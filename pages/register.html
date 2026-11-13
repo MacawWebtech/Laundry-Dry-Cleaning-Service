@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Create an Account | FreshFold Laundry</title>
+<meta name="description" content="Create your FreshFold account in under a minute and get ₹100 off your first laundry pickup. Book, track and pay for your laundry and dry cleaning online.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://www.freshfold.example/pages/register.html">
+<meta name="theme-color" content="#1a64e0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<!-- Open Graph / social preview — TODO: update domain & image -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FreshFold">
+<meta property="og:title" content="Create an Account | FreshFold Laundry">
+<meta property="og:description" content="Create your FreshFold account in under a minute and get ₹100 off your first laundry pickup. Book, track and pay for your laundry and dry cleaning online.">
+<meta property="og:url" content="https://www.freshfold.example/pages/register.html">
+<meta property="og:image" content="https://www.freshfold.example/assets/images/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/images/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+<script>
+  /* Theme + direction boot: applies saved or system preference before first paint */
+  (function () { try {
+    var t = localStorage.getItem("ff-theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    var d = localStorage.getItem("ff-dir") || "ltr";
+    var h = document.documentElement; h.setAttribute("data-theme", t); h.setAttribute("data-bs-theme", t); h.setAttribute("dir", d);
+    if (d === "rtl") h.setAttribute("lang", "ar");
+  } catch (e) {} })();
+  /* Image fallback: if a remote photo fails, swap in the bundled local image (data-fallback) */
+  addEventListener("error", function (e) { var i = e.target;
+    if (i.tagName === "IMG" && i.dataset.fallback && i.src.indexOf(i.dataset.fallback) < 0) {
+      var p = i.closest("picture"); if (p) p.querySelectorAll("source").forEach(function (s) { s.remove(); });
+      i.removeAttribute("srcset"); i.src = i.dataset.fallback; }
+  }, true);
+</script>
+<!-- Fonts: Outfit (display) + Plus Jakarta Sans (body) — TODO: swap in style.css :root -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<!-- Template styles (use the .min.css versions in production) -->
+<link rel="stylesheet" href="../assets/css/style.css?v=1.4.0">
+<link rel="stylesheet" href="../assets/css/dark-mode.css?v=1.4.0">
+<link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="ff-auth">
+  <!-- ============ AUTH SIDE PANEL ============ -->
+  <aside class="ff-auth-side ff-has-bg" style="background-image:var(--ff-overlay),url('../assets/images/fold.jpg') !important" aria-label="Why customers love FreshFold">
+    <a class="ff-logo" href="index.html" aria-label="FreshFold home">
+          <img class="ff-logo-img" src="../assets/images/logo.png" alt="" width="1044" height="360">
+          <img class="ff-logo-img ff-logo-img--light" src="../assets/images/logo-light.png" alt="" width="1044" height="360">
+        </a>
+    <div>
+      <h2 class="display-6 mb-3">₹100 off your first pickup</h2>
+      <p class="lead-ff mb-4" style="color:#cfe7f1">Join 18,000+ households who never think about laundry anymore.</p>
+      <ul class="list-unstyled d-grid gap-3 mb-0">
+        <li class="d-flex gap-2"><i class="bi bi-truck text-info" aria-hidden="true"></i> Free pickup &amp; delivery on orders over ₹299</li>
+        <li class="d-flex gap-2"><i class="bi bi-lightning-charge text-info" aria-hidden="true"></i> 24h express and same-day options</li>
+        <li class="d-flex gap-2"><i class="bi bi-geo-alt text-info" aria-hidden="true"></i> Live order tracking from bag to door</li>
+      </ul>
+    </div>
+    <figure class="mb-0">
+      <blockquote class="mb-2"><p class="mb-0" style="color:#fff">“The easiest app I use all week. Laundry just… happens now.”</p></blockquote>
+      <figcaption class="small">— Ananya I., customer since 2021</figcaption>
+    </figure>
+  </aside>
+  <main id="main" class="ff-auth-main" tabindex="-1">
+    <div class="ff-auth-box">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <div class="d-lg-none"><a class="ff-logo" href="index.html" aria-label="FreshFold home">
+          <img class="ff-logo-img" src="../assets/images/logo.png" alt="" width="1044" height="360">
+          <img class="ff-logo-img ff-logo-img--light" src="../assets/images/logo-light.png" alt="" width="1044" height="360">
+        </a></div>
+        <a href="index.html" class="small fw-semibold text-decoration-none ms-auto me-2 d-inline-flex align-items-center" style="min-height:44px"><i class="bi bi-arrow-left me-1" aria-hidden="true"></i> Back to site</a>
+        <div class="d-flex gap-2"><button type="button" class="btn btn-icon " data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">
+            <i class="bi bi-moon-stars theme-icon-light" aria-hidden="true"></i><i class="bi bi-sun theme-icon-dark" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="btn btn-icon " data-dir-toggle aria-pressed="false" aria-label="Toggle right-to-left layout">
+            <span class="dir-label">RTL</span>
+          </button></div>
+      </div>
+
+      <h1 class="h2 mb-1">Create your account</h1>
+      <p class="mb-4">Get ₹100 off your first pickup. Takes less than a minute.</p>
+      <form data-validate data-submit="redirect" data-redirect="dashboard.html" data-success="Account created! Taking you to your dashboard…" aria-label="Create account">
+        <div class="row g-3">
+          <div class="col-sm-6 ff-field"><label class="form-label" for="rgFirst">First name</label><input class="form-control" id="rgFirst" name="first_name" autocomplete="given-name" required data-error-required="Please enter your first name."></div>
+          <div class="col-sm-6 ff-field"><label class="form-label" for="rgLast">Last name</label><input class="form-control" id="rgLast" name="last_name" autocomplete="family-name" required data-error-required="Please enter your last name."></div>
+          <div class="col-12 ff-field"><label class="form-label" for="rgEmail">Email</label><input class="form-control" id="rgEmail" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></div>
+          <div class="col-sm-6 ff-field"><label class="form-label" for="rgPhone">Mobile number</label><input class="form-control" id="rgPhone" name="phone" type="tel" autocomplete="tel" required pattern="[+0-9 ()-]{10,16}" placeholder="+91 98450 12345" data-error="Please enter a valid mobile number."></div>
+          <div class="col-sm-6 ff-field"><label class="form-label" for="rgPin">Pincode <button type="button" class="ff-tip" data-bs-toggle="tooltip" data-bs-title="We use this to confirm your area and show available slots." aria-label="Why we need your pincode"><i class="bi bi-info-circle" aria-hidden="true"></i></button></label><input class="form-control" id="rgPin" name="pincode" inputmode="numeric" maxlength="6" pattern="[0-9]{6}" required data-error="Pincodes have 6 digits."></div>
+          <div class="col-12 ff-field"><label class="form-label" for="rgPass">Password</label>
+            <div class="position-relative"><input class="form-control" id="rgPass" name="password" type="password" autocomplete="new-password" required minlength="8" data-strength aria-describedby="strengthText"><button type="button" class="ff-pass-toggle" data-toggle-password="rgPass" aria-label="Show password"><i class="bi bi-eye" aria-hidden="true"></i></button></div>
+            <div class="progress mt-2" style="height:6px" aria-hidden="true"><div class="progress-bar" id="strengthBar" style="width:0"></div></div>
+            <p class="ff-hint mb-0" id="strengthText" aria-live="polite"></p></div>
+          <div class="col-12 ff-field"><label class="form-label" for="rgPass2">Confirm password</label><input class="form-control" id="rgPass2" name="password_confirm" type="password" autocomplete="new-password" required data-match="rgPass" data-error-match="Passwords don't match yet."></div>
+          <div class="col-12 ff-field"><div class="form-check"><input class="form-check-input" type="checkbox" id="rgTerms" name="terms" required data-error-required="Please accept the terms to continue."><label class="form-check-label" for="rgTerms">I agree to the <a href="coming-soon.html">Terms</a> and <a href="coming-soon.html">Privacy Policy</a>.</label></div></div>
+          <div class="col-12"><div class="form-check"><input class="form-check-input" type="checkbox" id="rgNews" name="newsletter" checked><label class="form-check-label" for="rgNews">Send me offers and fabric-care tips (1 email/month).</label></div></div>
+          <div class="col-12"><button type="submit" class="btn btn-accent btn-lg w-100"><span class="btn-label">Create account</span></button></div>
+          <div class="col-12"><div class="ff-form-status" role="status" aria-live="polite"></div></div>
+        </div>
+      </form>
+      <div class="ff-divider">or continue with</div>
+        <div class="d-grid gap-2 d-sm-flex">
+          <a class="btn btn-ghost flex-fill" href="dashboard.html"><i class="bi bi-google" aria-hidden="true"></i> Google</a>
+          <a class="btn btn-ghost flex-fill" href="dashboard.html"><i class="bi bi-apple" aria-hidden="true"></i> Apple</a>
+        </div>
+      <p class="text-center mt-4 mb-0">Already have an account? <a href="login.html" class="fw-bold">Log in</a></p>
+    </div>
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="../assets/js/main.js?v=1.3.3" defer></script>
+
+</body>
+</html>

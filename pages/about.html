@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About FreshFold — Laundry Done With Care Since 2018</title>
+<meta name="description" content="Meet FreshFold: a Bengaluru laundry and dry cleaning service on a mission to give you your weekends back with on-time, honestly priced, eco-friendly care.">
+<link rel="canonical" href="https://www.freshfold.example/pages/about.html">
+<meta name="theme-color" content="#1a64e0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<!-- Open Graph / social preview — TODO: update domain & image -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FreshFold">
+<meta property="og:title" content="About FreshFold — Laundry Done With Care Since 2018">
+<meta property="og:description" content="Meet FreshFold: a Bengaluru laundry and dry cleaning service on a mission to give you your weekends back with on-time, honestly priced, eco-friendly care.">
+<meta property="og:url" content="https://www.freshfold.example/pages/about.html">
+<meta property="og:image" content="https://www.freshfold.example/assets/images/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/images/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+<script>
+  /* Theme + direction boot: applies saved or system preference before first paint */
+  (function () { try {
+    var t = localStorage.getItem("ff-theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    var d = localStorage.getItem("ff-dir") || "ltr";
+    var h = document.documentElement; h.setAttribute("data-theme", t); h.setAttribute("data-bs-theme", t); h.setAttribute("dir", d);
+    if (d === "rtl") h.setAttribute("lang", "ar");
+  } catch (e) {} })();
+  /* Image fallback: if a remote photo fails, swap in the bundled local image (data-fallback) */
+  addEventListener("error", function (e) { var i = e.target;
+    if (i.tagName === "IMG" && i.dataset.fallback && i.src.indexOf(i.dataset.fallback) < 0) {
+      var p = i.closest("picture"); if (p) p.querySelectorAll("source").forEach(function (s) { s.remove(); });
+      i.removeAttribute("srcset"); i.src = i.dataset.fallback; }
+  }, true);
+</script>
+<!-- Fonts: Outfit (display) + Plus Jakarta Sans (body) — TODO: swap in style.css :root -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<!-- Template styles (use the .min.css versions in production) -->
+<link rel="stylesheet" href="../assets/css/style.css?v=1.4.0">
+<link rel="stylesheet" href="../assets/css/dark-mode.css?v=1.4.0">
+<link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- ============ TOP BAR ============ -->
+<div class="ff-topbar d-none d-md-block">
+  <div class="container d-flex align-items-center justify-content-between gap-3">
+    <p class="mb-0 text-white-50"><i class="bi bi-clock me-1" aria-hidden="true"></i> Pickups 7 AM – 10 PM, every day · <span class="text-white">Free pickup &amp; delivery over ₹299</span></p>
+    <div class="d-flex gap-3"><a href="track-order.html"><i class="bi bi-geo-alt me-1" aria-hidden="true"></i>Track order</a><a href="contact.html"><i class="bi bi-headset me-1" aria-hidden="true"></i>Help</a></div>
+  </div>
+</div>
+
+<!-- ============ HEADER / NAVIGATION ============ -->
+<header class="ff-header">
+  <nav class="navbar navbar-expand-xl" aria-label="Main navigation">
+    <div class="container">
+      <a class="ff-logo" href="index.html" aria-label="FreshFold home">
+          <img class="ff-logo-img" src="../assets/images/logo.png" alt="" width="1044" height="360">
+          <img class="ff-logo-img ff-logo-img--light" src="../assets/images/logo-light.png" alt="" width="1044" height="360">
+        </a>
+      <div class="d-flex align-items-center gap-2 d-xl-none ms-auto me-2">
+        <button type="button" class="btn btn-icon " data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">
+            <i class="bi bi-moon-stars theme-icon-light" aria-hidden="true"></i><i class="bi bi-sun theme-icon-dark" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="btn btn-icon " data-dir-toggle aria-pressed="false" aria-label="Toggle right-to-left layout">
+            <span class="dir-label">RTL</span>
+          </button>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Open menu">
+        <span class="navbar-toggler-icon" aria-hidden="true"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ff-nav mx-auto gap-xl-1">
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="index.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+            <ul class="dropdown-menu ff-dropdown">
+              <li><a class="dropdown-item" href="index.html"><i class="bi bi-house me-2" aria-hidden="true"></i>Home 1 — Classic</a></li>
+              <li><a class="dropdown-item" href="index-2.html"><i class="bi bi-lightning-charge me-2" aria-hidden="true"></i>Home 2 — Express</a></li>
+            </ul></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="how-it-works.html">How It Works</a></li>
+          <li class="nav-item"><a class="nav-link" aria-current="page" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <div class="d-flex flex-column flex-xl-row align-items-xl-center gap-2 mt-3 mt-xl-0">
+          <a class="ff-phone" href="tel:+918045678900"><i class="bi bi-telephone-fill text-primary-ff" aria-hidden="true"></i><span class="num-text ltr">+91 80 4567 8900</span></a>
+          <div class="d-none d-xl-flex gap-2"><button type="button" class="btn btn-icon " data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">
+            <i class="bi bi-moon-stars theme-icon-light" aria-hidden="true"></i><i class="bi bi-sun theme-icon-dark" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="btn btn-icon " data-dir-toggle aria-pressed="false" aria-label="Toggle right-to-left layout">
+            <span class="dir-label">RTL</span>
+          </button></div>
+          <a class="btn btn-ghost" href="login.html"><i class="bi bi-person" aria-hidden="true"></i> Login</a>
+          <a class="btn btn-accent" href="schedule-pickup.html"><i class="bi bi-calendar-check" aria-hidden="true"></i> Schedule Pickup</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="main" tabindex="-1">
+
+<!-- ============ PAGE HERO ============ -->
+<section class="ff-page-hero ff-has-bg" aria-labelledby="pageTitle" style="background-image:var(--ff-overlay),url('../assets/images/Duvets &amp; Blankets.jpg') !important">
+  <div class="container position-relative">
+    <nav aria-label="Breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">Home</a></li><li class="breadcrumb-item active" aria-current="page">About</li></ol></nav>
+    <span class="eyebrow">Our story</span>
+    <h1 id="pageTitle">We give you your weekends back</h1>
+    <p class="lead-ff">FreshFold started in 2018 with one washing machine, two scooters and a promise: laundry that's on time, honestly priced and done with care.</p>
+    
+  </div>
+</section>
+
+<!-- ============ STORY ============ -->
+<section class="ff-section" aria-labelledby="storyTitle">
+  <div class="container">
+    <div class="row g-4 g-lg-5 ff-eqrow">
+      <div class="col-lg-6 ff-eqmedia reveal"><div class="ff-img-rounded ff-eqimg"><picture>
+          <img class="ff-photo " src="../assets/images/about.jpg" srcset="" sizes="(min-width: 1024px) 50vw, 100vw" width="1200" height="800" alt="Rows of washing machines in a laundromat" data-fallback="../assets/images/about-storefront.jpg" fetchpriority="high" decoding="async">
+        </picture></div></div>
+      <div class="col-lg-6 reveal reveal-delay-1">
+        <span class="eyebrow">How it started</span>
+        <h2 id="storyTitle">From one machine in HSR Layout to 18,000 homes</h2>
+        <p>Neha and Vikram were working 60-hour weeks and spending every Sunday on laundry. The local options were slow, unpredictable and rarely picked up the phone. So they rented a 300 sq ft shop, bought a commercial washer and started collecting laundry from their neighbours.</p>
+        <p>Eight years later we run a 6,000 sq ft facility, 40 riders and a team of garment-care specialists — but we still treat every bag like it belongs to a neighbour.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MISSION & VALUES ============ -->
+<section class="ff-section bg-soft" aria-labelledby="missionTitle">
+  <div class="container">
+    <div class="ff-section-head"><span class="eyebrow">Mission</span><h2 id="missionTitle">Clean clothes, zero effort, kinder to the planet</h2></div>
+    <div class="row g-4">
+      <div class="col-md-4 reveal"><div class="ff-card"><span class="ff-icon" aria-hidden="true"><i class="bi bi-clock"></i></span><h3>On time, every time</h3><p class="mb-0">97.6% of orders were delivered in their promised slot last year. If we're late, your next pickup is free.</p></div></div>
+      <div class="col-md-4 reveal reveal-delay-1"><div class="ff-card"><span class="ff-icon green" aria-hidden="true"><i class="bi bi-recycle"></i></span><h3>Lighter footprint</h3><p class="mb-0">Our machines recycle 40% of rinse water, our riders use electric scooters, and our bags are reusable.</p></div></div>
+      <div class="col-md-4 reveal reveal-delay-2"><div class="ff-card"><span class="ff-icon coral" aria-hidden="true"><i class="bi bi-heart"></i></span><h3>Fair to our team</h3><p class="mb-0">We invest in our people with stable employment, ongoing support, and a workplace built on respect.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TEAM ============ -->
+<section class="ff-section" aria-labelledby="teamTitle">
+  <div class="container">
+    <div class="ff-section-head"><span class="eyebrow">Team</span><h2 id="teamTitle">The people behind your fresh laundry</h2></div>
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-3 reveal"><article class="ff-card text-center">
+        <span class="ff-avatar-photo mx-auto mb-3 ff-team-photo" style="width:120px;height:120px" data-initials="NK"><img src="../assets/images/team1.jpg" srcset="" width="120" height="120" alt="Photo of Neha Kapoor" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('no-photo');this.remove()"></span>
+        <h3 class="h5 mb-1">Neha Kapoor</h3><p class="small fw-bold text-primary-ff mb-2">Co-founder &amp; CEO</p><p class="small mb-0">Former hotel housekeeping head who got tired of seeing great clothes ruined by bad laundries.</p>
+      </article></div>
+      <div class="col-sm-6 col-lg-3 reveal"><article class="ff-card text-center">
+        <span class="ff-avatar-photo mx-auto mb-3 ff-team-photo" style="width:120px;height:120px" data-initials="VS"><img src="../assets/images/team2.jpg" srcset="" width="120" height="120" alt="Photo of Vikram Shetty" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('no-photo');this.remove()"></span>
+        <h3 class="h5 mb-1">Vikram Shetty</h3><p class="small fw-bold text-primary-ff mb-2">Co-founder &amp; Operations</p><p class="small mb-0">Runs our 6,000 sq ft facility and the 40-strong rider fleet. Obsessed with on-time delivery.</p>
+      </article></div>
+      <div class="col-sm-6 col-lg-3 reveal"><article class="ff-card text-center">
+        <span class="ff-avatar-photo mx-auto mb-3 ff-team-photo" style="width:120px;height:120px" data-initials="LN"><img src="../assets/images/team3.jpg" srcset="" width="120" height="120" alt="Photo of Lakshmi Narayan" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('no-photo');this.remove()"></span>
+        <h3 class="h5 mb-1">Lakshmi Narayan</h3><p class="small fw-bold text-primary-ff mb-2">Head of Garment Care</p><p class="small mb-0">20 years in dry cleaning. She personally signs off on every bridal and designer piece.</p>
+      </article></div>
+      <div class="col-sm-6 col-lg-3 reveal"><article class="ff-card text-center">
+        <span class="ff-avatar-photo mx-auto mb-3 ff-team-photo" style="width:120px;height:120px" data-initials="IQ"><img src="../assets/images/team4.jpg" srcset="" width="120" height="120" alt="Photo of Imran Qureshi" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('no-photo');this.remove()"></span>
+        <h3 class="h5 mb-1">Imran Qureshi</h3><p class="small fw-bold text-primary-ff mb-2">Customer Happiness</p><p class="small mb-0">Leads the support team that answers WhatsApp messages in under 10 minutes.</p>
+      </article></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUALITY PROMISE ============ -->
+<section class="ff-section pt-0" aria-labelledby="promiseTitle">
+  <div class="container">
+    <div class="ff-turnaround ff-has-bg" style="background-image:var(--ff-overlay),url('../assets/images/Curtains &amp; Upholstery.jpg') !important">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-5"><h2 id="promiseTitle">Our quality promise</h2><p class="mb-0">If anything isn't right, tell us within 48 hours. We'll fix it — free.</p></div>
+        <div class="col-lg-7"><div class="row g-3">
+          <div class="col-sm-6"><div class="ff-turn-item"><h3 class="h5"><i class="bi bi-arrow-repeat me-2" aria-hidden="true"></i>Free re-clean</h3><p class="mb-0 small">Not happy with a stain or press? We'll collect and redo it at no cost.</p></div></div>
+          <div class="col-sm-6"><div class="ff-turn-item"><h3 class="h5"><i class="bi bi-shield-check me-2" aria-hidden="true"></i>Damage cover</h3><p class="mb-0 small">Up to 10× the cleaning charge (max ₹10,000) per item.</p></div></div>
+          <div class="col-sm-6"><div class="ff-turn-item"><h3 class="h5"><i class="bi bi-camera me-2" aria-hidden="true"></i>Photo check-in</h3><p class="mb-0 small">Existing marks are photographed at intake, so there's never a dispute.</p></div></div>
+          <div class="col-sm-6"><div class="ff-turn-item featured"><h3 class="h5"><i class="bi bi-stopwatch me-2" aria-hidden="true"></i>Late? It's on us</h3><p class="mb-0 small">Miss your delivery slot and your next pickup is free.</p></div></div>
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="ff-section bg-soft" aria-labelledby="aboutRevTitle">
+  <div class="container">
+    <div class="ff-section-head"><span class="eyebrow">Reviews</span><h2 id="aboutRevTitle">What our customers say</h2></div>
+    <div id="aboutTestimonials" class="carousel slide" data-bs-ride="carousel" data-bs-interval="7000" aria-roledescription="carousel" aria-label="Customer reviews">
+      <div class="carousel-inner">
+      <div class="carousel-item active">
+        <figure class="ff-testimonial">
+          <div class="ff-stars mb-3" role="img" aria-label="Rated 5 out of 5"><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i></div>
+          <blockquote class="mb-4"><p>“I used to lose my whole Sunday to laundry. Now I book on my phone, hand over the bag at the door and it's back on Tuesday, folded better than I ever could. The rider even texts before he arrives.”</p></blockquote>
+          <figcaption><span class="ff-avatar-photo mx-auto mb-2" style="width:80px;height:80px" data-initials="AI"><img src="../assets/images/review1.jpg" srcset="format&amp;fit=crop&amp;crop=faces&amp;w=160&amp;h=160&amp;q=75 2x" width="80" height="80" alt="Photo of Ananya Iyer" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('no-photo');this.remove()"></span><strong class="d-block" style="color:var(--ff-heading)">Ananya Iyer</strong><span class="small text-muted-ff">Koramangala, Bengaluru</span></figcaption>
+        </figure>
+      </div>
+      <div class="carousel-item">
+        <figure class="ff-testimonial">
+          <div class="ff-stars mb-3" role="img" aria-label="Rated 5 out of 5"><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i></div>
+          <blockquote class="mb-4"><p>“They got a red-wine stain out of my linen blazer that two other dry cleaners gave up on. Packed in a garment bag, on time, and the price was exactly what the website said.”</p></blockquote>
+          <figcaption><span class="ff-avatar-photo mx-auto mb-2" style="width:80px;height:80px" data-initials="RM"><img src="../assets/images/review2.jpg" srcset=" " width="80" height="80" alt="Photo of Rahul Menon" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('no-photo');this.remove()"></span><strong class="d-block" style="color:var(--ff-heading)">Rahul Menon</strong><span class="small text-muted-ff">Whitefield, Bengaluru</span></figcaption>
+        </figure>
+      </div>
+      <div class="carousel-item">
+        <figure class="ff-testimonial">
+          <div class="ff-stars mb-3" role="img" aria-label="Rated 5 out of 5"><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i></div>
+          <blockquote class="mb-4"><p>“With two toddlers, the Family plan is the best money I spend each month. Uniforms, bedsheets, my sarees — everything comes back fresh and sorted per person.”</p></blockquote>
+          <figcaption><span class="ff-avatar-photo mx-auto mb-2" style="width:80px;height:80px" data-initials="FS"><img src="../assets/images/review3.jpg" srcset=" " width="80" height="80" alt="Photo of Fatima Sheikh" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('no-photo');this.remove()"></span><strong class="d-block" style="color:var(--ff-heading)">Fatima Sheikh</strong><span class="small text-muted-ff">Indiranagar, Bengaluru</span></figcaption>
+        </figure>
+      </div>
+      <div class="carousel-item">
+        <figure class="ff-testimonial">
+          <div class="ff-stars mb-3" role="img" aria-label="Rated 5 out of 5"><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i></div>
+          <blockquote class="mb-4"><p>“We run a 14-room guest house and switched our linen to FreshFold's business plan. Same-day turnaround on weekends has saved us more than once.”</p></blockquote>
+          <figcaption><span class="ff-avatar-photo mx-auto mb-2" style="width:80px;height:80px" data-initials="KR"><img src="../assets/images/review4.jpg" srcset="" width="80" height="80" alt="Photo of Karthik Rao" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('no-photo');this.remove()"></span><strong class="d-block" style="color:var(--ff-heading)">Karthik Rao</strong><span class="small text-muted-ff">HSR Layout, Bengaluru</span></figcaption>
+        </figure>
+      </div>
+      </div>
+      <div class="d-flex align-items-center justify-content-center gap-3 mt-4">
+        <button class="carousel-control-prev ff-carousel-ctrl" type="button" data-bs-target="#aboutTestimonials" data-bs-slide="prev" aria-label="Previous review"><i class="bi bi-chevron-left" aria-hidden="true"></i></button>
+        <div class="carousel-indicators ff-dots m-0"><button type="button" data-bs-target="#aboutTestimonials" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Review 1"></button><button type="button" data-bs-target="#aboutTestimonials" data-bs-slide-to="1" aria-label="Review 2"></button><button type="button" data-bs-target="#aboutTestimonials" data-bs-slide-to="2" aria-label="Review 3"></button><button type="button" data-bs-target="#aboutTestimonials" data-bs-slide-to="3" aria-label="Review 4"></button></div>
+        <button class="carousel-control-next ff-carousel-ctrl" type="button" data-bs-target="#aboutTestimonials" data-bs-slide="next" aria-label="Next review"><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="ff-section pt-0" aria-labelledby="ctaTitle">
+  <div class="container">
+    <div class="ff-cta ff-has-bg reveal" style="background-image:var(--ff-overlay),url('../assets/images/washfold.jpg') !important">
+      <h2 id="ctaTitle">Your laundry day just got easier</h2>
+      <p class="lead-ff mx-auto mb-4" style="max-width:600px;color:#eaf2ff">Book a pickup in 2 minutes. We'll collect today and have everything back fresh, folded and pressed in 24–48 hours.</p>
+      <div class="d-flex flex-wrap gap-2 justify-content-center">
+        <a class="btn btn-lg btn-dark-ff" href="schedule-pickup.html"><i class="bi bi-calendar-check" aria-hidden="true"></i> Schedule Pickup</a>
+        <a class="btn btn-lg btn-light" href="https://wa.me/918045678900"><i class="bi bi-whatsapp" aria-hidden="true"></i> Book on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="ff-footer" aria-labelledby="footerHeading">
+  <h2 id="footerHeading" class="visually-hidden">Site footer</h2>
+  <div class="container">
+    <div class="row g-4 g-lg-5">
+      <div class="col-lg-4">
+        <a class="ff-logo" href="index.html" aria-label="FreshFold home">
+          <img class="ff-logo-img" src="../assets/images/logo.png" alt="" width="1044" height="360">
+          <img class="ff-logo-img ff-logo-img--light" src="../assets/images/logo-light.png" alt="" width="1044" height="360">
+        </a>
+        <p class="mt-3">We pick up your laundry from your door, clean it with care and bring it back fresh in 24–48 hours. Serving Bengaluru since 2018.</p>
+        <ul class="ff-social mt-3" aria-label="Social media">
+          <li><a href="https://www.instagram.com/" aria-label="FreshFold on Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.facebook.com/" aria-label="FreshFold on Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a></li>
+          <li><a href="https://x.com/" aria-label="FreshFold on X"><i class="bi bi-twitter-x" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.youtube.com/" aria-label="FreshFold on YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a></li>
+          <li><a href="https://wa.me/918045678900" aria-label="Chat with FreshFold on WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h3>Services</h3>
+        <ul class="ff-footer-links">
+          <li><a href="services.html#wash-fold">Wash &amp; Fold</a></li>
+          <li><a href="service-details.html">Dry Cleaning</a></li>
+          <li><a href="services.html#ironing">Ironing &amp; Pressing</a></li>
+          <li><a href="services.html#home-care">Curtains &amp; Duvets</a></li>
+          <li><a href="services.html#specialty">Shoe Cleaning</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h3>Company</h3>
+        <ul class="ff-footer-links">
+          <li><a href="about.html">About us</a></li>
+          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html#faq">FAQs</a></li>
+          <li><a href="coming-soon.html">Careers</a></li>
+          <li><a href="track-order.html">Track an order</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 col-lg-4">
+        <h3>Contact &amp; hours</h3>
+        <ul class="ff-footer-links">
+          <li><a href="tel:+918045678900"><i class="bi bi-telephone me-2" aria-hidden="true"></i><span class="ltr">+91 80 4567 8900</span></a></li>
+          <li><a href="mailto:hello@freshfold.example"><i class="bi bi-envelope me-2" aria-hidden="true"></i>hello@freshfold.example</a></li>
+          <li class="d-flex"><i class="bi bi-geo-alt me-2 mt-1" aria-hidden="true"></i><address class="mb-0">No. 24, 27th Main Road, HSR Layout Sector 1, Bengaluru 560102</address></li>
+          <li class="mt-2"><i class="bi bi-clock me-2" aria-hidden="true"></i>Pickups: Mon–Sun, 7 AM – 10 PM</li>
+          <li><i class="bi bi-headset me-2" aria-hidden="true"></i>Support: Mon–Sat, 8 AM – 9 PM</li>
+        </ul>
+        <div class="d-flex flex-wrap gap-2 mt-3">
+          <!-- TODO: link to your real App Store / Google Play listings -->
+          <a class="ff-store-btn" href="coming-soon.html"><i class="bi bi-apple" aria-hidden="true"></i><span>Coming soon on<strong>App Store</strong></span></a>
+          <a class="ff-store-btn" href="coming-soon.html"><i class="bi bi-google-play" aria-hidden="true"></i><span>Coming soon on<strong>Google Play</strong></span></a>
+        </div>
+      </div>
+    </div>
+    <div class="ff-footer-bottom d-flex flex-column flex-lg-row gap-3 justify-content-between align-items-lg-center">
+      <p class="mb-0">© <span data-year>2026</span> FreshFold Laundry Services. All rights reserved. · <a href="coming-soon.html">Privacy</a> · <a href="coming-soon.html">Terms</a> · <a href="../sitemap.xml">Sitemap</a></p>
+      <ul class="ff-pay" aria-label="Payment methods we accept">
+        <li><i class="bi bi-credit-card" aria-hidden="true"></i> Visa</li>
+        <li><i class="bi bi-credit-card-2-front" aria-hidden="true"></i> Mastercard</li>
+        <li><i class="bi bi-phone" aria-hidden="true"></i> UPI</li>
+        <li><i class="bi bi-paypal" aria-hidden="true"></i> PayPal</li>
+        <li><i class="bi bi-cash-coin" aria-hidden="true"></i> Cash</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating mobile CTA + back to top -->
+<button type="button" class="btn btn-icon ff-back-top" aria-label="Back to top"><i class="bi bi-arrow-up" aria-hidden="true"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="../assets/js/main.js?v=1.3.3" defer></script>
+
+</body>
+</html>

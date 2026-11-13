@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact FreshFold — Call, WhatsApp or Email Us</title>
+<meta name="description" content="Contact FreshFold laundry and dry cleaning in Bengaluru. Call, chat on WhatsApp or send a message about orders, pickups, stains or business laundry accounts.">
+<link rel="canonical" href="https://www.freshfold.example/pages/contact.html">
+<meta name="theme-color" content="#1a64e0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<!-- Open Graph / social preview — TODO: update domain & image -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FreshFold">
+<meta property="og:title" content="Contact FreshFold — Call, WhatsApp or Email Us">
+<meta property="og:description" content="Contact FreshFold laundry and dry cleaning in Bengaluru. Call, chat on WhatsApp or send a message about orders, pickups, stains or business laundry accounts.">
+<meta property="og:url" content="https://www.freshfold.example/pages/contact.html">
+<meta property="og:image" content="https://www.freshfold.example/assets/images/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/images/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+<script>
+  /* Theme + direction boot: applies saved or system preference before first paint */
+  (function () { try {
+    var t = localStorage.getItem("ff-theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    var d = localStorage.getItem("ff-dir") || "ltr";
+    var h = document.documentElement; h.setAttribute("data-theme", t); h.setAttribute("data-bs-theme", t); h.setAttribute("dir", d);
+    if (d === "rtl") h.setAttribute("lang", "ar");
+  } catch (e) {} })();
+  /* Image fallback: if a remote photo fails, swap in the bundled local image (data-fallback) */
+  addEventListener("error", function (e) { var i = e.target;
+    if (i.tagName === "IMG" && i.dataset.fallback && i.src.indexOf(i.dataset.fallback) < 0) {
+      var p = i.closest("picture"); if (p) p.querySelectorAll("source").forEach(function (s) { s.remove(); });
+      i.removeAttribute("srcset"); i.src = i.dataset.fallback; }
+  }, true);
+</script>
+<!-- Fonts: Outfit (display) + Plus Jakarta Sans (body) — TODO: swap in style.css :root -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<!-- Template styles (use the .min.css versions in production) -->
+<link rel="stylesheet" href="../assets/css/style.css?v=1.4.0">
+<link rel="stylesheet" href="../assets/css/dark-mode.css?v=1.4.0">
+<link rel="stylesheet" href="../assets/css/rtl.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DryCleaningOrLaundry",
+  "name": "FreshFold",
+  "description": "Laundry and dry cleaning with free doorstep pickup and delivery in 24–48 hours.",
+  "url": "https://www.freshfold.example/",
+  "image": "https://www.freshfold.example/assets/images/og-image.jpg",
+  "telephone": "+91 80 4567 8900",
+  "email": "hello@freshfold.example",
+  "priceRange": "₹₹",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No. 24, 27th Main Road, HSR Layout Sector 1",
+    "addressLocality": "Bengaluru",
+    "addressRegion": "KA",
+    "postalCode": "560102",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 12.9116,
+    "longitude": 77.6474
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "07:00",
+      "closes": "22:00"
+    }
+  ],
+  "areaServed": [
+    "Koramangala",
+    "HSR Layout",
+    "Indiranagar",
+    "Whitefield",
+    "BTM Layout",
+    "Jayanagar",
+    "JP Nagar",
+    "Bellandur",
+    "Marathahalli"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "2140"
+  },
+  "sameAs": [
+    "https://www.instagram.com/",
+    "https://www.facebook.com/"
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- ============ TOP BAR ============ -->
+<div class="ff-topbar d-none d-md-block">
+  <div class="container d-flex align-items-center justify-content-between gap-3">
+    <p class="mb-0 text-white-50"><i class="bi bi-clock me-1" aria-hidden="true"></i> Pickups 7 AM – 10 PM, every day · <span class="text-white">Free pickup &amp; delivery over ₹299</span></p>
+    <div class="d-flex gap-3"><a href="track-order.html"><i class="bi bi-geo-alt me-1" aria-hidden="true"></i>Track order</a><a href="contact.html"><i class="bi bi-headset me-1" aria-hidden="true"></i>Help</a></div>
+  </div>
+</div>
+
+<!-- ============ HEADER / NAVIGATION ============ -->
+<header class="ff-header">
+  <nav class="navbar navbar-expand-xl" aria-label="Main navigation">
+    <div class="container">
+      <a class="ff-logo" href="index.html" aria-label="FreshFold home">
+          <img class="ff-logo-img" src="../assets/images/logo.png" alt="" width="1044" height="360">
+          <img class="ff-logo-img ff-logo-img--light" src="../assets/images/logo-light.png" alt="" width="1044" height="360">
+        </a>
+      <div class="d-flex align-items-center gap-2 d-xl-none ms-auto me-2">
+        <button type="button" class="btn btn-icon " data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">
+            <i class="bi bi-moon-stars theme-icon-light" aria-hidden="true"></i><i class="bi bi-sun theme-icon-dark" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="btn btn-icon " data-dir-toggle aria-pressed="false" aria-label="Toggle right-to-left layout">
+            <span class="dir-label">RTL</span>
+          </button>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Open menu">
+        <span class="navbar-toggler-icon" aria-hidden="true"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ff-nav mx-auto gap-xl-1">
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="index.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+            <ul class="dropdown-menu ff-dropdown">
+              <li><a class="dropdown-item" href="index.html"><i class="bi bi-house me-2" aria-hidden="true"></i>Home 1 — Classic</a></li>
+              <li><a class="dropdown-item" href="index-2.html"><i class="bi bi-lightning-charge me-2" aria-hidden="true"></i>Home 2 — Express</a></li>
+            </ul></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="how-it-works.html">How It Works</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" aria-current="page" href="contact.html">Contact</a></li>
+        </ul>
+        <div class="d-flex flex-column flex-xl-row align-items-xl-center gap-2 mt-3 mt-xl-0">
+          <a class="ff-phone" href="tel:+918045678900"><i class="bi bi-telephone-fill text-primary-ff" aria-hidden="true"></i><span class="num-text ltr">+91 80 4567 8900</span></a>
+          <div class="d-none d-xl-flex gap-2"><button type="button" class="btn btn-icon " data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">
+            <i class="bi bi-moon-stars theme-icon-light" aria-hidden="true"></i><i class="bi bi-sun theme-icon-dark" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="btn btn-icon " data-dir-toggle aria-pressed="false" aria-label="Toggle right-to-left layout">
+            <span class="dir-label">RTL</span>
+          </button></div>
+          <a class="btn btn-ghost" href="login.html"><i class="bi bi-person" aria-hidden="true"></i> Login</a>
+          <a class="btn btn-accent" href="schedule-pickup.html"><i class="bi bi-calendar-check" aria-hidden="true"></i> Schedule Pickup</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="main" tabindex="-1">
+
+<!-- ============ PAGE HERO ============ -->
+<section class="ff-page-hero ff-has-bg" aria-labelledby="pageTitle" style="background-image:var(--ff-overlay),url('../assets/images/about.jpg') !important">
+  <div class="container position-relative">
+    <nav aria-label="Breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">Home</a></li><li class="breadcrumb-item active" aria-current="page">Contact</li></ol></nav>
+    <span class="eyebrow">Contact us</span>
+    <h1 id="pageTitle">Talk to a real person</h1>
+    <p class="lead-ff">Questions about an order, a tricky stain or a business account? Call, WhatsApp or send a message — we reply within minutes during working hours.</p>
+    
+  </div>
+</section>
+
+<section class="ff-section pt-4" aria-labelledby="contactFormTitle">
+  <div class="container">
+    <div class="row g-4 g-lg-5 ff-contact-row">
+      <div class="col-lg-7">
+        <div class="ff-booking-card">
+          <h2 id="contactFormTitle" class="h3">Send us a message</h2>
+          <p>We usually reply within 2 hours (Mon–Sat, 8 AM – 9 PM).</p>
+          <!-- Formspree-ready: TODO replace YOUR_FORM_ID. For Netlify, keep data-netlify and set data-submit="netlify". -->
+          <form action="https://formspree.io/f/YOUR_FORM_ID" method="post" name="contact" data-netlify="true" data-netlify-honeypot="company_website" data-validate data-submit="formspree" data-success="Thanks! Your message is on its way — we'll reply within 2 hours.">
+            <input type="hidden" name="form-name" value="contact">
+            <p class="visually-hidden"><label for="cHoney">Leave this empty</label><input id="cHoney" name="company_website" tabindex="-1" autocomplete="off"></p>
+            <div class="row g-3">
+              <div class="col-md-6 ff-field"><label class="form-label" for="cName">Full name</label><input class="form-control" id="cName" name="name" autocomplete="name" required minlength="2" data-error-required="Please tell us your name."></div>
+              <div class="col-md-6 ff-field"><label class="form-label" for="cPhone">Phone</label><input class="form-control" id="cPhone" name="phone" type="tel" autocomplete="tel" pattern="[+0-9 ()-]{10,16}" placeholder="+91 98450 12345" required data-error-required="We need a number to call you back." data-error="Please enter a valid phone number (10+ digits)."></div>
+              <div class="col-md-6 ff-field"><label class="form-label" for="cEmail">Email</label><input class="form-control" id="cEmail" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></div>
+              <div class="col-md-6 ff-field"><label class="form-label" for="cTopic">Topic</label>
+                <select class="form-select" id="cTopic" name="topic" required data-error-required="Choose what your message is about.">
+                  <option value="">Choose a topic</option><option>Question about an order</option><option>New pickup / pricing</option><option>Damage or quality issue</option><option value="business">Business &amp; bulk laundry</option><option>Request a new service area</option><option>Something else</option>
+                </select></div>
+              <div class="col-md-6 ff-field"><label class="form-label" for="cOrder">Order ID <span class="text-muted-ff fw-normal">(optional)</span></label><input class="form-control" id="cOrder" name="order_id" pattern="[Ff][Ff]-[0-9]{5}" placeholder="FF-10492" data-error="Order IDs look like FF-10492."></div>
+              <div class="col-md-6 ff-field"><label class="form-label" for="cPin">Pincode <span class="text-muted-ff fw-normal">(optional)</span></label><input class="form-control" id="cPin" name="pincode" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" placeholder="560102" data-error="Pincodes have 6 digits."></div>
+              <div class="col-12 ff-field"><label class="form-label" for="cMsg">Message</label><textarea class="form-control" id="cMsg" name="message" rows="5" required minlength="10" data-error-required="Please write a short message." placeholder="Tell us how we can help…"></textarea></div>
+              <div class="col-12 ff-field"><div class="form-check"><input class="form-check-input" type="checkbox" id="cConsent" name="consent" required data-error-required="Please agree so we can contact you."><label class="form-check-label" for="cConsent">I agree to FreshFold contacting me about this request.</label></div></div>
+              <div class="col-12"><button class="btn btn-accent btn-lg" type="submit"><span class="btn-label"><i class="bi bi-send" aria-hidden="true"></i> Send message</span></button></div>
+              <div class="col-12"><div class="ff-form-status" role="status" aria-live="polite"></div></div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-5 ff-contact-side">
+        <div class="d-grid gap-3">
+          <a class="btn btn-lg ff-whatsapp" href="https://wa.me/918045678900?text=Hi%20FreshFold%2C%20I%27d%20like%20to%20book%20a%20pickup"><i class="bi bi-whatsapp" aria-hidden="true"></i> Chat on WhatsApp</a>
+          <a class="btn btn-lg btn-outline-ff" href="tel:+918045678900"><i class="bi bi-telephone" aria-hidden="true"></i> Call <span class="ltr">+91 80 4567 8900</span></a>
+        </div>
+        <div class="ff-card ff-card-static mt-4">
+          <h2 class="h5"><i class="bi bi-geo-alt text-primary-ff me-2" aria-hidden="true"></i>Facility &amp; drop-off</h2>
+          <address class="mb-3">No. 24, 27th Main Road, HSR Layout Sector 1, Bengaluru 560102</address>
+          <h3 class="h6 mt-3">Hours</h3>
+          <ul class="list-unstyled mb-0 small">
+            <li class="d-flex justify-content-between py-1 border-bottom"><span>Pickups &amp; deliveries</span><strong>Mon–Sun, 7 AM – 10 PM</strong></li>
+            <li class="d-flex justify-content-between py-1 border-bottom"><span>Customer support</span><strong>Mon–Sat, 8 AM – 9 PM</strong></li>
+            <li class="d-flex justify-content-between py-1"><span>Walk-in drop-off</span><strong>Mon–Sat, 9 AM – 8 PM</strong></li>
+          </ul>
+          <h3 class="h6 mt-3">Email</h3><a href="mailto:hello@freshfold.example">hello@freshfold.example</a>
+        </div>
+        <!-- Map: grows to fill the column so both columns end level on desktop.
+             TODO: change the address in ?q=… (or paste your own Google Maps "Embed a map" src). -->
+        <div class="ff-map ff-contact-map mt-4">
+          <iframe src="https://maps.google.com/maps?q=27th%20Main%20Road%2C%20HSR%20Layout%20Sector%201%2C%20Bengaluru%20560102&amp;z=15&amp;output=embed" title="Map showing the FreshFold facility in HSR Layout, Bengaluru" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          <a class="btn btn-sm btn-primary-ff ff-map-link" href="https://www.google.com/maps/search/?api=1&amp;query=27th+Main+Road+HSR+Layout+Sector+1+Bengaluru" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> Open in Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="ff-footer" aria-labelledby="footerHeading">
+  <h2 id="footerHeading" class="visually-hidden">Site footer</h2>
+  <div class="container">
+    <div class="row g-4 g-lg-5">
+      <div class="col-lg-4">
+        <a class="ff-logo" href="index.html" aria-label="FreshFold home">
+          <img class="ff-logo-img" src="../assets/images/logo.png" alt="" width="1044" height="360">
+          <img class="ff-logo-img ff-logo-img--light" src="../assets/images/logo-light.png" alt="" width="1044" height="360">
+        </a>
+        <p class="mt-3">We pick up your laundry from your door, clean it with care and bring it back fresh in 24–48 hours. Serving Bengaluru since 2018.</p>
+        <ul class="ff-social mt-3" aria-label="Social media">
+          <li><a href="https://www.instagram.com/" aria-label="FreshFold on Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.facebook.com/" aria-label="FreshFold on Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a></li>
+          <li><a href="https://x.com/" aria-label="FreshFold on X"><i class="bi bi-twitter-x" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.youtube.com/" aria-label="FreshFold on YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a></li>
+          <li><a href="https://wa.me/918045678900" aria-label="Chat with FreshFold on WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h3>Services</h3>
+        <ul class="ff-footer-links">
+          <li><a href="services.html#wash-fold">Wash &amp; Fold</a></li>
+          <li><a href="service-details.html">Dry Cleaning</a></li>
+          <li><a href="services.html#ironing">Ironing &amp; Pressing</a></li>
+          <li><a href="services.html#home-care">Curtains &amp; Duvets</a></li>
+          <li><a href="services.html#specialty">Shoe Cleaning</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h3>Company</h3>
+        <ul class="ff-footer-links">
+          <li><a href="about.html">About us</a></li>
+          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html#faq">FAQs</a></li>
+          <li><a href="coming-soon.html">Careers</a></li>
+          <li><a href="track-order.html">Track an order</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 col-lg-4">
+        <h3>Contact &amp; hours</h3>
+        <ul class="ff-footer-links">
+          <li><a href="tel:+918045678900"><i class="bi bi-telephone me-2" aria-hidden="true"></i><span class="ltr">+91 80 4567 8900</span></a></li>
+          <li><a href="mailto:hello@freshfold.example"><i class="bi bi-envelope me-2" aria-hidden="true"></i>hello@freshfold.example</a></li>
+          <li class="d-flex"><i class="bi bi-geo-alt me-2 mt-1" aria-hidden="true"></i><address class="mb-0">No. 24, 27th Main Road, HSR Layout Sector 1, Bengaluru 560102</address></li>
+          <li class="mt-2"><i class="bi bi-clock me-2" aria-hidden="true"></i>Pickups: Mon–Sun, 7 AM – 10 PM</li>
+          <li><i class="bi bi-headset me-2" aria-hidden="true"></i>Support: Mon–Sat, 8 AM – 9 PM</li>
+        </ul>
+        <div class="d-flex flex-wrap gap-2 mt-3">
+          <!-- TODO: link to your real App Store / Google Play listings -->
+          <a class="ff-store-btn" href="coming-soon.html"><i class="bi bi-apple" aria-hidden="true"></i><span>Coming soon on<strong>App Store</strong></span></a>
+          <a class="ff-store-btn" href="coming-soon.html"><i class="bi bi-google-play" aria-hidden="true"></i><span>Coming soon on<strong>Google Play</strong></span></a>
+        </div>
+      </div>
+    </div>
+    <div class="ff-footer-bottom d-flex flex-column flex-lg-row gap-3 justify-content-between align-items-lg-center">
+      <p class="mb-0">© <span data-year>2026</span> FreshFold Laundry Services. All rights reserved. · <a href="coming-soon.html">Privacy</a> · <a href="coming-soon.html">Terms</a> · <a href="../sitemap.xml">Sitemap</a></p>
+      <ul class="ff-pay" aria-label="Payment methods we accept">
+        <li><i class="bi bi-credit-card" aria-hidden="true"></i> Visa</li>
+        <li><i class="bi bi-credit-card-2-front" aria-hidden="true"></i> Mastercard</li>
+        <li><i class="bi bi-phone" aria-hidden="true"></i> UPI</li>
+        <li><i class="bi bi-paypal" aria-hidden="true"></i> PayPal</li>
+        <li><i class="bi bi-cash-coin" aria-hidden="true"></i> Cash</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating mobile CTA + back to top -->
+<button type="button" class="btn btn-icon ff-back-top" aria-label="Back to top"><i class="bi bi-arrow-up" aria-hidden="true"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="../assets/js/main.js?v=1.3.3" defer></script>
+
+</body>
+</html>

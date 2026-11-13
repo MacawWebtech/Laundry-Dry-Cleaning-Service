@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page Not Found (404) | FreshFold</title>
+<meta name="description" content="Sorry, this FreshFold page could not be found. Head back to the home page to schedule a laundry pickup, check our prices or track an existing order online.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://www.freshfold.example/pages/404.html">
+<meta name="theme-color" content="#1a64e0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<!-- Open Graph / social preview — TODO: update domain & image -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FreshFold">
+<meta property="og:title" content="Page Not Found (404) | FreshFold">
+<meta property="og:description" content="Sorry, this FreshFold page could not be found. Head back to the home page to schedule a laundry pickup, check our prices or track an existing order online.">
+<meta property="og:url" content="https://www.freshfold.example/pages/404.html">
+<meta property="og:image" content="https://www.freshfold.example/assets/images/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/images/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+<script>
+  /* Theme + direction boot: applies saved or system preference before first paint */
+  (function () { try {
+    var t = localStorage.getItem("ff-theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    var d = localStorage.getItem("ff-dir") || "ltr";
+    var h = document.documentElement; h.setAttribute("data-theme", t); h.setAttribute("data-bs-theme", t); h.setAttribute("dir", d);
+    if (d === "rtl") h.setAttribute("lang", "ar");
+  } catch (e) {} })();
+  /* Image fallback: if a remote photo fails, swap in the bundled local image (data-fallback) */
+  addEventListener("error", function (e) { var i = e.target;
+    if (i.tagName === "IMG" && i.dataset.fallback && i.src.indexOf(i.dataset.fallback) < 0) {
+      var p = i.closest("picture"); if (p) p.querySelectorAll("source").forEach(function (s) { s.remove(); });
+      i.removeAttribute("srcset"); i.src = i.dataset.fallback; }
+  }, true);
+</script>
+<!-- Fonts: Outfit (display) + Plus Jakarta Sans (body) — TODO: swap in style.css :root -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<!-- Template styles (use the .min.css versions in production) -->
+<link rel="stylesheet" href="../assets/css/style.css?v=1.4.0">
+<link rel="stylesheet" href="../assets/css/dark-mode.css?v=1.4.0">
+<link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<main id="main" class="ff-utility ff-has-bg" tabindex="-1" style="background-image:var(--ff-overlay),url('../assets/images/curtain.jpg') !important">
+  <div class="container" style="max-width:760px">
+    <div class="d-flex justify-content-between align-items-center mb-5"><a class="ff-logo" href="index.html" aria-label="FreshFold home">
+          <img class="ff-logo-img" src="../assets/images/logo.png" alt="" width="1044" height="360">
+          <img class="ff-logo-img ff-logo-img--light" src="../assets/images/logo-light.png" alt="" width="1044" height="360">
+        </a><div class="d-flex gap-2"><button type="button" class="btn btn-icon " data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">
+            <i class="bi bi-moon-stars theme-icon-light" aria-hidden="true"></i><i class="bi bi-sun theme-icon-dark" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="btn btn-icon " data-dir-toggle aria-pressed="false" aria-label="Toggle right-to-left layout">
+            <span class="dir-label">RTL</span>
+          </button></div></div>
+
+    <div class="mx-auto mb-4" style="max-width:360px"><picture>
+          <img class="ff-photo rounded-4" src="../assets/images/Steam-pressed by hand.jpg" srcset="" sizes="360px" width="1200" height="800" alt="Clothes drying on a line under a blue sky" data-fallback="../assets/images/lost-sock.jpg">
+        </picture></div>
+    <p class="ff-big-num mb-0" aria-hidden="true">404</p>
+    <h1 class="h2">This page went missing — like a sock in the wash</h1>
+    <p class="lead-ff mb-4">The link may be old or mistyped. Let's get you back to fresh laundry.</p>
+    <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+      <a class="btn btn-accent btn-lg" href="index.html"><i class="bi bi-house" aria-hidden="true"></i> Back to home</a>
+      <a class="btn btn-outline-ff btn-lg" href="schedule-pickup.html">Schedule a pickup</a>
+    </div>
+    <p class="small">Popular: <a href="services.html">Services</a> · <a href="pricing.html">Pricing</a> · <a href="track-order.html">Track order</a> · <a href="contact.html">Contact</a></p>
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="../assets/js/main.js?v=1.3.3" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Schedule a Laundry Pickup | FreshFold</title>
+<meta name="description" content="Schedule a laundry or dry cleaning pickup in seven quick steps: address, service, items, pickup slot, delivery slot, instructions and review. Pay later.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://www.freshfold.example/pages/schedule-pickup.html">
+<meta name="theme-color" content="#1a64e0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<!-- Open Graph / social preview — TODO: update domain & image -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FreshFold">
+<meta property="og:title" content="Schedule a Laundry Pickup | FreshFold">
+<meta property="og:description" content="Schedule a laundry or dry cleaning pickup in seven quick steps: address, service, items, pickup slot, delivery slot, instructions and review. Pay later.">
+<meta property="og:url" content="https://www.freshfold.example/pages/schedule-pickup.html">
+<meta property="og:image" content="https://www.freshfold.example/assets/images/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/images/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+<script>
+  /* Theme + direction boot: applies saved or system preference before first paint */
+  (function () { try {
+    var t = localStorage.getItem("ff-theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    var d = localStorage.getItem("ff-dir") || "ltr";
+    var h = document.documentElement; h.setAttribute("data-theme", t); h.setAttribute("data-bs-theme", t); h.setAttribute("dir", d);
+    if (d === "rtl") h.setAttribute("lang", "ar");
+  } catch (e) {} })();
+  /* Image fallback: if a remote photo fails, swap in the bundled local image (data-fallback) */
+  addEventListener("error", function (e) { var i = e.target;
+    if (i.tagName === "IMG" && i.dataset.fallback && i.src.indexOf(i.dataset.fallback) < 0) {
+      var p = i.closest("picture"); if (p) p.querySelectorAll("source").forEach(function (s) { s.remove(); });
+      i.removeAttribute("srcset"); i.src = i.dataset.fallback; }
+  }, true);
+</script>
+<!-- Fonts: Outfit (display) + Plus Jakarta Sans (body) — TODO: swap in style.css :root -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<!-- Template styles (use the .min.css versions in production) -->
+<link rel="stylesheet" href="../assets/css/style.css?v=1.4.0">
+<link rel="stylesheet" href="../assets/css/dark-mode.css?v=1.4.0">
+<link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="ff-dash">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="ff-sidebar" id="dashSidebar" aria-label="Account navigation">
+    <div class="ff-sidebar-head justify-content-between">
+      <a class="ff-logo" href="dashboard.html" aria-label="FreshFold home">
+          <img class="ff-logo-img" src="../assets/images/logo.png" alt="" width="1044" height="360">
+          <img class="ff-logo-img ff-logo-img--light" src="../assets/images/logo-light.png" alt="" width="1044" height="360">
+        </a>
+      <button type="button" class="btn btn-icon sidebar-toggle d-lg-none" data-sidebar-toggle aria-controls="dashSidebar" aria-expanded="false" aria-label="Close menu"><i class="bi bi-x-lg" aria-hidden="true"></i></button>
+    </div>
+    <nav aria-label="Dashboard">
+      <p class="nav-title">Overview</p><ul class="list-unstyled mb-0"><li><a class="ff-side-link" href="dashboard.html"><i class="bi bi-grid-1x2" aria-hidden="true"></i>Dashboard</a></li><li><a class="ff-side-link active" aria-current="page" href="schedule-pickup.html"><i class="bi bi-calendar-plus" aria-hidden="true"></i>Schedule Pickup</a></li><li><a class="ff-side-link" href="track-order.html"><i class="bi bi-geo-alt" aria-hidden="true"></i>Track Order</a></li><li><a class="ff-side-link" href="orders.html"><i class="bi bi-bag" aria-hidden="true"></i>My Orders</a></li></ul><p class="nav-title">Account</p><ul class="list-unstyled mb-0"><li><a class="ff-side-link" href="payments.html"><i class="bi bi-wallet2" aria-hidden="true"></i>Payments</a></li><li><a class="ff-side-link" href="addresses.html"><i class="bi bi-house-door" aria-hidden="true"></i>Addresses</a></li><li><a class="ff-side-link" href="messages.html"><i class="bi bi-chat-dots" aria-hidden="true"></i>Support Chat<span class="badge rounded-pill text-bg-danger">2</span></a></li><li><a class="ff-side-link" href="notifications.html"><i class="bi bi-bell" aria-hidden="true"></i>Notifications<span class="badge rounded-pill text-bg-primary ff-notif-count">3</span></a></li><li><a class="ff-side-link" href="profile-settings.html"><i class="bi bi-gear" aria-hidden="true"></i>Settings</a></li></ul>
+    </nav>
+    <div class="ff-sidebar-foot">
+      <div class="ff-help-card mb-2">
+        <p class="fw-bold mb-1" style="color:var(--ff-heading)"><i class="bi bi-headset me-1" aria-hidden="true"></i> Need help?</p>
+        <p class="small mb-2">Our team replies in under 10 minutes.</p>
+        <a class="btn btn-sm ff-whatsapp w-100" href="https://wa.me/918045678900"><i class="bi bi-whatsapp" aria-hidden="true"></i> WhatsApp us</a>
+      </div>
+      <a class="ff-side-link" href="login.html"><i class="bi bi-box-arrow-right" aria-hidden="true"></i>Log out</a>
+    </div>
+  </aside>
+  <div class="ff-backdrop" aria-hidden="true"></div>
+
+  <div class="ff-dash-main">
+    <!-- ============ TOPBAR ============ -->
+    <header class="ff-topbar-dash">
+      <button type="button" class="btn btn-icon sidebar-toggle" data-sidebar-toggle aria-controls="dashSidebar" aria-expanded="false" aria-label="Open menu"><i class="bi bi-list" aria-hidden="true"></i></button>
+      <form class="search d-none d-md-block" role="search" action="orders.html">
+        <label for="topSearch" class="visually-hidden">Search orders</label>
+        <div class="ff-input-icon"><i class="bi bi-search" aria-hidden="true"></i><input class="form-control" id="topSearch" type="search" name="q" placeholder="Search orders, e.g. FF-10492"></div>
+      </form>
+      <div class="ms-auto d-flex align-items-center gap-2">
+        <a class="btn btn-accent d-none d-sm-inline-flex" href="schedule-pickup.html"><i class="bi bi-plus-lg" aria-hidden="true"></i> Schedule Pickup</a>
+        <button type="button" class="btn btn-icon " data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">
+            <i class="bi bi-moon-stars theme-icon-light" aria-hidden="true"></i><i class="bi bi-sun theme-icon-dark" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="btn btn-icon " data-dir-toggle aria-pressed="false" aria-label="Toggle right-to-left layout">
+            <span class="dir-label">RTL</span>
+          </button>
+        <a class="btn btn-icon position-relative" href="notifications.html" aria-label="Notifications, 3 unread"><i class="bi bi-bell" aria-hidden="true"></i><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-danger ff-notif-count">3</span></a>
+        <div class="dropdown">
+          <button class="btn p-0 border-0 d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Account menu for Priya Raman">
+            <span class="ff-avatar ff-avatar-sm" aria-hidden="true">PR</span><span class="d-none d-lg-inline fw-semibold" style="color:var(--ff-heading)">Priya</span><i class="bi bi-chevron-down small d-none d-lg-inline" aria-hidden="true"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end shadow">
+            <li><a class="dropdown-item" href="profile-settings.html"><i class="bi bi-person me-2" aria-hidden="true"></i>Profile</a></li>
+            <li><a class="dropdown-item" href="payments.html"><i class="bi bi-wallet2 me-2" aria-hidden="true"></i>Wallet</a></li>
+            <li><a class="dropdown-item" href="index.html"><i class="bi bi-house me-2" aria-hidden="true"></i>Back to website</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-right me-2" aria-hidden="true"></i>Log out</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="ff-dash-content" tabindex="-1">
+      <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-4">
+        <div><h1>Schedule a pickup</h1><p class="mb-0">Takes about 2 minutes. Free pickup &amp; delivery over ₹299.</p></div>
+        
+      </div>
+
+      <p id="wizardLive" class="visually-hidden" aria-live="polite"></p>
+      <ol class="ff-stepper" aria-label="Booking progress"><li data-step="1">Address</li><li data-step="2">Service</li><li data-step="3">Items</li><li data-step="4">Pickup</li><li data-step="5">Delivery</li><li data-step="6">Notes</li><li data-step="7">Review</li></ol>
+      <div class="row g-4">
+        <div class="col-xl-8">
+          <form id="pickupWizard" class="ff-panel p-4" data-validate data-wizard aria-label="Schedule a pickup">
+
+            <!-- STEP 1: ADDRESS -->
+            <fieldset class="ff-wizard-step" data-step="1">
+              <h2 class="h4">Where should we pick up?</h2>
+              <p>Use a saved address or enter a new one.</p>
+              <div class="mb-3"><label class="form-label" for="wzSaved">Saved addresses</label>
+                <select class="form-select" id="wzSaved" onchange="if(this.value==='home'){document.getElementById('wzAddress1').value='Flat 402, Lakeview Residency';document.getElementById('wzAddress2').value='17th Cross, 4th Main, HSR Layout Sector 2';document.getElementById('wzCity').value='Bengaluru';document.getElementById('wzPincode').value='560102';}else if(this.value==='office'){document.getElementById('wzAddress1').value='Level 6, Prestige Tech Park';document.getElementById('wzAddress2').value='Outer Ring Road, Kadubeesanahalli';document.getElementById('wzCity').value='Bengaluru';document.getElementById('wzPincode').value='560103';}">
+                  <option value="">Enter a new address</option><option value="home">Home — HSR Layout</option><option value="office">Office — Bellandur</option>
+                </select></div>
+              <div class="row g-3">
+                <div class="col-12 ff-field"><label class="form-label" for="wzAddress1">Flat / house no. &amp; building</label><input class="form-control" id="wzAddress1" name="address1" autocomplete="address-line1" required data-error-required="Tell the rider which flat or house to come to."></div>
+                <div class="col-12 ff-field"><label class="form-label" for="wzAddress2">Street &amp; area</label><input class="form-control" id="wzAddress2" name="address2" autocomplete="address-line2" required data-error-required="Add the street or area name."></div>
+                <div class="col-md-6 ff-field"><label class="form-label" for="wzCity">City</label><input class="form-control" id="wzCity" name="city" autocomplete="address-level2" value="Bengaluru" required></div>
+                <div class="col-md-6 ff-field"><label class="form-label" for="wzPincode">Pincode</label><input class="form-control" id="wzPincode" name="pincode" inputmode="numeric" maxlength="6" pattern="[0-9]{6}" autocomplete="postal-code" required data-error="Pincodes have 6 digits, like 560102."></div>
+                <div class="col-md-6 ff-field"><label class="form-label" for="wzPhone">Contact phone</label><input class="form-control" id="wzPhone" name="phone" type="tel" autocomplete="tel" pattern="[+0-9 ()-]{10,16}" value="+91 98450 12345" required data-error="Please enter a valid phone number."></div>
+                <div class="col-md-6 ff-field"><label class="form-label" for="wzLandmark">Landmark <span class="fw-normal text-muted-ff">(optional)</span></label><input class="form-control" id="wzLandmark" name="landmark" placeholder="Opposite BDA Complex"></div>
+              </div>
+              <div class="d-flex justify-content-between gap-2 mt-4 pt-3 border-top"><span></span><button type="button" class="btn btn-primary-ff" data-next>Continue <i class="bi bi-arrow-right" aria-hidden="true"></i></button></div>
+            </fieldset>
+
+            <!-- STEP 2: SERVICE -->
+            <fieldset class="ff-wizard-step" data-step="2" hidden>
+              <h2 class="h4">What do you need?</h2>
+              <p>Pick the main service. You can add other items in the same bag — just mention them in notes.</p>
+              <div class="row g-3 ff-field"><div class="col-md-6 ff-option-card"><input type="radio" name="service" id="svc-wash-fold" value="wash-fold" required data-error="Choose a service to continue." checked><label for="svc-wash-fold"><span class="ff-icon " aria-hidden="true"><i class="bi bi-basket2"></i></span><span><strong class="d-block" style="color:var(--ff-heading)">Wash &amp; Fold</strong><span class="small text-muted-ff">₹89/kg · washed, dried, folded</span></span></label></div><div class="col-md-6 ff-option-card"><input type="radio" name="service" id="svc-wash-iron" value="wash-iron" required data-error="Choose a service to continue."><label for="svc-wash-iron"><span class="ff-icon green" aria-hidden="true"><i class="bi bi-water"></i></span><span><strong class="d-block" style="color:var(--ff-heading)">Wash &amp; Iron</strong><span class="small text-muted-ff">₹109/kg · shirts on hangers</span></span></label></div><div class="col-md-6 ff-option-card"><input type="radio" name="service" id="svc-dry-cleaning" value="dry-cleaning" required data-error="Choose a service to continue."><label for="svc-dry-cleaning"><span class="ff-icon coral" aria-hidden="true"><i class="bi bi-stars"></i></span><span><strong class="d-block" style="color:var(--ff-heading)">Dry Cleaning</strong><span class="small text-muted-ff">From ₹149/item · suits, sarees, silks</span></span></label></div><div class="col-md-6 ff-option-card"><input type="radio" name="service" id="svc-ironing" value="ironing" required data-error="Choose a service to continue."><label for="svc-ironing"><span class="ff-icon sun" aria-hidden="true"><i class="bi bi-fire"></i></span><span><strong class="d-block" style="color:var(--ff-heading)">Ironing only</strong><span class="small text-muted-ff">₹20/piece · steam pressed</span></span></label></div></div>
+              <h3 class="h6 mt-4">How fast?</h3>
+              <div class="ff-slot-group" role="radiogroup" aria-label="Turnaround speed"><div class="ff-slot"><input type="radio" name="speed" id="sp-standard" value="standard" checked><label for="sp-standard">Standard<small>48 hours · included</small></label></div><div class="ff-slot"><input type="radio" name="speed" id="sp-express" value="express"><label for="sp-express">Express<small>24 hours · +50%</small></label></div><div class="ff-slot"><input type="radio" name="speed" id="sp-sameday" value="sameday"><label for="sp-sameday">Same day<small>Pickup by 11 AM · +100%</small></label></div></div>
+              <div class="d-flex justify-content-between gap-2 mt-4 pt-3 border-top"><button type="button" class="btn btn-ghost" data-prev><i class="bi bi-arrow-left" aria-hidden="true"></i> Back</button><button type="button" class="btn btn-primary-ff" data-next>Continue <i class="bi bi-arrow-right" aria-hidden="true"></i></button></div>
+            </fieldset>
+
+            <!-- STEP 3: ITEMS / WEIGHT -->
+            <fieldset class="ff-wizard-step" data-step="3" hidden>
+              <h2 class="h4">Roughly how much?</h2>
+              <p>An estimate is fine — we weigh and count at check-in and confirm the final price before cleaning.</p>
+              <div data-qty-for="wash-fold wash-iron">
+                <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 py-3 border-bottom">
+              <div><p class="fw-bold mb-0" style="color:var(--ff-heading)" id="wzKg-l">Estimated weight</p><p class="small mb-0">₹89 per kg</p></div>
+              <div class="ff-qty"><button type="button" data-qty="-" aria-label="Decrease Estimated weight"><i class="bi bi-dash" aria-hidden="true"></i></button><input class="qty" type="number" id="wzKg" name="wzKg" min="0" step="0.5" value="5" data-price="89" inputmode="decimal" aria-labelledby="wzKg-l"><button type="button" data-qty="+" aria-label="Increase Estimated weight"><i class="bi bi-plus" aria-hidden="true"></i></button></div>
+            </div>
+                <p class="ff-hint">Tip: a full laundry basket ≈ 5–6 kg. Minimum 3 kg.</p>
+              </div>
+              <div data-qty-for="dry-cleaning" hidden>
+                <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 py-3 border-bottom">
+              <div><p class="fw-bold mb-0" style="color:var(--ff-heading)" id="wzShirts-l">Shirts / tops</p><p class="small mb-0">₹149 per item</p></div>
+              <div class="ff-qty"><button type="button" data-qty="-" aria-label="Decrease Shirts / tops"><i class="bi bi-dash" aria-hidden="true"></i></button><input class="qty" type="number" id="wzShirts" name="wzShirts" min="0" step="1" value="0" data-price="149" inputmode="decimal" aria-labelledby="wzShirts-l"><button type="button" data-qty="+" aria-label="Increase Shirts / tops"><i class="bi bi-plus" aria-hidden="true"></i></button></div>
+            </div><div class="d-flex flex-wrap justify-content-between align-items-center gap-3 py-3 border-bottom">
+              <div><p class="fw-bold mb-0" style="color:var(--ff-heading)" id="wzTrousers-l">Trousers / skirts</p><p class="small mb-0">₹169 per item</p></div>
+              <div class="ff-qty"><button type="button" data-qty="-" aria-label="Decrease Trousers / skirts"><i class="bi bi-dash" aria-hidden="true"></i></button><input class="qty" type="number" id="wzTrousers" name="wzTrousers" min="0" step="1" value="0" data-price="169" inputmode="decimal" aria-labelledby="wzTrousers-l"><button type="button" data-qty="+" aria-label="Increase Trousers / skirts"><i class="bi bi-plus" aria-hidden="true"></i></button></div>
+            </div><div class="d-flex flex-wrap justify-content-between align-items-center gap-3 py-3 border-bottom">
+              <div><p class="fw-bold mb-0" style="color:var(--ff-heading)" id="wzSuits-l">Suits (2-piece)</p><p class="small mb-0">₹599 per item</p></div>
+              <div class="ff-qty"><button type="button" data-qty="-" aria-label="Decrease Suits (2-piece)"><i class="bi bi-dash" aria-hidden="true"></i></button><input class="qty" type="number" id="wzSuits" name="wzSuits" min="0" step="1" value="0" data-price="599" inputmode="decimal" aria-labelledby="wzSuits-l"><button type="button" data-qty="+" aria-label="Increase Suits (2-piece)"><i class="bi bi-plus" aria-hidden="true"></i></button></div>
+            </div><div class="d-flex flex-wrap justify-content-between align-items-center gap-3 py-3 border-bottom">
+              <div><p class="fw-bold mb-0" style="color:var(--ff-heading)" id="wzSarees-l">Sarees</p><p class="small mb-0">₹249 per item</p></div>
+              <div class="ff-qty"><button type="button" data-qty="-" aria-label="Decrease Sarees"><i class="bi bi-dash" aria-hidden="true"></i></button><input class="qty" type="number" id="wzSarees" name="wzSarees" min="0" step="1" value="0" data-price="249" inputmode="decimal" aria-labelledby="wzSarees-l"><button type="button" data-qty="+" aria-label="Increase Sarees"><i class="bi bi-plus" aria-hidden="true"></i></button></div>
+            </div><div class="d-flex flex-wrap justify-content-between align-items-center gap-3 py-3 border-bottom">
+              <div><p class="fw-bold mb-0" style="color:var(--ff-heading)" id="wzDresses-l">Dresses</p><p class="small mb-0">₹299 per item</p></div>
+              <div class="ff-qty"><button type="button" data-qty="-" aria-label="Decrease Dresses"><i class="bi bi-dash" aria-hidden="true"></i></button><input class="qty" type="number" id="wzDresses" name="wzDresses" min="0" step="1" value="0" data-price="299" inputmode="decimal" aria-labelledby="wzDresses-l"><button type="button" data-qty="+" aria-label="Increase Dresses"><i class="bi bi-plus" aria-hidden="true"></i></button></div>
+            </div>
+              </div>
+              <div data-qty-for="ironing" hidden>
+                <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 py-3 border-bottom">
+              <div><p class="fw-bold mb-0" style="color:var(--ff-heading)" id="wzPieces-l">Pieces to iron</p><p class="small mb-0">₹20 per piece</p></div>
+              <div class="ff-qty"><button type="button" data-qty="-" aria-label="Decrease Pieces to iron"><i class="bi bi-dash" aria-hidden="true"></i></button><input class="qty" type="number" id="wzPieces" name="wzPieces" min="0" step="1" value="10" data-price="20" inputmode="decimal" aria-labelledby="wzPieces-l"><button type="button" data-qty="+" aria-label="Increase Pieces to iron"><i class="bi bi-plus" aria-hidden="true"></i></button></div>
+            </div>
+              </div>
+              <div class="d-flex justify-content-between gap-2 mt-4 pt-3 border-top"><button type="button" class="btn btn-ghost" data-prev><i class="bi bi-arrow-left" aria-hidden="true"></i> Back</button><button type="button" class="btn btn-primary-ff" data-next>Continue <i class="bi bi-arrow-right" aria-hidden="true"></i></button></div>
+            </fieldset>
+
+            <!-- STEP 4: PICKUP SLOT -->
+            <fieldset class="ff-wizard-step" data-step="4" hidden>
+              <h2 class="h4">When should we pick up?</h2>
+              <p>Riders call 15 minutes before arriving.</p>
+              <div class="row g-3">
+                <div class="col-md-6 ff-field"><label class="form-label" for="wzPickupDate">Pickup date</label><input type="date" class="form-control" id="wzPickupDate" name="pickup_date" required data-min-today data-default-today data-error-required="Choose a pickup date."></div>
+                <div class="col-md-6 ff-field"><label class="form-label" for="wzPickupSlot">Pickup slot</label><select class="form-select" id="wzPickupSlot" name="pickup_slot" required data-error-required="Choose a 2-hour window."><option value="">Choose a time slot</option></select></div>
+              </div>
+              <p class="small mt-3 mb-0"><a href="#" data-booking-calendar><i class="bi bi-calendar3" aria-hidden="true"></i> Prefer a calendar view?</a></p>
+              <div class="d-flex justify-content-between gap-2 mt-4 pt-3 border-top"><button type="button" class="btn btn-ghost" data-prev><i class="bi bi-arrow-left" aria-hidden="true"></i> Back</button><button type="button" class="btn btn-primary-ff" data-next>Continue <i class="bi bi-arrow-right" aria-hidden="true"></i></button></div>
+            </fieldset>
+
+            <!-- STEP 5: DELIVERY SLOT -->
+            <fieldset class="ff-wizard-step" data-step="5" hidden>
+              <h2 class="h4">When should we bring it back?</h2>
+              <p class="ff-hint" id="wzDeliveryHint" aria-live="polite"></p>
+              <div class="row g-3">
+                <div class="col-md-6 ff-field"><label class="form-label" for="wzDeliveryDate">Delivery date</label><input type="date" class="form-control" id="wzDeliveryDate" name="delivery_date" required data-min-today data-error-required="Choose a delivery date."></div>
+                <div class="col-md-6 ff-field"><label class="form-label" for="wzDeliverySlot">Delivery slot</label><select class="form-select" id="wzDeliverySlot" name="delivery_slot" required data-error-required="Choose a delivery window."><option value="">Choose a time slot</option></select></div>
+              </div>
+              <div class="d-flex justify-content-between gap-2 mt-4 pt-3 border-top"><button type="button" class="btn btn-ghost" data-prev><i class="bi bi-arrow-left" aria-hidden="true"></i> Back</button><button type="button" class="btn btn-primary-ff" data-next>Continue <i class="bi bi-arrow-right" aria-hidden="true"></i></button></div>
+            </fieldset>
+
+            <!-- STEP 6: INSTRUCTIONS -->
+            <fieldset class="ff-wizard-step" data-step="6" hidden>
+              <h2 class="h4">Anything we should know?</h2>
+              <div class="ff-field mb-3"><label class="form-label" for="wzNotes">Special instructions <span class="fw-normal text-muted-ff">(optional)</span></label>
+                <textarea class="form-control" id="wzNotes" name="notes" rows="4" maxlength="500" placeholder="e.g. Coffee stain on the white shirt. Fold, don't hang, the T-shirts. Leave with security if I'm not home."></textarea>
+                <p class="ff-hint">Max 500 characters.</p></div>
+              <div class="row g-2">
+                <div class="col-sm-6"><div class="form-check"><input class="form-check-input" type="checkbox" id="wzFragrance" name="fragrance_free"><label class="form-check-label" for="wzFragrance">Fragrance-free detergent</label></div></div>
+                <div class="col-sm-6"><div class="form-check"><input class="form-check-input" type="checkbox" id="wzHangers" name="hangers" checked><label class="form-check-label" for="wzHangers">Shirts on hangers</label></div></div>
+                <div class="col-sm-6"><div class="form-check"><input class="form-check-input" type="checkbox" id="wzContactless" name="contactless"><label class="form-check-label" for="wzContactless">Contactless pickup</label></div></div>
+                <div class="col-sm-6"><div class="form-check"><input class="form-check-input" type="checkbox" id="wzStain" name="stain_care"><label class="form-check-label" for="wzStain">Premium stain care (+₹49/item)</label></div></div>
+              </div>
+              <div class="d-flex justify-content-between gap-2 mt-4 pt-3 border-top"><button type="button" class="btn btn-ghost" data-prev><i class="bi bi-arrow-left" aria-hidden="true"></i> Back</button><button type="button" class="btn btn-primary-ff" data-next>Continue <i class="bi bi-arrow-right" aria-hidden="true"></i></button></div>
+            </fieldset>
+
+            <!-- STEP 7: REVIEW & CONFIRM -->
+            <fieldset class="ff-wizard-step" data-step="7" hidden>
+              <h2 class="h4">Review &amp; confirm</h2>
+              <p>Check the details below. You'll only pay after we weigh your clothes.</p>
+              <dl id="reviewList" class="mb-3"></dl>
+              <div class="d-flex flex-wrap gap-2 mb-3"><button type="button" class="btn btn-sm btn-ghost" data-goto="0">Edit address</button><button type="button" class="btn btn-sm btn-ghost" data-goto="1">Edit service</button><button type="button" class="btn btn-sm btn-ghost" data-goto="3">Edit pickup time</button></div>
+              <div class="ff-field"><div class="form-check"><input class="form-check-input" type="checkbox" id="wzAgree" name="agree" required data-error-required="Please confirm to book your pickup."><label class="form-check-label" for="wzAgree">I agree to the <a href="coming-soon.html">service terms</a> and damage policy.</label></div></div>
+              <div class="d-flex justify-content-between gap-2 mt-4 pt-3 border-top"><button type="button" class="btn btn-ghost" data-prev><i class="bi bi-arrow-left" aria-hidden="true"></i> Back</button><button type="submit" class="btn btn-accent btn-lg"><span class="btn-label"><i class="bi bi-check2-circle" aria-hidden="true"></i> Confirm pickup</span></button></div>
+            </fieldset>
+          </form>
+
+          <!-- SUCCESS -->
+          <section id="wizardDone" class="ff-panel p-5 text-center" hidden aria-labelledby="doneTitle">
+            <span class="ff-icon green mx-auto" style="width:88px;height:88px;border-radius:50%;font-size:2.4rem" aria-hidden="true"><i class="bi bi-check-lg"></i></span>
+            <h2 id="doneTitle" tabindex="-1">Pickup booked!</h2>
+            <p class="lead-ff">Order <strong class="ltr" id="doneOrderId">FF-10500</strong> · Pickup <span id="donePickup">—</span></p>
+            <p>We've sent the details by SMS and email. Your rider will call 15 minutes before arriving.</p>
+            <div class="d-flex flex-wrap justify-content-center gap-2"><a class="btn btn-accent" id="doneTrackLink" href="track-order.html">Track this order</a><a class="btn btn-ghost" href="dashboard.html">Back to dashboard</a></div>
+          </section>
+        </div>
+
+        <!-- SUMMARY -->
+        <aside class="col-xl-4" aria-label="Order summary">
+          <div class="ff-panel position-sticky" style="top:96px" id="wizSummary">
+            <h2 class="h5">Your pickup</h2>
+            <dl class="small mb-0">
+              <div class="d-flex justify-content-between py-2 border-bottom"><dt>Service</dt><dd class="mb-0 fw-semibold" id="sumService">—</dd></div>
+              <div class="d-flex justify-content-between py-2 border-bottom"><dt>Quantity</dt><dd class="mb-0 fw-semibold" id="sumQty">—</dd></div>
+              <div class="d-flex justify-content-between py-2 border-bottom"><dt>Speed</dt><dd class="mb-0 fw-semibold" id="sumSpeed">—</dd></div>
+              <div class="d-flex justify-content-between py-2 border-bottom"><dt>Pickup</dt><dd class="mb-0 fw-semibold text-end" id="sumPickup">—</dd></div>
+              <div class="d-flex justify-content-between py-2 border-bottom"><dt>Delivery</dt><dd class="mb-0 fw-semibold text-end" id="sumDelivery">—</dd></div>
+              <div class="d-flex justify-content-between py-2"><dt>Cleaning</dt><dd class="mb-0" id="sumSubtotal">₹0</dd></div>
+              <div class="d-flex justify-content-between py-1"><dt>Speed surcharge</dt><dd class="mb-0" id="sumSurcharge">₹0</dd></div>
+              <div class="d-flex justify-content-between py-1 border-bottom pb-2"><dt>Pickup &amp; delivery</dt><dd class="mb-0" id="sumDeliveryFee">Free</dd></div>
+              <div class="d-flex justify-content-between pt-3"><dt class="h6 mb-0">Estimated total</dt><dd class="mb-0 h5" id="sumTotal" style="color:var(--ff-primary)">₹0</dd></div>
+            </dl>
+            <p class="ff-hint mt-3 mb-0"><i class="bi bi-shield-check" aria-hidden="true"></i> Pay after weighing. Free cancellation up to 1 hour before pickup.</p>
+          </div>
+        </aside>
+      </div>
+    </main>
+    <footer class="px-4 py-3 small text-muted-ff border-top" style="border-color:var(--ff-border)!important">© <span data-year>2026</span> FreshFold · <a href="contact.html">Support</a> · <a href="index.html">Website</a></footer>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="../assets/js/main.js?v=1.3.3" defer></script>
+<script src="../assets/js/dashboard.js" defer></script>
+</body>
+</html>

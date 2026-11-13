@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laundry & Dry Cleaning Services | FreshFold</title>
+<meta name="description" content="Wash & fold, dry cleaning, ironing, curtains, duvets and shoe cleaning — collected from your door and delivered back fresh in 24–48 hours across Bengaluru.">
+<link rel="canonical" href="https://www.freshfold.example/pages/services.html">
+<meta name="theme-color" content="#1a64e0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<!-- Open Graph / social preview — TODO: update domain & image -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FreshFold">
+<meta property="og:title" content="Laundry & Dry Cleaning Services | FreshFold">
+<meta property="og:description" content="Wash & fold, dry cleaning, ironing, curtains, duvets and shoe cleaning — collected from your door and delivered back fresh in 24–48 hours across Bengaluru.">
+<meta property="og:url" content="https://www.freshfold.example/pages/services.html">
+<meta property="og:image" content="https://www.freshfold.example/assets/images/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/images/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+<script>
+  /* Theme + direction boot: applies saved or system preference before first paint */
+  (function () { try {
+    var t = localStorage.getItem("ff-theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    var d = localStorage.getItem("ff-dir") || "ltr";
+    var h = document.documentElement; h.setAttribute("data-theme", t); h.setAttribute("data-bs-theme", t); h.setAttribute("dir", d);
+    if (d === "rtl") h.setAttribute("lang", "ar");
+  } catch (e) {} })();
+  /* Image fallback: if a remote photo fails, swap in the bundled local image (data-fallback) */
+  addEventListener("error", function (e) { var i = e.target;
+    if (i.tagName === "IMG" && i.dataset.fallback && i.src.indexOf(i.dataset.fallback) < 0) {
+      var p = i.closest("picture"); if (p) p.querySelectorAll("source").forEach(function (s) { s.remove(); });
+      i.removeAttribute("srcset"); i.src = i.dataset.fallback; }
+  }, true);
+</script>
+<!-- Fonts: Outfit (display) + Plus Jakarta Sans (body) — TODO: swap in style.css :root -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<!-- Template styles (use the .min.css versions in production) -->
+<link rel="stylesheet" href="../assets/css/style.css?v=1.4.0">
+<link rel="stylesheet" href="../assets/css/dark-mode.css?v=1.4.0">
+<link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- ============ TOP BAR ============ -->
+<div class="ff-topbar d-none d-md-block">
+  <div class="container d-flex align-items-center justify-content-between gap-3">
+    <p class="mb-0 text-white-50"><i class="bi bi-clock me-1" aria-hidden="true"></i> Pickups 7 AM – 10 PM, every day · <span class="text-white">Free pickup &amp; delivery over ₹299</span></p>
+    <div class="d-flex gap-3"><a href="track-order.html"><i class="bi bi-geo-alt me-1" aria-hidden="true"></i>Track order</a><a href="contact.html"><i class="bi bi-headset me-1" aria-hidden="true"></i>Help</a></div>
+  </div>
+</div>
+
+<!-- ============ HEADER / NAVIGATION ============ -->
+<header class="ff-header">
+  <nav class="navbar navbar-expand-xl" aria-label="Main navigation">
+    <div class="container">
+      <a class="ff-logo" href="index.html" aria-label="FreshFold home">
+          <img class="ff-logo-img" src="../assets/images/logo.png" alt="" width="1044" height="360">
+          <img class="ff-logo-img ff-logo-img--light" src="../assets/images/logo-light.png" alt="" width="1044" height="360">
+        </a>
+      <div class="d-flex align-items-center gap-2 d-xl-none ms-auto me-2">
+        <button type="button" class="btn btn-icon " data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">
+            <i class="bi bi-moon-stars theme-icon-light" aria-hidden="true"></i><i class="bi bi-sun theme-icon-dark" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="btn btn-icon " data-dir-toggle aria-pressed="false" aria-label="Toggle right-to-left layout">
+            <span class="dir-label">RTL</span>
+          </button>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Open menu">
+        <span class="navbar-toggler-icon" aria-hidden="true"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ff-nav mx-auto gap-xl-1">
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="index.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+            <ul class="dropdown-menu ff-dropdown">
+              <li><a class="dropdown-item" href="index.html"><i class="bi bi-house me-2" aria-hidden="true"></i>Home 1 — Classic</a></li>
+              <li><a class="dropdown-item" href="index-2.html"><i class="bi bi-lightning-charge me-2" aria-hidden="true"></i>Home 2 — Express</a></li>
+            </ul></li>
+          <li class="nav-item"><a class="nav-link" aria-current="page" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="how-it-works.html">How It Works</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <div class="d-flex flex-column flex-xl-row align-items-xl-center gap-2 mt-3 mt-xl-0">
+          <a class="ff-phone" href="tel:+918045678900"><i class="bi bi-telephone-fill text-primary-ff" aria-hidden="true"></i><span class="num-text ltr">+91 80 4567 8900</span></a>
+          <div class="d-none d-xl-flex gap-2"><button type="button" class="btn btn-icon " data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">
+            <i class="bi bi-moon-stars theme-icon-light" aria-hidden="true"></i><i class="bi bi-sun theme-icon-dark" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="btn btn-icon " data-dir-toggle aria-pressed="false" aria-label="Toggle right-to-left layout">
+            <span class="dir-label">RTL</span>
+          </button></div>
+          <a class="btn btn-ghost" href="login.html"><i class="bi bi-person" aria-hidden="true"></i> Login</a>
+          <a class="btn btn-accent" href="schedule-pickup.html"><i class="bi bi-calendar-check" aria-hidden="true"></i> Schedule Pickup</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="main" tabindex="-1">
+
+<!-- ============ PAGE HERO ============ -->
+<section class="ff-page-hero ff-has-bg" aria-labelledby="pageTitle" style="background-image:var(--ff-overlay),url('../assets/images/dry.jpg') !important">
+  <div class="container position-relative">
+    <nav aria-label="Breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">Home</a></li><li class="breadcrumb-item active" aria-current="page">Services</li></ol></nav>
+    <span class="eyebrow">Our services</span>
+    <h1 id="pageTitle">Laundry &amp; dry cleaning services</h1>
+    <p class="lead-ff">Everything from your everyday wash to bridal lehengas — collected from your door, cleaned by specialists and returned in 24–48 hours.</p>
+    
+  </div>
+</section>
+
+<!-- ============ SERVICE GRID + FILTER ============ -->
+<section class="ff-section pt-4" aria-labelledby="gridTitle">
+  <div class="container">
+    <h2 id="gridTitle" class="visually-hidden">All services</h2>
+    <div class="ff-filter mb-3" data-filter-group="serviceGrid" role="group" aria-label="Filter services">
+      <button type="button" class="btn active" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" class="btn" data-filter="laundry" aria-pressed="false">Laundry</button>
+      <button type="button" class="btn" data-filter="dry" aria-pressed="false">Dry cleaning</button>
+      <button type="button" class="btn" data-filter="ironing" aria-pressed="false">Ironing</button>
+      <button type="button" class="btn" data-filter="home" aria-pressed="false">Home linen</button>
+      <button type="button" class="btn" data-filter="specialty" aria-pressed="false">Specialty</button>
+    </div>
+    <nav class="text-center small mb-5" aria-label="Jump to service">
+      Jump to: <a href="#wash-fold">Wash &amp; Fold</a> · <a href="service-details.html">Dry Cleaning</a> · <a href="#ironing">Ironing</a> · <a href="#home-care">Home linen</a> · <a href="#specialty">Shoes</a>
+    </nav>
+    <p id="filterLive" class="visually-hidden" aria-live="polite"></p>
+    <div class="row g-4" id="serviceGrid">
+      <div class="col-md-6 col-lg-3" data-category="laundry">
+        <article class="ff-card ff-service-card">
+          <div class="media"><picture>
+          <img class="ff-photo " src="../assets/images/wash and fold.jpg" srcset=" " sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw" width="1200" height="750" alt="Stack of folded shirts" data-fallback="../assets/images/service-wash-fold.jpg" loading="lazy" decoding="async">
+        </picture></div>
+          <div class="body">
+            <span class="ff-icon ff-icon-sm" aria-hidden="true"><i class="bi bi-basket2"></i></span>
+            <h3 class="h5">Wash &amp; Fold</h3>
+            <p class="small">Everyday clothes, gym wear and towels washed at the right temperature, tumble-dried and folded.</p>
+            <div class="d-flex align-items-center justify-content-between gap-2 mt-auto">
+              <p class="ff-price-from mb-0 small">From <strong class="fs-5">₹89/kg</strong></p>
+              <a class="link-arrow small" href="services.html#wash-fold">Details<span class="visually-hidden"> for Wash &amp; Fold</span> <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-3" data-category="laundry">
+        <article class="ff-card ff-service-card">
+          <div class="media"><picture>
+          <img class="ff-photo " src="../assets/images/Washed in separate loads.jpg" srcset="" sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw" width="1200" height="750" alt="Washer and dryer" data-fallback="../assets/images/service-wash-iron.jpg" loading="lazy" decoding="async">
+        </picture></div>
+          <div class="body">
+            <span class="ff-icon ff-icon-sm" aria-hidden="true"><i class="bi bi-water"></i></span>
+            <h3 class="h5">Wash &amp; Iron</h3>
+            <p class="small">Washed, dried and steam-ironed — shirts on hangers, the rest folded. Perfect for office wear.</p>
+            <div class="d-flex align-items-center justify-content-between gap-2 mt-auto">
+              <p class="ff-price-from mb-0 small">From <strong class="fs-5">₹109/kg</strong></p>
+              <a class="link-arrow small" href="services.html#wash-fold">Details<span class="visually-hidden"> for Wash &amp; Iron</span> <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-3" data-category="dry">
+        <article class="ff-card ff-service-card">
+          <div class="media"><picture>
+          <img class="ff-photo " src="../assets/images/dry cleaning.jpg" srcset="" sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw" width="1200" height="750" alt="Dress shirts on hangers after dry cleaning" data-fallback="../assets/images/service-dry-cleaning.jpg" loading="lazy" decoding="async">
+        </picture></div>
+          <div class="body">
+            <span class="ff-icon ff-icon-sm" aria-hidden="true"><i class="bi bi-stars"></i></span>
+            <h3 class="h5">Dry Cleaning</h3>
+            <p class="small">Suits, blazers, silks, sarees and party wear cleaned with gentle solvents and hand-finished.</p>
+            <div class="d-flex align-items-center justify-content-between gap-2 mt-auto">
+              <p class="ff-price-from mb-0 small">From <strong class="fs-5">₹149/item</strong></p>
+              <a class="link-arrow small" href="service-details.html">Details<span class="visually-hidden"> for Dry Cleaning</span> <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-3" data-category="dry">
+        <article class="ff-card ff-service-card">
+          <div class="media"><picture>
+          <img class="ff-photo " src="../assets/images/Premium Garment Care.jpg" srcset="" sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw" width="1200" height="750" alt="Suit on a hanger" data-fallback="../assets/images/service-premium.jpg" loading="lazy" decoding="async">
+        </picture></div>
+          <div class="body">
+            <span class="ff-icon ff-icon-sm" aria-hidden="true"><i class="bi bi-gem"></i></span>
+            <h3 class="h5">Premium Garment Care</h3>
+            <p class="small">Bridal wear, lehengas, sherwanis and designer pieces — inspected, hand-cleaned and bagged.</p>
+            <div class="d-flex align-items-center justify-content-between gap-2 mt-auto">
+              <p class="ff-price-from mb-0 small">From <strong class="fs-5">₹449/item</strong></p>
+              <a class="link-arrow small" href="service-details.html#pricing">Details<span class="visually-hidden"> for Premium Garment Care</span> <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-3" data-category="ironing">
+        <article class="ff-card ff-service-card">
+          <div class="media"><picture>
+          <img class="ff-photo " src="../assets/images/Ironing & Pressing.jpg" srcset="" sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw" width="1200" height="750" alt="Steam iron on an ironing board" data-fallback="../assets/images/service-ironing.jpg" loading="lazy" decoding="async">
+        </picture></div>
+          <div class="body">
+            <span class="ff-icon ff-icon-sm" aria-hidden="true"><i class="bi bi-fire"></i></span>
+            <h3 class="h5">Ironing &amp; Pressing</h3>
+            <p class="small">Steam-pressed shirts, trousers, kurtas and sarees. Collar and cuff detailing included.</p>
+            <div class="d-flex align-items-center justify-content-between gap-2 mt-auto">
+              <p class="ff-price-from mb-0 small">From <strong class="fs-5">₹20/piece</strong></p>
+              <a class="link-arrow small" href="services.html#ironing">Details<span class="visually-hidden"> for Ironing &amp; Pressing</span> <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-3" data-category="home">
+        <article class="ff-card ff-service-card">
+          <div class="media"><picture>
+          <img class="ff-photo " src="../assets/images/Curtains & Upholstery.jpg" srcset="" sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw" width="1200" height="750" alt="Sunlight through clean sheer curtains" data-fallback="../assets/images/service-curtains.jpg" loading="lazy" decoding="async">
+        </picture></div>
+          <div class="body">
+            <span class="ff-icon ff-icon-sm" aria-hidden="true"><i class="bi bi-window"></i></span>
+            <h3 class="h5">Curtains &amp; Upholstery</h3>
+            <p class="small">Curtains taken down, cleaned without shrinking and steamed — re-hanging available.</p>
+            <div class="d-flex align-items-center justify-content-between gap-2 mt-auto">
+              <p class="ff-price-from mb-0 small">From <strong class="fs-5">₹299/panel</strong></p>
+              <a class="link-arrow small" href="services.html#home-care">Details<span class="visually-hidden"> for Curtains &amp; Upholstery</span> <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-3" data-category="home">
+        <article class="ff-card ff-service-card">
+          <div class="media"><picture>
+          <img class="ff-photo " src="../assets/images/Duvets & Blankets.jpg" srcset="" sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw" width="1200" height="750" alt="Fresh white pillows and comforter on a bed" data-fallback="../assets/images/service-blankets.jpg" loading="lazy" decoding="async">
+        </picture></div>
+          <div class="body">
+            <span class="ff-icon ff-icon-sm" aria-hidden="true"><i class="bi bi-moon-stars"></i></span>
+            <h3 class="h5">Duvets &amp; Blankets</h3>
+            <p class="small">Quilts, duvets, comforters and blankets deep-cleaned in large-drum machines.</p>
+            <div class="d-flex align-items-center justify-content-between gap-2 mt-auto">
+              <p class="ff-price-from mb-0 small">From <strong class="fs-5">₹399/item</strong></p>
+              <a class="link-arrow small" href="services.html#home-care">Details<span class="visually-hidden"> for Duvets &amp; Blankets</span> <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-3" data-category="specialty">
+        <article class="ff-card ff-service-card">
+          <div class="media"><picture>
+          <img class="ff-photo " src="../assets/images/shoe.jpg" srcset="" sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw" width="1200" height="750" alt="Pair of clean sneakers" data-fallback="../assets/images/service-shoes.jpg" loading="lazy" decoding="async">
+        </picture></div>
+          <div class="body">
+            <span class="ff-icon ff-icon-sm" aria-hidden="true"><i class="bi bi-person-walking"></i></span>
+            <h3 class="h5">Shoe Cleaning</h3>
+            <p class="small">Sneakers, canvas and leather shoes cleaned, deodorised and whitened where safe.</p>
+            <div class="d-flex align-items-center justify-content-between gap-2 mt-auto">
+              <p class="ff-price-from mb-0 small">From <strong class="fs-5">₹299/pair</strong></p>
+              <a class="link-arrow small" href="services.html#specialty">Details<span class="visually-hidden"> for Shoe Cleaning</span> <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WASH &AMP; FOLD ============ -->
+<section class="ff-section" id="wash-fold" aria-labelledby="wash-fold-title">
+  <div class="container">
+    <div class="row g-4 g-lg-5 ff-eqrow">
+      <div class="col-lg-6 ff-eqmedia reveal"><div class="ff-img-rounded ff-eqimg"><picture>
+          <img class="ff-photo " src="../assets/images/fold.jpg" srcset="" sizes="(min-width: 1024px) 50vw, 100vw" width="1200" height="750" alt="Laundry basket of whites ready to be sorted" data-fallback="../assets/images/process-sorting.jpg" loading="lazy" decoding="async">
+        </picture></div></div>
+      <div class="col-lg-6 ff-eqtext reveal reveal-delay-1">
+        <span class="eyebrow">Wash &amp; Fold</span>
+        <h2 id="wash-fold-title">Wash &amp; Fold</h2>
+        <p>Hand us a bag of everyday laundry — T-shirts, jeans, innerwear, gym kit, towels. We sort by colour and fabric, wash in your own load, dry at the right heat and fold everything ready for the shelf.</p>
+        <ul class="ff-check-list my-4"><li>Separate machine for every order — never mixed</li><li>Colour-sorted, cold wash for darks, warm for whites</li><li>Hypoallergenic, eco-safe detergent (fragrance-free on request)</li><li>Folded and packed by category: tops, bottoms, linens</li></ul>
+        <div class="ff-table mb-4"><table class="table mb-0"><caption class="visually-hidden">Wash &amp; Fold prices</caption><thead><tr><th scope="col">Item</th><th scope="col" class="text-end">Price</th></tr></thead><tbody><tr><td>Wash &amp; Fold (min. 3 kg)</td><td class="text-end fw-bold">₹89/kg</td></tr><tr><td>Wash &amp; Iron</td><td class="text-end fw-bold">₹109/kg</td></tr><tr><td>Bedsheets &amp; towels</td><td class="text-end fw-bold">₹99/kg</td></tr><tr><td>Delicates (hand wash)</td><td class="text-end fw-bold">₹149/kg</td></tr></tbody></table></div>
+        <div class="d-flex flex-wrap gap-2"><a class="btn btn-accent" href="schedule-pickup.html">Book Wash &amp; Fold</a><a class="btn btn-ghost" href="pricing.html">Full price list</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ IRONING &AMP; PRESSING ============ -->
+<section class="ff-section bg-soft" id="ironing" aria-labelledby="ironing-title">
+  <div class="container">
+    <div class="row g-4 g-lg-5 ff-eqrow">
+      <div class="col-lg-6 order-lg-2 ff-eqmedia reveal"><div class="ff-img-rounded ff-eqimg"><picture>
+          <img class="ff-photo " src="../assets/images/iron.jpg" srcset="" sizes="(min-width: 1024px) 50vw, 100vw" width="1200" height="750" alt="Crisp white shirt on a wooden hanger after pressing" data-fallback="../assets/images/process-pressing.jpg" loading="lazy" decoding="async">
+        </picture></div></div>
+      <div class="col-lg-6 ff-eqtext reveal reveal-delay-1">
+        <span class="eyebrow">Ironing</span>
+        <h2 id="ironing-title">Ironing &amp; Pressing</h2>
+        <p>Already washed your clothes? Send them for pressing only. Steam pressing removes creases without shine marks, and shirts come back on hangers with collars set.</p>
+        <ul class="ff-check-list my-4"><li>Steam press safe for cotton, linen and blends</li><li>Shirts on hangers, everything else folded</li><li>Saree pre-pleating available on request</li><li>Same-day pressing for orders picked up by 11 AM</li></ul>
+        <div class="ff-table mb-4"><table class="table mb-0"><caption class="visually-hidden">Ironing &amp; Pressing prices</caption><thead><tr><th scope="col">Item</th><th scope="col" class="text-end">Price</th></tr></thead><tbody><tr><td>Shirt / T-shirt / kurta</td><td class="text-end fw-bold">₹20</td></tr><tr><td>Trousers / jeans</td><td class="text-end fw-bold">₹20</td></tr><tr><td>Saree (plain)</td><td class="text-end fw-bold">₹60</td></tr><tr><td>Bedsheet (double)</td><td class="text-end fw-bold">₹40</td></tr></tbody></table></div>
+        <div class="d-flex flex-wrap gap-2"><a class="btn btn-accent" href="schedule-pickup.html">Book Ironing &amp; Pressing</a><a class="btn btn-ghost" href="pricing.html">Full price list</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CURTAINS, DUVETS &AMP; BLANKETS ============ -->
+<section class="ff-section" id="home-care" aria-labelledby="home-care-title">
+  <div class="container">
+    <div class="row g-4 g-lg-5 ff-eqrow">
+      <div class="col-lg-6 ff-eqmedia reveal"><div class="ff-img-rounded ff-eqimg"><picture>
+          <img class="ff-photo " src="../assets/images/curtain.jpg" srcset="" sizes="(min-width: 1024px) 50vw, 100vw" width="1200" height="750" alt="Fresh white bedding and pillows" data-fallback="../assets/images/service-blankets.jpg" loading="lazy" decoding="async">
+        </picture></div></div>
+      <div class="col-lg-6 ff-eqtext reveal reveal-delay-1">
+        <span class="eyebrow">Home linen</span>
+        <h2 id="home-care-title">Curtains, Duvets &amp; Blankets</h2>
+        <p>Bulky items that won't fit your home machine. We use large-drum washers and low-heat drying so fillings stay fluffy and curtains don't shrink.</p>
+        <ul class="ff-check-list my-4"><li>Down, polyester and cotton-filled duvets</li><li>Curtain take-down &amp; re-hanging (₹99/window)</li><li>Anti-dust-mite hot wash for bedding</li><li>Vacuum-sealed packing for storage</li></ul>
+        <div class="ff-table mb-4"><table class="table mb-0"><caption class="visually-hidden">Curtains, Duvets &amp; Blankets prices</caption><thead><tr><th scope="col">Item</th><th scope="col" class="text-end">Price</th></tr></thead><tbody><tr><td>Curtain panel</td><td class="text-end fw-bold">₹299</td></tr><tr><td>Single blanket / quilt</td><td class="text-end fw-bold">₹399</td></tr><tr><td>Double duvet / comforter</td><td class="text-end fw-bold">₹549</td></tr><tr><td>Sofa cover (per seat)</td><td class="text-end fw-bold">₹199</td></tr></tbody></table></div>
+        <div class="d-flex flex-wrap gap-2"><a class="btn btn-accent" href="schedule-pickup.html">Book Curtains, Duvets &amp; Blankets</a><a class="btn btn-ghost" href="pricing.html">Full price list</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SHOE &AMP; BAG CLEANING ============ -->
+<section class="ff-section bg-soft" id="specialty" aria-labelledby="specialty-title">
+  <div class="container">
+    <div class="row g-4 g-lg-5 ff-eqrow">
+      <div class="col-lg-6 order-lg-2 ff-eqmedia reveal"><div class="ff-img-rounded ff-eqimg"><picture>
+          <img class="ff-photo " src="../assets/images/shoe and bag clening.jpg" srcset="" sizes="(min-width: 1024px) 50vw, 100vw" width="1200" height="750" alt="Clean pair of sneakers on a box" data-fallback="../assets/images/service-shoes.jpg" loading="lazy" decoding="async">
+        </picture></div></div>
+      <div class="col-lg-6 ff-eqtext reveal reveal-delay-1">
+        <span class="eyebrow">Specialty</span>
+        <h2 id="specialty-title">Shoe &amp; Bag Cleaning</h2>
+        <p>Sneakers, canvas shoes, leather loafers and handbags cleaned by hand with the right products for each material, then deodorised and dried naturally.</p>
+        <ul class="ff-check-list my-4"><li>Midsole whitening on sneakers</li><li>Leather cleaning and conditioning</li><li>Odour removal with UV treatment</li><li>Laces washed or replaced (₹49)</li></ul>
+        <div class="ff-table mb-4"><table class="table mb-0"><caption class="visually-hidden">Shoe &amp; Bag Cleaning prices</caption><thead><tr><th scope="col">Item</th><th scope="col" class="text-end">Price</th></tr></thead><tbody><tr><td>Sneakers / canvas (pair)</td><td class="text-end fw-bold">₹299</td></tr><tr><td>Leather shoes (pair)</td><td class="text-end fw-bold">₹449</td></tr><tr><td>Handbag (small)</td><td class="text-end fw-bold">₹499</td></tr><tr><td>Handbag (large)</td><td class="text-end fw-bold">₹799</td></tr></tbody></table></div>
+        <div class="d-flex flex-wrap gap-2"><a class="btn btn-accent" href="schedule-pickup.html">Book Shoe &amp; Bag Cleaning</a><a class="btn btn-ghost" href="pricing.html">Full price list</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="ff-section pt-0" aria-labelledby="ctaTitle">
+  <div class="container">
+    <div class="ff-cta ff-has-bg reveal" style="background-image:var(--ff-overlay),url('../assets/images/washfold.jpg') !important">
+      <h2 id="ctaTitle">Not sure which service you need?</h2>
+      <p class="lead-ff mx-auto mb-4" style="max-width:600px;color:#eaf2ff">Just put everything in one bag. We'll sort it, tell you the price before cleaning anything special, and bring it all back together.</p>
+      <div class="d-flex flex-wrap gap-2 justify-content-center">
+        <a class="btn btn-lg btn-dark-ff" href="schedule-pickup.html"><i class="bi bi-calendar-check" aria-hidden="true"></i> Schedule Pickup</a>
+        <a class="btn btn-lg btn-light" href="https://wa.me/918045678900"><i class="bi bi-whatsapp" aria-hidden="true"></i> Book on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="ff-footer" aria-labelledby="footerHeading">
+  <h2 id="footerHeading" class="visually-hidden">Site footer</h2>
+  <div class="container">
+    <div class="row g-4 g-lg-5">
+      <div class="col-lg-4">
+        <a class="ff-logo" href="index.html" aria-label="FreshFold home">
+          <img class="ff-logo-img" src="../assets/images/logo.png" alt="" width="1044" height="360">
+          <img class="ff-logo-img ff-logo-img--light" src="../assets/images/logo-light.png" alt="" width="1044" height="360">
+        </a>
+        <p class="mt-3">We pick up your laundry from your door, clean it with care and bring it back fresh in 24–48 hours. Serving Bengaluru since 2018.</p>
+        <ul class="ff-social mt-3" aria-label="Social media">
+          <li><a href="https://www.instagram.com/" aria-label="FreshFold on Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.facebook.com/" aria-label="FreshFold on Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a></li>
+          <li><a href="https://x.com/" aria-label="FreshFold on X"><i class="bi bi-twitter-x" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.youtube.com/" aria-label="FreshFold on YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a></li>
+          <li><a href="https://wa.me/918045678900" aria-label="Chat with FreshFold on WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h3>Services</h3>
+        <ul class="ff-footer-links">
+          <li><a href="services.html#wash-fold">Wash &amp; Fold</a></li>
+          <li><a href="service-details.html">Dry Cleaning</a></li>
+          <li><a href="services.html#ironing">Ironing &amp; Pressing</a></li>
+          <li><a href="services.html#home-care">Curtains &amp; Duvets</a></li>
+          <li><a href="services.html#specialty">Shoe Cleaning</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h3>Company</h3>
+        <ul class="ff-footer-links">
+          <li><a href="about.html">About us</a></li>
+          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html#faq">FAQs</a></li>
+          <li><a href="coming-soon.html">Careers</a></li>
+          <li><a href="track-order.html">Track an order</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 col-lg-4">
+        <h3>Contact &amp; hours</h3>
+        <ul class="ff-footer-links">
+          <li><a href="tel:+918045678900"><i class="bi bi-telephone me-2" aria-hidden="true"></i><span class="ltr">+91 80 4567 8900</span></a></li>
+          <li><a href="mailto:hello@freshfold.example"><i class="bi bi-envelope me-2" aria-hidden="true"></i>hello@freshfold.example</a></li>
+          <li class="d-flex"><i class="bi bi-geo-alt me-2 mt-1" aria-hidden="true"></i><address class="mb-0">No. 24, 27th Main Road, HSR Layout Sector 1, Bengaluru 560102</address></li>
+          <li class="mt-2"><i class="bi bi-clock me-2" aria-hidden="true"></i>Pickups: Mon–Sun, 7 AM – 10 PM</li>
+          <li><i class="bi bi-headset me-2" aria-hidden="true"></i>Support: Mon–Sat, 8 AM – 9 PM</li>
+        </ul>
+        <div class="d-flex flex-wrap gap-2 mt-3">
+          <!-- TODO: link to your real App Store / Google Play listings -->
+          <a class="ff-store-btn" href="coming-soon.html"><i class="bi bi-apple" aria-hidden="true"></i><span>Coming soon on<strong>App Store</strong></span></a>
+          <a class="ff-store-btn" href="coming-soon.html"><i class="bi bi-google-play" aria-hidden="true"></i><span>Coming soon on<strong>Google Play</strong></span></a>
+        </div>
+      </div>
+    </div>
+    <div class="ff-footer-bottom d-flex flex-column flex-lg-row gap-3 justify-content-between align-items-lg-center">
+      <p class="mb-0">© <span data-year>2026</span> FreshFold Laundry Services. All rights reserved. · <a href="coming-soon.html">Privacy</a> · <a href="coming-soon.html">Terms</a> · <a href="../sitemap.xml">Sitemap</a></p>
+      <ul class="ff-pay" aria-label="Payment methods we accept">
+        <li><i class="bi bi-credit-card" aria-hidden="true"></i> Visa</li>
+        <li><i class="bi bi-credit-card-2-front" aria-hidden="true"></i> Mastercard</li>
+        <li><i class="bi bi-phone" aria-hidden="true"></i> UPI</li>
+        <li><i class="bi bi-paypal" aria-hidden="true"></i> PayPal</li>
+        <li><i class="bi bi-cash-coin" aria-hidden="true"></i> Cash</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating mobile CTA + back to top -->
+<button type="button" class="btn btn-icon ff-back-top" aria-label="Back to top"><i class="bi bi-arrow-up" aria-hidden="true"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="../assets/js/main.js?v=1.3.3" defer></script>
+
+</body>
+</html>

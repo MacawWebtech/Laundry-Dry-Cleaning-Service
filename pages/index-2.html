@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FreshFold — 24-Hour Laundry Pickup & Delivery</title>
+<meta name="description" content="Laundry, dry cleaning and ironing picked up from your door and back fresh in 24 hours. Free pickup over ₹299, live tracking and same-day service in Bengaluru.">
+<link rel="canonical" href="https://www.freshfold.example/pages/index-2.html">
+<meta name="theme-color" content="#1a64e0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<!-- Open Graph / social preview — TODO: update domain & image -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FreshFold">
+<meta property="og:title" content="FreshFold — 24-Hour Laundry Pickup & Delivery">
+<meta property="og:description" content="Laundry, dry cleaning and ironing picked up from your door and back fresh in 24 hours. Free pickup over ₹299, live tracking and same-day service in Bengaluru.">
+<meta property="og:url" content="https://www.freshfold.example/pages/index-2.html">
+<meta property="og:image" content="https://www.freshfold.example/assets/images/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/images/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+<script>
+  /* Theme + direction boot: applies saved or system preference before first paint */
+  (function () { try {
+    var t = localStorage.getItem("ff-theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    var d = localStorage.getItem("ff-dir") || "ltr";
+    var h = document.documentElement; h.setAttribute("data-theme", t); h.setAttribute("data-bs-theme", t); h.setAttribute("dir", d);
+    if (d === "rtl") h.setAttribute("lang", "ar");
+  } catch (e) {} })();
+  /* Image fallback: if a remote photo fails, swap in the bundled local image (data-fallback) */
+  addEventListener("error", function (e) { var i = e.target;
+    if (i.tagName === "IMG" && i.dataset.fallback && i.src.indexOf(i.dataset.fallback) < 0) {
+      var p = i.closest("picture"); if (p) p.querySelectorAll("source").forEach(function (s) { s.remove(); });
+      i.removeAttribute("srcset"); i.src = i.dataset.fallback; }
+  }, true);
+</script>
+<!-- Fonts: Outfit (display) + Plus Jakarta Sans (body) — TODO: swap in style.css :root -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<!-- Template styles (use the .min.css versions in production) -->
+<link rel="stylesheet" href="../assets/css/style.css?v=1.4.0">
+<link rel="stylesheet" href="../assets/css/dark-mode.css?v=1.4.0">
+<link rel="stylesheet" href="../assets/css/rtl.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DryCleaningOrLaundry",
+  "name": "FreshFold",
+  "description": "Laundry and dry cleaning with free doorstep pickup and delivery in 24–48 hours.",
+  "url": "https://www.freshfold.example/",
+  "image": "https://www.freshfold.example/assets/images/og-image.jpg",
+  "telephone": "+91 80 4567 8900",
+  "email": "hello@freshfold.example",
+  "priceRange": "₹₹",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No. 24, 27th Main Road, HSR Layout Sector 1",
+    "addressLocality": "Bengaluru",
+    "addressRegion": "KA",
+    "postalCode": "560102",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 12.9116,
+    "longitude": 77.6474
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "07:00",
+      "closes": "22:00"
+    }
+  ],
+  "areaServed": [
+    "Koramangala",
+    "HSR Layout",
+    "Indiranagar",
+    "Whitefield",
+    "BTM Layout",
+    "Jayanagar",
+    "JP Nagar",
+    "Bellandur",
+    "Marathahalli"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "2140"
+  },
+  "sameAs": [
+    "https://www.instagram.com/",
+    "https://www.facebook.com/"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need to sort my clothes before pickup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Put everything in one bag — we sort by colour, fabric and service at our facility, and list each item on your invoice."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is pickup really free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, on every order over ₹299. Below that there's a flat ₹49 fee. Plan members get free pickups included every month."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I book for someone else?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Of course. Add their address and phone number at booking — the rider will call them directly, and you'll still get the tracking updates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What detergents do you use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Plant-based, phosphate-free detergents that are gentle on skin. Choose fragrance-free at booking if you or your kids have sensitive skin."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I know my order is on time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You get an SMS and WhatsApp update at each step — picked up, cleaning, quality check, out for delivery — and live rider tracking on the last mile."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you clean school uniforms in bulk?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Our Family plan is popular for uniforms: we wash, press and return them in labelled sets per child, ready for the week."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- ============ TOP BAR ============ -->
+<div class="ff-topbar d-none d-md-block">
+  <div class="container d-flex align-items-center justify-content-between gap-3">
+    <p class="mb-0 text-white-50"><i class="bi bi-clock me-1" aria-hidden="true"></i> Pickups 7 AM – 10 PM, every day · <span class="text-white">Free pickup &amp; delivery over ₹299</span></p>
+    <div class="d-flex gap-3"><a href="track-order.html"><i class="bi bi-geo-alt me-1" aria-hidden="true"></i>Track order</a><a href="contact.html"><i class="bi bi-headset me-1" aria-hidden="true"></i>Help</a></div>
+  </div>
+</div>
+
+<!-- ============ HEADER / NAVIGATION ============ -->
+<header class="ff-header">
+  <nav class="navbar navbar-expand-xl" aria-label="Main navigation">
+    <div class="container">
+      <a class="ff-logo" href="index.html" aria-label="FreshFold home">
+          <img class="ff-logo-img" src="../assets/images/logo.png" alt="" width="1044" height="360">
+          <img class="ff-logo-img ff-logo-img--light" src="../assets/images/logo-light.png" alt="" width="1044" height="360">
+        </a>
+      <div class="d-flex align-items-center gap-2 d-xl-none ms-auto me-2">
+        <button type="button" class="btn btn-icon " data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">
+            <i class="bi bi-moon-stars theme-icon-light" aria-hidden="true"></i><i class="bi bi-sun theme-icon-dark" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="btn btn-icon " data-dir-toggle aria-pressed="false" aria-label="Toggle right-to-left layout">
+            <span class="dir-label">RTL</span>
+          </button>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Open menu">
+        <span class="navbar-toggler-icon" aria-hidden="true"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ff-nav mx-auto gap-xl-1">
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle active" href="index.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+            <ul class="dropdown-menu ff-dropdown">
+              <li><a class="dropdown-item" href="index.html"><i class="bi bi-house me-2" aria-hidden="true"></i>Home 1 — Classic</a></li>
+              <li><a class="dropdown-item" aria-current="page" href="index-2.html"><i class="bi bi-lightning-charge me-2" aria-hidden="true"></i>Home 2 — Express</a></li>
+            </ul></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="how-it-works.html">How It Works</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <div class="d-flex flex-column flex-xl-row align-items-xl-center gap-2 mt-3 mt-xl-0">
+          <a class="ff-phone" href="tel:+918045678900"><i class="bi bi-telephone-fill text-primary-ff" aria-hidden="true"></i><span class="num-text ltr">+91 80 4567 8900</span></a>
+          <div class="d-none d-xl-flex gap-2"><button type="button" class="btn btn-icon " data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">
+            <i class="bi bi-moon-stars theme-icon-light" aria-hidden="true"></i><i class="bi bi-sun theme-icon-dark" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="btn btn-icon " data-dir-toggle aria-pressed="false" aria-label="Toggle right-to-left layout">
+            <span class="dir-label">RTL</span>
+          </button></div>
+          <a class="btn btn-ghost" href="login.html"><i class="bi bi-person" aria-hidden="true"></i> Login</a>
+          <a class="btn btn-accent" href="schedule-pickup.html"><i class="bi bi-calendar-check" aria-hidden="true"></i> Schedule Pickup</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="main" tabindex="-1">
+
+<!-- ============ HERO (centered + booking bar) ============ -->
+<section class="ff-hero2 ff-has-bg" aria-labelledby="hero2Title" style="background-image:var(--ff-overlay),url('../assets/images/clean with care.jpg') !important">
+  <div class="ff-bubbles" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="container position-relative">
+    <div class="text-center mx-auto" style="max-width:880px">
+      <span class="eyebrow"><i class="bi bi-lightning-charge-fill" aria-hidden="true"></i> Express 24-hour service available</span>
+      <!-- TODO: Edit the headline — keep it plain and specific -->
+      <h1 id="hero2Title">We pick up your laundry, clean it, and bring it back <span class="hl">fresh in 24 hours</span></h1>
+      <p class="lead-ff mx-auto">Wash &amp; fold, dry cleaning and ironing with free doorstep pickup. Book in 2 minutes — pay only after we weigh your clothes.</p>
+    </div>
+
+    <!-- Horizontal quick-booking bar (same JS as Home 1) -->
+    <form id="quickBookingForm" class="ff-bookbar" data-validate data-custom-submit aria-label="Quick pickup booking">
+      <div class="ff-field ff-bookbar-cell">
+        <label class="form-label" for="qbPincode"><i class="bi bi-geo-alt text-primary-ff me-1" aria-hidden="true"></i>Pincode</label>
+        <input type="text" class="form-control" id="qbPincode" name="pincode" inputmode="numeric" maxlength="6" pattern="[0-9]{6}" placeholder="e.g. 560102" autocomplete="postal-code" required data-error-required="Enter your 6-digit pincode." data-error="Pincodes have 6 digits.">
+      </div>
+      <div class="ff-field ff-bookbar-cell">
+        <label class="form-label" for="qbService"><i class="bi bi-basket2 text-primary-ff me-1" aria-hidden="true"></i>Service</label>
+        <select class="form-select" id="qbService" name="service" required data-error-required="Choose a service.">
+          <option value="">Choose service</option><option value="wash-fold">Wash &amp; Fold</option><option value="wash-iron">Wash &amp; Iron</option><option value="dry-cleaning">Dry Cleaning</option><option value="ironing">Ironing only</option>
+        </select>
+      </div>
+      <div class="ff-field ff-bookbar-cell">
+        <label class="form-label" for="qbDate"><i class="bi bi-calendar3 text-primary-ff me-1" aria-hidden="true"></i>Pickup date</label>
+        <input type="date" class="form-control" id="qbDate" name="date" required data-min-today data-default-today data-error-required="Pick a date.">
+      </div>
+      <div class="ff-field ff-bookbar-cell">
+        <label class="form-label" for="qbSlot"><i class="bi bi-clock text-primary-ff me-1" aria-hidden="true"></i>Time slot</label>
+        <select class="form-select" id="qbSlot" name="slot" required data-error-required="Choose a time slot."><option value="">Choose a time slot</option></select>
+      </div>
+      <div class="ff-bookbar-cell ff-bookbar-btn"><button type="submit" class="btn btn-accent btn-lg w-100"><span class="btn-label">Book pickup</span></button></div>
+      <div class="ff-pin-result w-100" aria-live="polite"></div>
+    </form>
+
+    <div class="ff-hero2-media reveal">
+      <picture>
+          <img class="ff-photo " src="../assets/images/delivery.jpg" srcset="" sizes="(min-width: 1024px) 760px, 100vw" width="1200" height="800" alt="Delivery rider on a scooter riding through the city" data-fallback="../assets/images/delivery-rider.jpg" fetchpriority="high" decoding="async">
+        </picture>
+      <div class="chip-float" style="top:14%;inset-inline-start:-2%"><i class="bi bi-truck text-primary-ff" aria-hidden="true"></i> Rider 6 min away</div>
+      <div class="chip-float" style="bottom:20%;inset-inline-end:-3%"><i class="bi bi-patch-check-fill" style="color:var(--ff-success)" aria-hidden="true"></i> Quality checked</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROOF STRIP ============ -->
+<section class="ff-section-sm" aria-labelledby="proofTitle">
+  <div class="container">
+    <h2 id="proofTitle" class="visually-hidden">Why people trust FreshFold</h2>
+    <ul class="ff-proof list-unstyled mb-0">
+      <li><strong>4.8<i class="bi bi-star-fill" aria-hidden="true"></i></strong><span>Google rating, 2,140+ reviews</span></li>
+      <li><strong data-count="97.6" data-suffix="%">97.6%</strong><span>Delivered in the promised slot</span></li>
+      <li><strong data-count="18000" data-suffix="+">18,000+</strong><span>Households served</span></li>
+      <li><strong>₹0</strong><span>Pickup fee over ₹299</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ SERVICES (tabs) ============ -->
+<section class="ff-section" aria-labelledby="h2svcTitle">
+  <div class="container">
+    <div class="row g-4 g-lg-5">
+      <div class="col-lg-4 ff-tabside">
+        <span class="eyebrow align-self-start">Services</span>
+        <h2 id="h2svcTitle">One bag. Every kind of clean.</h2>
+        <p class="mb-4">Choose a service to see what's included and what it costs. Mix services in the same pickup — we sort it all for you.</p>
+        <div class="nav ff-vpills" role="tablist" aria-label="Services" aria-orientation="vertical"><button class="nav-link active" id="h2t-wash-fold" data-bs-toggle="pill" data-bs-target="#h2p-wash-fold" type="button" role="tab" aria-controls="h2p-wash-fold" aria-selected="true"><i class="bi bi-basket2" aria-hidden="true"></i><span>Wash &amp; Fold</span></button><button class="nav-link" id="h2t-dry-cleaning" data-bs-toggle="pill" data-bs-target="#h2p-dry-cleaning" type="button" role="tab" aria-controls="h2p-dry-cleaning" aria-selected="false"><i class="bi bi-stars" aria-hidden="true"></i><span>Dry Cleaning</span></button><button class="nav-link" id="h2t-ironing" data-bs-toggle="pill" data-bs-target="#h2p-ironing" type="button" role="tab" aria-controls="h2p-ironing" aria-selected="false"><i class="bi bi-fire" aria-hidden="true"></i><span>Ironing</span></button><button class="nav-link" id="h2t-home-linen" data-bs-toggle="pill" data-bs-target="#h2p-home-linen" type="button" role="tab" aria-controls="h2p-home-linen" aria-selected="false"><i class="bi bi-window" aria-hidden="true"></i><span>Curtains &amp; Linen</span></button></div>
+      </div>
+      <div class="col-lg-8">
+        <div class="tab-content ff-panel p-4 ff-tabpanel">
+            <div class="tab-pane fade show active" id="h2p-wash-fold" role="tabpanel" aria-labelledby="h2t-wash-fold" tabindex="0">
+              <div class="row g-4 ff-tabrow">
+                <div class="col-md-6"><div class="ff-img-rounded ff-tabimg"><picture>
+          <img class="ff-photo " src="../assets/images/washfold.jpg" srcset="" sizes="(min-width: 1024px) 30vw, (min-width: 768px) 50vw, 100vw" width="1200" height="750" alt="Stack of freshly folded shirts" data-fallback="../assets/images/service-wash-fold.jpg" loading="lazy" decoding="async">
+        </picture></div></div>
+                <div class="col-md-6 d-flex flex-column justify-content-center">
+                  <h3>Wash &amp; Fold</h3><p>Your everyday laundry, washed in your own load at the right temperature, tumble-dried and folded by category.</p>
+                  <ul class="ff-check-list mb-4"><li>T-shirts, jeans, innerwear, gym wear, towels</li><li>Separate wash for darks and whites</li><li>Fragrance-free option at no extra cost</li></ul>
+                  <div class="d-flex align-items-end gap-2 mb-1"><span class="ff-price">₹89</span><span class="pb-1 fw-semibold text-muted-ff">per kg</span></div>
+                  <p class="small mb-4">Min. 3 kg · 48h</p>
+                  <div class="d-flex flex-wrap gap-2"><a class="btn btn-accent" href="schedule-pickup.html?service=wash-fold">Book Wash &amp; Fold</a><a class="btn btn-ghost" href="services.html#wash-fold">Details</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="h2p-dry-cleaning" role="tabpanel" aria-labelledby="h2t-dry-cleaning" tabindex="0">
+              <div class="row g-4 ff-tabrow">
+                <div class="col-md-6"><div class="ff-img-rounded ff-tabimg"><picture>
+          <img class="ff-photo " src="../assets/images/dry.jpg" srcset="" sizes="(min-width: 1024px) 30vw, (min-width: 768px) 50vw, 100vw" width="1200" height="750" alt="Dress shirts hanging on a rail after dry cleaning" data-fallback="../assets/images/service-dry-cleaning.jpg" loading="lazy" decoding="async">
+        </picture></div></div>
+                <div class="col-md-6 d-flex flex-column justify-content-center">
+                  <h3>Dry Cleaning</h3><p>Suits, sarees, silks and party wear cleaned with gentle, odour-free solvents and finished by hand on steam forms.</p>
+                  <ul class="ff-check-list mb-4"><li>Item-by-item inspection with photos</li><li>Stain pre-treatment included</li><li>Returned on hangers in garment covers</li></ul>
+                  <div class="d-flex align-items-end gap-2 mb-1"><span class="ff-price">₹149</span><span class="pb-1 fw-semibold text-muted-ff">per item</span></div>
+                  <p class="small mb-4">Shirts from ₹149 · suits ₹599</p>
+                  <div class="d-flex flex-wrap gap-2"><a class="btn btn-accent" href="schedule-pickup.html?service=dry-cleaning">Book Dry Cleaning</a><a class="btn btn-ghost" href="service-details.html">Details</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="h2p-ironing" role="tabpanel" aria-labelledby="h2t-ironing" tabindex="0">
+              <div class="row g-4 ff-tabrow">
+                <div class="col-md-6"><div class="ff-img-rounded ff-tabimg"><picture>
+          <img class="ff-photo " src="../assets/images/iron.jpg" srcset="" sizes="(min-width: 1024px) 30vw, (min-width: 768px) 50vw, 100vw" width="1200" height="750" alt="Steam iron on an ironing board" data-fallback="../assets/images/service-ironing.jpg" loading="lazy" decoding="async">
+        </picture></div></div>
+                <div class="col-md-6 d-flex flex-column justify-content-center">
+                  <h3>Ironing</h3><p>Already washed? Send it for steam pressing only — crisp collars, sharp creases and no shine marks.</p>
+                  <ul class="ff-check-list mb-4"><li>Shirts on hangers, rest folded</li><li>Saree pre-pleating on request</li><li>Same-day if picked up by 11 AM</li></ul>
+                  <div class="d-flex align-items-end gap-2 mb-1"><span class="ff-price">₹20</span><span class="pb-1 fw-semibold text-muted-ff">per piece</span></div>
+                  <p class="small mb-4">Sarees ₹60</p>
+                  <div class="d-flex flex-wrap gap-2"><a class="btn btn-accent" href="schedule-pickup.html?service=ironing">Book Ironing</a><a class="btn btn-ghost" href="services.html#ironing">Details</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="h2p-home-linen" role="tabpanel" aria-labelledby="h2t-home-linen" tabindex="0">
+              <div class="row g-4 ff-tabrow">
+                <div class="col-md-6"><div class="ff-img-rounded ff-tabimg"><picture>
+          <img class="ff-photo " src="../assets/images/curtain.jpg" srcset="" sizes="(min-width: 1024px) 30vw, (min-width: 768px) 50vw, 100vw" width="1200" height="750" alt="Sunlight through clean sheer curtains" data-fallback="../assets/images/service-curtains.jpg" loading="lazy" decoding="async">
+        </picture></div></div>
+                <div class="col-md-6 d-flex flex-column justify-content-center">
+                  <h3>Curtains &amp; Linen</h3><p>Curtains, duvets, blankets and sofa covers cleaned in large-drum machines without shrinking or clumping.</p>
+                  <ul class="ff-check-list mb-4"><li>Curtain take-down and re-hanging</li><li>Anti-dust-mite hot wash for bedding</li><li>Vacuum-sealed packing for storage</li></ul>
+                  <div class="d-flex align-items-end gap-2 mb-1"><span class="ff-price">₹299</span><span class="pb-1 fw-semibold text-muted-ff">per panel</span></div>
+                  <p class="small mb-4">Duvets from ₹399</p>
+                  <div class="d-flex flex-wrap gap-2"><a class="btn btn-accent" href="schedule-pickup.html?service=wash-fold">Book Curtains &amp; Linen</a><a class="btn btn-ghost" href="services.html#home-care">Details</a></div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS (dark rail) ============ -->
+<section class="ff-section ff-dark-band ff-has-bg" aria-labelledby="h2howTitle" style="background-image:var(--ff-overlay),url('../assets/images/Curtains &amp; Upholstery.jpg') !important">
+  <div class="container">
+    <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-5">
+      <div><span class="eyebrow">How it works</span><h2 id="h2howTitle">You book. We do everything else.</h2></div>
+      <a class="btn btn-light" href="how-it-works.html">See the full process <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+    </div>
+    <ol class="ff-rail list-unstyled mb-0"><li class="ff-rail-step reveal reveal-delay-0"><span class="ff-rail-num" aria-hidden="true">01</span><span class="ff-rail-icon" aria-hidden="true"><i class="bi bi-phone"></i></span><h3 class="h5"><span class="visually-hidden">Step 1: </span>Book in 2 minutes</h3><p class="mb-0">Online, in the app or on WhatsApp.</p></li><li class="ff-rail-step reveal reveal-delay-1"><span class="ff-rail-num" aria-hidden="true">02</span><span class="ff-rail-icon" aria-hidden="true"><i class="bi bi-truck"></i></span><h3 class="h5"><span class="visually-hidden">Step 2: </span>Hand over your bag</h3><p class="mb-0">Rider arrives in your 2-hour window.</p></li><li class="ff-rail-step reveal reveal-delay-2"><span class="ff-rail-num" aria-hidden="true">03</span><span class="ff-rail-icon" aria-hidden="true"><i class="bi bi-droplet-half"></i></span><h3 class="h5"><span class="visually-hidden">Step 3: </span>We clean &amp; check</h3><p class="mb-0">Your own load, then a 2-person quality check.</p></li><li class="ff-rail-step reveal reveal-delay-3"><span class="ff-rail-num" aria-hidden="true">04</span><span class="ff-rail-icon" aria-hidden="true"><i class="bi bi-house-check"></i></span><h3 class="h5"><span class="visually-hidden">Step 4: </span>Back at your door</h3><p class="mb-0">Fresh, folded and pressed in 24–48 hours.</p></li></ol>
+  </div>
+</section>
+
+<!-- ============ COMPARISON ============ -->
+<section class="ff-section" aria-labelledby="cmpTitle">
+  <div class="container" style="max-width:1000px">
+    <div class="ff-section-head reveal"><span class="eyebrow">Compare</span><h2 id="cmpTitle">FreshFold vs. doing it yourself</h2><p>The real cost of laundry is your time.</p></div>
+    <div class="ff-table table-responsive ff-cmp reveal"><table class="table mb-0">
+      <caption class="visually-hidden">Comparison of FreshFold, washing at home and a local laundromat</caption>
+      <thead><tr><th scope="col"><span class="visually-hidden">Feature</span></th><th scope="col" class="ff-cmp-us"><i class="bi bi-droplet-half me-1" aria-hidden="true"></i>FreshFold</th><th scope="col">At home</th><th scope="col">Local laundry</th></tr></thead>
+      <tbody><tr><th scope="row">Time you spend</th><td class="ff-cmp-us"><strong>2 minutes</strong> to book</td><td>3–4 hours a week</td><td>2 trips + waiting</td></tr><tr><th scope="row">Doorstep pickup &amp; delivery</th><td class="ff-cmp-us"><i class="bi bi-check-circle-fill" style="color:var(--ff-success)" aria-hidden="true"></i><span class="visually-hidden">Yes</span></td><td><i class="bi bi-x-circle" style="color:var(--ff-danger)" aria-hidden="true"></i><span class="visually-hidden">No</span></td><td><i class="bi bi-x-circle" style="color:var(--ff-danger)" aria-hidden="true"></i><span class="visually-hidden">No</span></td></tr><tr><th scope="row">Stain treatment by fabric</th><td class="ff-cmp-us"><i class="bi bi-check-circle-fill" style="color:var(--ff-success)" aria-hidden="true"></i><span class="visually-hidden">Yes</span></td><td><i class="bi bi-x-circle" style="color:var(--ff-danger)" aria-hidden="true"></i><span class="visually-hidden">No</span></td><td>Sometimes</td></tr><tr><th scope="row">Ironed &amp; folded</th><td class="ff-cmp-us"><i class="bi bi-check-circle-fill" style="color:var(--ff-success)" aria-hidden="true"></i><span class="visually-hidden">Yes</span></td><td>If you have time</td><td>Extra charge</td></tr><tr><th scope="row">Live order tracking</th><td class="ff-cmp-us"><i class="bi bi-check-circle-fill" style="color:var(--ff-success)" aria-hidden="true"></i><span class="visually-hidden">Yes</span></td><td><i class="bi bi-x-circle" style="color:var(--ff-danger)" aria-hidden="true"></i><span class="visually-hidden">No</span></td><td><i class="bi bi-x-circle" style="color:var(--ff-danger)" aria-hidden="true"></i><span class="visually-hidden">No</span></td></tr><tr><th scope="row">Damage cover</th><td class="ff-cmp-us">Up to ₹10,000/item</td><td><i class="bi bi-x-circle" style="color:var(--ff-danger)" aria-hidden="true"></i><span class="visually-hidden">No</span></td><td>Rarely</td></tr><tr><th scope="row">Cost for 5 kg</th><td class="ff-cmp-us"><strong>₹445</strong></td><td>₹250 + water, power &amp; time</td><td>₹400–600</td></tr></tbody>
+    </table></div>
+  </div>
+</section>
+
+<!-- ============ EXPRESS PROMISE ============ -->
+<section class="ff-section pt-0" aria-labelledby="expTitle">
+  <div class="container">
+    <div class="ff-express ff-has-bg reveal" style="background-image:var(--ff-overlay),url('../assets/images/dry.jpg') !important">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-7">
+          <span class="ff-badge mb-3" style="background:#0d2547;color:var(--ff-sun)"><i class="bi bi-lightning-charge-fill" aria-hidden="true"></i> Same-day</span>
+          <h2 id="expTitle">Book by 11 AM, wear it tonight</h2>
+          <p class="mb-4">Forgot about tomorrow's interview shirt or tonight's party dress? Same-day orders are picked up before 11 AM and delivered between 7–9 PM.</p>
+          <div class="d-flex flex-wrap gap-2"><a class="btn btn-lg btn-dark-ff" href="schedule-pickup.html">Book same-day</a><a class="btn btn-lg btn-ghost" style="border-color:#0d254733;color:#0d2547" href="pricing.html#estimate">Estimate the cost</a></div>
+        </div>
+        <div class="col-lg-5">
+          <ul class="ff-clock list-unstyled mb-0" aria-label="Same-day schedule">
+            <li><time>10:30 AM</time><span>You book</span></li>
+            <li><time>11:00 AM</time><span>Rider picks up</span></li>
+            <li><time>4:00 PM</time><span>Cleaned &amp; pressed</span></li>
+            <li><time>7:30 PM</time><span>Back at your door</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PLANS (monthly / yearly toggle) ============ -->
+<section class="ff-section bg-soft" aria-labelledby="h2planTitle">
+  <div class="container">
+    <div class="ff-section-head"><span class="eyebrow">Plans</span><h2 id="h2planTitle">Save more when laundry is a habit</h2>
+      <div class="ff-billing mt-3" role="group" aria-label="Billing period">
+        <button type="button" class="active" data-billing="monthly" aria-pressed="true">Monthly</button>
+        <button type="button" data-billing="yearly" aria-pressed="false">Yearly <span class="ff-badge ms-1" style="background:var(--ff-success-100);color:var(--ff-success)">2 months free</span></button>
+      </div>
+    </div>
+    <div class="row g-4 justify-content-center" aria-live="polite">
+      <div class="col-md-6 col-lg-4"><article class="ff-card ff-price-card">
+        <h3>Solo</h3><p>One person, weekly wash.</p>
+        <p class="ff-price mb-1"><span data-price-monthly="₹1,499" data-price-yearly="₹1,249">₹1,499</span><small>/month</small></p>
+        <p class="small mb-3" data-note-monthly="Billed monthly" data-note-yearly="₹14,990 billed yearly">Billed monthly</p>
+        <ul class="ff-check-list mb-4"><li>20 kg wash &amp; fold</li><li>10 ironed pieces</li><li>4 free pickups</li></ul>
+        <a class="btn btn-outline-ff w-100" href="register.html?plan=monthly">Choose Solo</a></article></div>
+      <div class="col-md-6 col-lg-4"><article class="ff-card ff-price-card popular"><span class="ribbon">Most popular</span>
+        <h3>Family</h3><p>3–5 people, uniforms &amp; linens.</p>
+        <p class="ff-price mb-1"><span data-price-monthly="₹2,999" data-price-yearly="₹2,499">₹2,999</span><small>/month</small></p>
+        <p class="small mb-3" data-note-monthly="Billed monthly" data-note-yearly="₹29,990 billed yearly">Billed monthly</p>
+        <ul class="ff-check-list mb-4"><li>45 kg wash &amp; fold</li><li>30 ironed + 2 dry-cleaned items</li><li>8 free pickups, priority slots</li></ul>
+        <a class="btn btn-accent w-100" href="register.html?plan=family">Choose Family</a></article></div>
+      <div class="col-md-6 col-lg-4"><article class="ff-card ff-price-card">
+        <h3>Business</h3><p>Salons, gyms, guest houses.</p>
+        <p class="ff-price mb-1"><span data-price-monthly="₹7,999" data-price-yearly="₹6,666">₹7,999</span><small>/month</small></p>
+        <p class="small mb-3" data-note-monthly="Custom volume pricing" data-note-yearly="₹79,990 billed yearly">Custom volume pricing</p>
+        <ul class="ff-check-list mb-4"><li>From 120 kg linen</li><li>Daily scheduled pickups</li><li>GST invoices &amp; account manager</li></ul>
+        <a class="btn btn-outline-ff w-100" href="contact.html?topic=business">Talk to sales</a></article></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOR BUSINESS ============ -->
+<section class="ff-section" aria-labelledby="bizTitle">
+  <div class="container">
+    <div class="row g-4 g-lg-5 ff-eqrow">
+      <div class="col-lg-6 order-lg-2 ff-eqmedia reveal"><div class="ff-img-rounded ff-eqimg"><picture>
+          <img class="ff-photo " src="../assets/images/for business.jpg" srcset="" sizes="(min-width: 1024px) 50vw, 100vw" width="1200" height="800" alt="Commercial washing machines for business linen" data-fallback="../assets/images/process-washing.jpg" loading="lazy" decoding="async">
+        </picture></div></div>
+      <div class="col-lg-6 reveal reveal-delay-1">
+        <span class="eyebrow">For business</span>
+        <h2 id="bizTitle">Linen service for salons, gyms and guest houses</h2>
+        <p>Towels, bedsheets, aprons and uniforms on a fixed schedule — collected daily or weekly, with a dedicated account manager and monthly GST invoices.</p>
+        <div class="row g-3 my-3">
+          <div class="col-sm-6"><div class="ff-tile"><span class="ff-icon ff-icon-sm" aria-hidden="true"><i class="bi bi-calendar-week"></i></span><div><h3 class="h6 mb-1">Scheduled pickups</h3><p class="small mb-0">Daily, alternate days or weekly.</p></div></div></div>
+          <div class="col-sm-6"><div class="ff-tile"><span class="ff-icon ff-icon-sm coral" aria-hidden="true"><i class="bi bi-lightning"></i></span><div><h3 class="h6 mb-1">Same-day included</h3><p class="small mb-0">Never run out of towels on a busy weekend.</p></div></div></div>
+          <div class="col-sm-6"><div class="ff-tile"><span class="ff-icon ff-icon-sm green" aria-hidden="true"><i class="bi bi-tags"></i></span><div><h3 class="h6 mb-1">Tagged by location</h3><p class="small mb-0">Separate counts for each branch.</p></div></div></div>
+          <div class="col-sm-6"><div class="ff-tile"><span class="ff-icon ff-icon-sm sun" aria-hidden="true"><i class="bi bi-receipt"></i></span><div><h3 class="h6 mb-1">Monthly GST invoice</h3><p class="small mb-0">One bill, itemised by pickup.</p></div></div></div>
+        </div>
+        <a class="btn btn-primary-ff btn-lg" href="contact.html?topic=business">Get a business quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS GRID ============ -->
+<section class="ff-section bg-soft" aria-labelledby="h2revTitle">
+  <div class="container">
+    <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-5">
+      <div><span class="eyebrow">Reviews</span><h2 id="h2revTitle" class="mb-0">Rated 4.8 by 2,140+ customers</h2></div>
+      <p class="mb-0 fw-semibold" style="color:var(--ff-heading)"><span class="ff-stars me-2" aria-hidden="true"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span>Google · App Store · Play Store</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-0"><figure class="ff-card ff-review h-100 mb-0">
+        <div class="ff-stars mb-2" role="img" aria-label="Rated 5 out of 5"><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i></div>
+        <p class="fw-bold mb-2" style="color:var(--ff-heading)">Saved my Sundays</p>
+        <blockquote class="mb-4"><p class="mb-0">“I used to lose my whole Sunday to laundry. Now I book on my phone, hand over the bag at the door and it's back on Tuesday, folded better than I ever could. The rider even texts before he arrives.”</p></blockquote>
+        <figcaption class="d-flex align-items-center gap-3 mt-auto"><span class="ff-avatar-photo " style="width:56px;height:56px" data-initials="AI"><img src="../assets/images/review1.jpg" srcset="" width="56" height="56" alt="Photo of Ananya Iyer" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('no-photo');this.remove()"></span><span><strong class="d-block" style="color:var(--ff-heading)">Ananya Iyer</strong><span class="small text-muted-ff">Koramangala</span></span></figcaption>
+      </figure></div>
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-1"><figure class="ff-card ff-review h-100 mb-0">
+        <div class="ff-stars mb-2" role="img" aria-label="Rated 5 out of 5"><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i></div>
+        <p class="fw-bold mb-2" style="color:var(--ff-heading)">Got out a wine stain</p>
+        <blockquote class="mb-4"><p class="mb-0">“They got a red-wine stain out of my linen blazer that two other dry cleaners gave up on. Packed in a garment bag, on time, and the price was exactly what the website said.”</p></blockquote>
+        <figcaption class="d-flex align-items-center gap-3 mt-auto"><span class="ff-avatar-photo " style="width:56px;height:56px" data-initials="RM"><img src="../assets/images/review2.jpg" srcset="" width="56" height="56" alt="Photo of Rahul Menon" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('no-photo');this.remove()"></span><span><strong class="d-block" style="color:var(--ff-heading)">Rahul Menon</strong><span class="small text-muted-ff">Whitefield</span></span></figcaption>
+      </figure></div>
+      <div class="col-md-12 col-lg-4 reveal reveal-delay-2"><figure class="ff-card ff-review h-100 mb-0">
+        <div class="ff-stars mb-2" role="img" aria-label="Rated 5 out of 5"><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i></div>
+        <p class="fw-bold mb-2" style="color:var(--ff-heading)">Worth it with toddlers</p>
+        <blockquote class="mb-4"><p class="mb-0">“With two toddlers, the Family plan is the best money I spend each month. Uniforms, bedsheets, my sarees — everything comes back fresh and sorted per person.”</p></blockquote>
+        <figcaption class="d-flex align-items-center gap-3 mt-auto"><span class="ff-avatar-photo " style="width:56px;height:56px" data-initials="FS"><img src="../assets/images/review3.jpg" srcset="" width="56" height="56" alt="Photo of Fatima Sheikh" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('no-photo');this.remove()"></span><span><strong class="d-block" style="color:var(--ff-heading)">Fatima Sheikh</strong><span class="small text-muted-ff">Indiranagar</span></span></figcaption>
+      </figure></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ APP PROMO ============ -->
+<section class="ff-section" aria-labelledby="appTitle">
+  <div class="container">
+    <div class="ff-app ff-has-bg reveal" style="background-image:var(--ff-overlay),url('../assets/images/shedule.jpg') !important">
+      <div class="row g-4 g-lg-5 align-items-center">
+        <div class="col-lg-6">
+          <span class="eyebrow" style="background:rgba(255,255,255,.12);color:#c7dcff">Mobile app</span>
+          <h2 id="appTitle" style="color:#fff">Track every bag from your phone</h2>
+          <p style="color:#cfe7f1">Book in three taps, watch your rider on the map, and get a photo when your order is handed over. Reorder last week's laundry with one button.</p>
+          <ul class="ff-check-list mb-4 ff-check-light"><li>Live rider tracking</li><li>One-tap reorder &amp; saved preferences</li><li>Invoices and wallet in one place</li></ul>
+          <div class="d-flex flex-wrap gap-2">
+            <!-- TODO: link to your real App Store / Google Play listings -->
+            <a class="ff-store-btn" href="coming-soon.html" style="color:#fff"><i class="bi bi-apple" aria-hidden="true"></i><span>Coming soon on<strong>App Store</strong></span></a>
+            <a class="ff-store-btn" href="coming-soon.html" style="color:#fff"><i class="bi bi-google-play" aria-hidden="true"></i><span>Coming soon on<strong>Google Play</strong></span></a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <!-- CSS phone mockup showing order tracking -->
+          <div class="ff-phone-mock" role="img" aria-label="Phone screen showing order FF-10488 out for delivery, arriving 4 to 6 PM">
+            <div class="ff-phone-screen" aria-hidden="true">
+              <p class="small fw-bold mb-1" style="color:var(--ff-heading)">Order FF-10488</p>
+              <p class="mb-3"><span class="ff-status out">Out for delivery</span></p>
+              <ol class="ff-mini-track list-unstyled mb-3">
+                <li class="done">Picked up · 10:10 AM</li><li class="done">Cleaned · 2:00 PM</li><li class="done">Quality check · 9:20 AM</li><li class="current">Arriving 4–6 PM</li><li>Delivered</li>
+              </ol>
+              <div class="ff-mini-map"><span></span></div>
+              <p class="small mt-2 mb-0"><i class="bi bi-person-circle me-1"></i>Meera S. · 6 min away</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ (two columns) ============ -->
+<section class="ff-section pt-0" id="faq" aria-labelledby="h2faqTitle">
+  <div class="container">
+    <div class="ff-section-head"><span class="eyebrow">FAQ</span><h2 id="h2faqTitle">Good questions</h2></div>
+    <div class="row g-4">
+      <div class="col-lg-6"><div class="accordion ff-accordion" id="h2FaqA">
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="h2FaqA-h0">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#h2FaqA-c0" aria-expanded="true" aria-controls="h2FaqA-c0">Do I need to sort my clothes before pickup?</button>
+    </h3>
+    <div id="h2FaqA-c0" class="accordion-collapse collapse show" aria-labelledby="h2FaqA-h0" data-bs-parent="#h2FaqA">
+      <div class="accordion-body">No. Put everything in one bag — we sort by colour, fabric and service at our facility, and list each item on your invoice.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="h2FaqA-h1">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#h2FaqA-c1" aria-expanded="false" aria-controls="h2FaqA-c1">Is pickup really free?</button>
+    </h3>
+    <div id="h2FaqA-c1" class="accordion-collapse collapse" aria-labelledby="h2FaqA-h1" data-bs-parent="#h2FaqA">
+      <div class="accordion-body">Yes, on every order over ₹299. Below that there's a flat ₹49 fee. Plan members get free pickups included every month.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="h2FaqA-h2">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#h2FaqA-c2" aria-expanded="false" aria-controls="h2FaqA-c2">Can I book for someone else?</button>
+    </h3>
+    <div id="h2FaqA-c2" class="accordion-collapse collapse" aria-labelledby="h2FaqA-h2" data-bs-parent="#h2FaqA">
+      <div class="accordion-body">Of course. Add their address and phone number at booking — the rider will call them directly, and you'll still get the tracking updates.</div>
+    </div>
+  </div>
+</div></div>
+      <div class="col-lg-6"><div class="accordion ff-accordion" id="h2FaqB">
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="h2FaqB-h0">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#h2FaqB-c0" aria-expanded="false" aria-controls="h2FaqB-c0">What detergents do you use?</button>
+    </h3>
+    <div id="h2FaqB-c0" class="accordion-collapse collapse" aria-labelledby="h2FaqB-h0" data-bs-parent="#h2FaqB">
+      <div class="accordion-body">Plant-based, phosphate-free detergents that are gentle on skin. Choose fragrance-free at booking if you or your kids have sensitive skin.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="h2FaqB-h1">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#h2FaqB-c1" aria-expanded="false" aria-controls="h2FaqB-c1">How do I know my order is on time?</button>
+    </h3>
+    <div id="h2FaqB-c1" class="accordion-collapse collapse" aria-labelledby="h2FaqB-h1" data-bs-parent="#h2FaqB">
+      <div class="accordion-body">You get an SMS and WhatsApp update at each step — picked up, cleaning, quality check, out for delivery — and live rider tracking on the last mile.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="h2FaqB-h2">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#h2FaqB-c2" aria-expanded="false" aria-controls="h2FaqB-c2">Do you clean school uniforms in bulk?</button>
+    </h3>
+    <div id="h2FaqB-c2" class="accordion-collapse collapse" aria-labelledby="h2FaqB-h2" data-bs-parent="#h2FaqB">
+      <div class="accordion-body">Yes. Our Family plan is popular for uniforms: we wash, press and return them in labelled sets per child, ready for the week.</div>
+    </div>
+  </div>
+</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="ff-section pt-0" aria-labelledby="ctaTitle">
+  <div class="container">
+    <div class="ff-cta ff-has-bg reveal" style="background-image:var(--ff-overlay),url('../assets/images/washfold.jpg') !important">
+      <h2 id="ctaTitle">Laundry day, cancelled.</h2>
+      <p class="lead-ff mx-auto mb-4" style="max-width:600px;color:#eaf2ff">Book a pickup now — we'll collect today and bring everything back fresh, folded and pressed.</p>
+      <div class="d-flex flex-wrap gap-2 justify-content-center">
+        <a class="btn btn-lg btn-dark-ff" href="schedule-pickup.html"><i class="bi bi-calendar-check" aria-hidden="true"></i> Schedule Pickup</a>
+        <a class="btn btn-lg btn-light" href="https://wa.me/918045678900"><i class="bi bi-whatsapp" aria-hidden="true"></i> Book on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEWSLETTER (Mailchimp-ready) ============ -->
+<section class="ff-section pt-0" aria-labelledby="newsTitle">
+  <div class="container">
+    <div class="ff-newsletter reveal">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <h2 id="newsTitle" class="h3">Get ₹100 off your first order</h2>
+          <p class="mb-0">One short email a month: fabric-care tips, seasonal offers and new service areas. No spam — unsubscribe anytime.</p>
+        </div>
+        <div class="col-lg-6">
+          <!-- TODO: set CONFIG.mailchimpEndpoint in main.js (or replace action with your Mailchimp form URL) -->
+          <form class="row g-2" data-validate data-submit="mailchimp" data-success="You're in! Check your inbox for your ₹100 code." aria-label="Newsletter signup">
+            <div class="col-sm-8 ff-field">
+              <label for="newsEmail" class="visually-hidden">Email address</label>
+              <div class="ff-input-icon"><i class="bi bi-envelope" aria-hidden="true"></i>
+                <input type="email" class="form-control" id="newsEmail" name="EMAIL" placeholder="you@example.com" autocomplete="email" required data-error-required="Please enter your email to get the code.">
+              </div>
+            </div>
+            <div class="col-sm-4"><button type="submit" class="btn btn-primary-ff w-100"><span class="btn-label">Subscribe</span></button></div>
+            <div class="col-12"><div class="ff-form-status" role="status" aria-live="polite"></div></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="ff-footer" aria-labelledby="footerHeading">
+  <h2 id="footerHeading" class="visually-hidden">Site footer</h2>
+  <div class="container">
+    <div class="row g-4 g-lg-5">
+      <div class="col-lg-4">
+        <a class="ff-logo" href="index.html" aria-label="FreshFold home">
+          <img class="ff-logo-img" src="../assets/images/logo.png" alt="" width="1044" height="360">
+          <img class="ff-logo-img ff-logo-img--light" src="../assets/images/logo-light.png" alt="" width="1044" height="360">
+        </a>
+        <p class="mt-3">We pick up your laundry from your door, clean it with care and bring it back fresh in 24–48 hours. Serving Bengaluru since 2018.</p>
+        <ul class="ff-social mt-3" aria-label="Social media">
+          <li><a href="https://www.instagram.com/" aria-label="FreshFold on Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.facebook.com/" aria-label="FreshFold on Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a></li>
+          <li><a href="https://x.com/" aria-label="FreshFold on X"><i class="bi bi-twitter-x" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.youtube.com/" aria-label="FreshFold on YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a></li>
+          <li><a href="https://wa.me/918045678900" aria-label="Chat with FreshFold on WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h3>Services</h3>
+        <ul class="ff-footer-links">
+          <li><a href="services.html#wash-fold">Wash &amp; Fold</a></li>
+          <li><a href="service-details.html">Dry Cleaning</a></li>
+          <li><a href="services.html#ironing">Ironing &amp; Pressing</a></li>
+          <li><a href="services.html#home-care">Curtains &amp; Duvets</a></li>
+          <li><a href="services.html#specialty">Shoe Cleaning</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h3>Company</h3>
+        <ul class="ff-footer-links">
+          <li><a href="about.html">About us</a></li>
+          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html#faq">FAQs</a></li>
+          <li><a href="coming-soon.html">Careers</a></li>
+          <li><a href="track-order.html">Track an order</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 col-lg-4">
+        <h3>Contact &amp; hours</h3>
+        <ul class="ff-footer-links">
+          <li><a href="tel:+918045678900"><i class="bi bi-telephone me-2" aria-hidden="true"></i><span class="ltr">+91 80 4567 8900</span></a></li>
+          <li><a href="mailto:hello@freshfold.example"><i class="bi bi-envelope me-2" aria-hidden="true"></i>hello@freshfold.example</a></li>
+          <li class="d-flex"><i class="bi bi-geo-alt me-2 mt-1" aria-hidden="true"></i><address class="mb-0">No. 24, 27th Main Road, HSR Layout Sector 1, Bengaluru 560102</address></li>
+          <li class="mt-2"><i class="bi bi-clock me-2" aria-hidden="true"></i>Pickups: Mon–Sun, 7 AM – 10 PM</li>
+          <li><i class="bi bi-headset me-2" aria-hidden="true"></i>Support: Mon–Sat, 8 AM – 9 PM</li>
+        </ul>
+        <div class="d-flex flex-wrap gap-2 mt-3">
+          <!-- TODO: link to your real App Store / Google Play listings -->
+          <a class="ff-store-btn" href="coming-soon.html"><i class="bi bi-apple" aria-hidden="true"></i><span>Coming soon on<strong>App Store</strong></span></a>
+          <a class="ff-store-btn" href="coming-soon.html"><i class="bi bi-google-play" aria-hidden="true"></i><span>Coming soon on<strong>Google Play</strong></span></a>
+        </div>
+      </div>
+    </div>
+    <div class="ff-footer-bottom d-flex flex-column flex-lg-row gap-3 justify-content-between align-items-lg-center">
+      <p class="mb-0">© <span data-year>2026</span> FreshFold Laundry Services. All rights reserved. · <a href="coming-soon.html">Privacy</a> · <a href="coming-soon.html">Terms</a> · <a href="../sitemap.xml">Sitemap</a></p>
+      <ul class="ff-pay" aria-label="Payment methods we accept">
+        <li><i class="bi bi-credit-card" aria-hidden="true"></i> Visa</li>
+        <li><i class="bi bi-credit-card-2-front" aria-hidden="true"></i> Mastercard</li>
+        <li><i class="bi bi-phone" aria-hidden="true"></i> UPI</li>
+        <li><i class="bi bi-paypal" aria-hidden="true"></i> PayPal</li>
+        <li><i class="bi bi-cash-coin" aria-hidden="true"></i> Cash</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating mobile CTA + back to top -->
+<button type="button" class="btn btn-icon ff-back-top" aria-label="Back to top"><i class="bi bi-arrow-up" aria-hidden="true"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="../assets/js/main.js?v=1.3.3" defer></script>
+
+</body>
+</html>

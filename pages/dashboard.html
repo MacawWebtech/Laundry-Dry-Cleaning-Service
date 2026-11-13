@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Dashboard | FreshFold</title>
+<meta name="description" content="Your FreshFold dashboard: active laundry orders, next pickup, wallet balance and monthly spending, plus a one-tap button to schedule your next pickup.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://www.freshfold.example/pages/dashboard.html">
+<meta name="theme-color" content="#1a64e0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<!-- Open Graph / social preview — TODO: update domain & image -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FreshFold">
+<meta property="og:title" content="My Dashboard | FreshFold">
+<meta property="og:description" content="Your FreshFold dashboard: active laundry orders, next pickup, wallet balance and monthly spending, plus a one-tap button to schedule your next pickup.">
+<meta property="og:url" content="https://www.freshfold.example/pages/dashboard.html">
+<meta property="og:image" content="https://www.freshfold.example/assets/images/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/images/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+<script>
+  /* Theme + direction boot: applies saved or system preference before first paint */
+  (function () { try {
+    var t = localStorage.getItem("ff-theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    var d = localStorage.getItem("ff-dir") || "ltr";
+    var h = document.documentElement; h.setAttribute("data-theme", t); h.setAttribute("data-bs-theme", t); h.setAttribute("dir", d);
+    if (d === "rtl") h.setAttribute("lang", "ar");
+  } catch (e) {} })();
+  /* Image fallback: if a remote photo fails, swap in the bundled local image (data-fallback) */
+  addEventListener("error", function (e) { var i = e.target;
+    if (i.tagName === "IMG" && i.dataset.fallback && i.src.indexOf(i.dataset.fallback) < 0) {
+      var p = i.closest("picture"); if (p) p.querySelectorAll("source").forEach(function (s) { s.remove(); });
+      i.removeAttribute("srcset"); i.src = i.dataset.fallback; }
+  }, true);
+</script>
+<!-- Fonts: Outfit (display) + Plus Jakarta Sans (body) — TODO: swap in style.css :root -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<!-- Template styles (use the .min.css versions in production) -->
+<link rel="stylesheet" href="../assets/css/style.css?v=1.4.0">
+<link rel="stylesheet" href="../assets/css/dark-mode.css?v=1.4.0">
+<link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="ff-dash">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="ff-sidebar" id="dashSidebar" aria-label="Account navigation">
+    <div class="ff-sidebar-head justify-content-between">
+      <a class="ff-logo" href="dashboard.html" aria-label="FreshFold home">
+          <img class="ff-logo-img" src="../assets/images/logo.png" alt="" width="1044" height="360">
+          <img class="ff-logo-img ff-logo-img--light" src="../assets/images/logo-light.png" alt="" width="1044" height="360">
+        </a>
+      <button type="button" class="btn btn-icon sidebar-toggle d-lg-none" data-sidebar-toggle aria-controls="dashSidebar" aria-expanded="false" aria-label="Close menu"><i class="bi bi-x-lg" aria-hidden="true"></i></button>
+    </div>
+    <nav aria-label="Dashboard">
+      <p class="nav-title">Overview</p><ul class="list-unstyled mb-0"><li><a class="ff-side-link active" aria-current="page" href="dashboard.html"><i class="bi bi-grid-1x2" aria-hidden="true"></i>Dashboard</a></li><li><a class="ff-side-link" href="schedule-pickup.html"><i class="bi bi-calendar-plus" aria-hidden="true"></i>Schedule Pickup</a></li><li><a class="ff-side-link" href="track-order.html"><i class="bi bi-geo-alt" aria-hidden="true"></i>Track Order</a></li><li><a class="ff-side-link" href="orders.html"><i class="bi bi-bag" aria-hidden="true"></i>My Orders</a></li></ul><p class="nav-title">Account</p><ul class="list-unstyled mb-0"><li><a class="ff-side-link" href="payments.html"><i class="bi bi-wallet2" aria-hidden="true"></i>Payments</a></li><li><a class="ff-side-link" href="addresses.html"><i class="bi bi-house-door" aria-hidden="true"></i>Addresses</a></li><li><a class="ff-side-link" href="messages.html"><i class="bi bi-chat-dots" aria-hidden="true"></i>Support Chat<span class="badge rounded-pill text-bg-danger">2</span></a></li><li><a class="ff-side-link" href="notifications.html"><i class="bi bi-bell" aria-hidden="true"></i>Notifications<span class="badge rounded-pill text-bg-primary ff-notif-count">3</span></a></li><li><a class="ff-side-link" href="profile-settings.html"><i class="bi bi-gear" aria-hidden="true"></i>Settings</a></li></ul>
+    </nav>
+    <div class="ff-sidebar-foot">
+      <div class="ff-help-card mb-2">
+        <p class="fw-bold mb-1" style="color:var(--ff-heading)"><i class="bi bi-headset me-1" aria-hidden="true"></i> Need help?</p>
+        <p class="small mb-2">Our team replies in under 10 minutes.</p>
+        <a class="btn btn-sm ff-whatsapp w-100" href="https://wa.me/918045678900"><i class="bi bi-whatsapp" aria-hidden="true"></i> WhatsApp us</a>
+      </div>
+      <a class="ff-side-link" href="login.html"><i class="bi bi-box-arrow-right" aria-hidden="true"></i>Log out</a>
+    </div>
+  </aside>
+  <div class="ff-backdrop" aria-hidden="true"></div>
+
+  <div class="ff-dash-main">
+    <!-- ============ TOPBAR ============ -->
+    <header class="ff-topbar-dash">
+      <button type="button" class="btn btn-icon sidebar-toggle" data-sidebar-toggle aria-controls="dashSidebar" aria-expanded="false" aria-label="Open menu"><i class="bi bi-list" aria-hidden="true"></i></button>
+      <form class="search d-none d-md-block" role="search" action="orders.html">
+        <label for="topSearch" class="visually-hidden">Search orders</label>
+        <div class="ff-input-icon"><i class="bi bi-search" aria-hidden="true"></i><input class="form-control" id="topSearch" type="search" name="q" placeholder="Search orders, e.g. FF-10492"></div>
+      </form>
+      <div class="ms-auto d-flex align-items-center gap-2">
+        <a class="btn btn-accent d-none d-sm-inline-flex" href="schedule-pickup.html"><i class="bi bi-plus-lg" aria-hidden="true"></i> Schedule Pickup</a>
+        <button type="button" class="btn btn-icon " data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">
+            <i class="bi bi-moon-stars theme-icon-light" aria-hidden="true"></i><i class="bi bi-sun theme-icon-dark" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="btn btn-icon " data-dir-toggle aria-pressed="false" aria-label="Toggle right-to-left layout">
+            <span class="dir-label">RTL</span>
+          </button>
+        <a class="btn btn-icon position-relative" href="notifications.html" aria-label="Notifications, 3 unread"><i class="bi bi-bell" aria-hidden="true"></i><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-danger ff-notif-count">3</span></a>
+        <div class="dropdown">
+          <button class="btn p-0 border-0 d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Account menu for Priya Raman">
+            <span class="ff-avatar ff-avatar-sm" aria-hidden="true">PR</span><span class="d-none d-lg-inline fw-semibold" style="color:var(--ff-heading)">Priya</span><i class="bi bi-chevron-down small d-none d-lg-inline" aria-hidden="true"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end shadow">
+            <li><a class="dropdown-item" href="profile-settings.html"><i class="bi bi-person me-2" aria-hidden="true"></i>Profile</a></li>
+            <li><a class="dropdown-item" href="payments.html"><i class="bi bi-wallet2 me-2" aria-hidden="true"></i>Wallet</a></li>
+            <li><a class="dropdown-item" href="index.html"><i class="bi bi-house me-2" aria-hidden="true"></i>Back to website</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-right me-2" aria-hidden="true"></i>Log out</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="ff-dash-content" tabindex="-1">
+      <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-4">
+        <div><h1>Good afternoon, Priya</h1><p class="mb-0">Here's what's happening with your laundry today.</p></div>
+        <a class="btn btn-accent btn-lg" href="schedule-pickup.html"><i class="bi bi-calendar-plus" aria-hidden="true"></i> Schedule Pickup</a>
+      </div>
+
+      <!-- ============ STAT CARDS ============ -->
+      <div class="row g-3 mb-4">
+        <div class="col-sm-6 col-xl-3"><div class="ff-panel ff-stat-card h-100" data-loading="600">
+          <div data-skeleton class="w-100"><div class="d-flex gap-3 align-items-center"><div class="skeleton" style="width:56px;height:56px;border-radius:16px"></div><div class="flex-grow-1"><div class="skeleton sk-line w-50"></div><div class="skeleton sk-line w-75 mb-0"></div></div></div></div>
+          <div data-skeleton-target><div class="d-flex gap-3 align-items-center"><span class="ff-icon " aria-hidden="true"><i class="bi bi-arrow-repeat"></i></span><div><p class="val mb-0">2</p><p class="lbl mb-0">Active orders</p></div></div></div>
+        </div></div>
+        <div class="col-sm-6 col-xl-3"><div class="ff-panel ff-stat-card h-100" data-loading="600">
+          <div data-skeleton class="w-100"><div class="d-flex gap-3 align-items-center"><div class="skeleton" style="width:56px;height:56px;border-radius:16px"></div><div class="flex-grow-1"><div class="skeleton sk-line w-50"></div><div class="skeleton sk-line w-75 mb-0"></div></div></div></div>
+          <div data-skeleton-target><div class="d-flex gap-3 align-items-center"><span class="ff-icon coral" aria-hidden="true"><i class="bi bi-calendar-event"></i></span><div><p class="val mb-0">Sat, 15 Nov</p><p class="lbl mb-0">Next pickup · 9–11 AM</p></div></div></div>
+        </div></div>
+        <div class="col-sm-6 col-xl-3"><div class="ff-panel ff-stat-card h-100" data-loading="600">
+          <div data-skeleton class="w-100"><div class="d-flex gap-3 align-items-center"><div class="skeleton" style="width:56px;height:56px;border-radius:16px"></div><div class="flex-grow-1"><div class="skeleton sk-line w-50"></div><div class="skeleton sk-line w-75 mb-0"></div></div></div></div>
+          <div data-skeleton-target><div class="d-flex gap-3 align-items-center"><span class="ff-icon green" aria-hidden="true"><i class="bi bi-wallet2"></i></span><div><p class="val mb-0">₹1,318</p><p class="lbl mb-0">Wallet balance</p></div></div></div>
+        </div></div>
+        <div class="col-sm-6 col-xl-3"><div class="ff-panel ff-stat-card h-100" data-loading="600">
+          <div data-skeleton class="w-100"><div class="d-flex gap-3 align-items-center"><div class="skeleton" style="width:56px;height:56px;border-radius:16px"></div><div class="flex-grow-1"><div class="skeleton sk-line w-50"></div><div class="skeleton sk-line w-75 mb-0"></div></div></div></div>
+          <div data-skeleton-target><div class="d-flex gap-3 align-items-center"><span class="ff-icon sun" aria-hidden="true"><i class="bi bi-basket2"></i></span><div><p class="val mb-0">11.5 / 20 kg</p><p class="lbl mb-0">Monthly plan used</p></div></div></div>
+        </div></div>
+      </div>
+
+      <div class="row g-3 mb-4">
+        <!-- Active orders -->
+        <div class="col-xl-8">
+          <section class="ff-panel h-100" aria-labelledby="activeTitle">
+            <div class="ff-panel-head"><h2 id="activeTitle">Active orders</h2><a class="small fw-semibold" href="orders.html?filter=active">View all</a></div>
+            <div class="d-grid gap-3">
+              <article class="ff-card ff-card-static p-3">
+                <div class="d-flex flex-wrap justify-content-between gap-2 mb-2"><div><a href="track-order.html?id=FF-10488" class="fw-bold text-decoration-none ltr">FF-10488</a><span class="small text-muted-ff ms-2">Dry Cleaning · 3 items</span></div><span class="ff-status out">Out for delivery</span></div>
+                <div class="progress mb-2" style="height:8px" role="progressbar" aria-label="Order FF-10488 progress" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar" style="width:80%;background:var(--ff-primary)"></div></div>
+                <div class="d-flex flex-wrap justify-content-between small"><span><i class="bi bi-truck me-1" aria-hidden="true"></i>Arriving today, 4–6 PM · Rider: Meera S.</span><a href="track-order.html?id=FF-10488" class="fw-semibold">Track live</a></div>
+              </article>
+              <article class="ff-card ff-card-static p-3">
+                <div class="d-flex flex-wrap justify-content-between gap-2 mb-2"><div><a href="track-order.html?id=FF-10492" class="fw-bold text-decoration-none ltr">FF-10492</a><span class="small text-muted-ff ms-2">Wash &amp; Fold · 6.5 kg</span></div><span class="ff-status cleaning">In cleaning</span></div>
+                <div class="progress mb-2" style="height:8px" role="progressbar" aria-label="Order FF-10492 progress" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar" style="width:45%;background:var(--ff-primary)"></div></div>
+                <div class="d-flex flex-wrap justify-content-between small"><span><i class="bi bi-calendar-check me-1" aria-hidden="true"></i>Delivery Fri, 14 Nov · 6–8 PM</span><a href="track-order.html?id=FF-10492" class="fw-semibold">Track</a></div>
+              </article>
+            </div>
+          </section>
+        </div>
+        <!-- Next pickup + quick action -->
+        <div class="col-xl-4">
+          <section class="ff-panel h-100 d-flex flex-column" aria-labelledby="nextTitle" style="background:linear-gradient(150deg,var(--ff-primary-100),var(--ff-surface))">
+            <h2 id="nextTitle" class="h5">Next pickup</h2>
+            <p class="ff-display h3 mb-1" style="color:var(--ff-heading)">Saturday, 15 Nov</p>
+            <p class="mb-3"><i class="bi bi-clock me-1" aria-hidden="true"></i>9–11 AM · Home, HSR Layout</p>
+            <ul class="ff-check-list small mb-4"><li>Wash &amp; Fold (plan)</li><li>Ironing — 10 pieces</li></ul>
+            <div class="mt-auto d-grid gap-2">
+              <a class="btn btn-accent btn-lg" href="schedule-pickup.html"><i class="bi bi-plus-lg" aria-hidden="true"></i> Schedule another pickup</a>
+              <a class="btn btn-ghost" href="schedule-pickup.html?reschedule=1">Reschedule</a>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- ============ CHARTS (Chart.js) ============ -->
+      <div class="row g-3 mb-4">
+        <div class="col-xl-8"><section class="ff-panel h-100" aria-labelledby="spendTitle">
+          <div class="ff-panel-head"><h2 id="spendTitle">Monthly spend</h2><span class="small text-muted-ff">Last 6 months</span></div>
+          <div class="ff-chart-box"><canvas id="spendChart" role="img" aria-label="Bar chart of monthly laundry spend from June to November, peaking at ₹3,120 in October">Monthly spend: Jun ₹1,840, Jul ₹2,210, Aug ₹1,960, Sep ₹2,580, Oct ₹3,120, Nov ₹2,473.</canvas></div>
+        </section></div>
+        <div class="col-xl-4"><section class="ff-panel h-100" aria-labelledby="mixTitle">
+          <div class="ff-panel-head"><h2 id="mixTitle">Services used</h2></div>
+          <div class="ff-chart-box"><canvas id="serviceChart" role="img" aria-label="Doughnut chart: Wash and Fold 46%, Dry Cleaning 28%, Ironing 18%, Other 8%">Wash &amp; Fold 46%, Dry Cleaning 28%, Ironing 18%, Other 8%.</canvas></div>
+        </section></div>
+      </div>
+
+      <div class="row g-3">
+        <!-- Recent orders (skeleton → content) -->
+        <div class="col-xl-8"><section class="ff-panel" aria-labelledby="recentTitle" data-loading="900">
+          <div class="ff-panel-head"><h2 id="recentTitle">Recent orders</h2><a class="small fw-semibold" href="orders.html">All orders</a></div>
+          <div class="table-responsive"><table class="table ff-dash-table">
+            <thead><tr><th scope="col">Order</th><th scope="col">Service</th><th scope="col">Date</th><th scope="col">Total</th><th scope="col">Status</th></tr></thead>
+            <tbody data-skeleton><tr><td><div class="skeleton sk-line"></div></td><td><div class="skeleton sk-line"></div></td><td><div class="skeleton sk-line"></div></td><td><div class="skeleton sk-line"></div></td><td><div class="skeleton sk-line"></div></td></tr><tr><td><div class="skeleton sk-line"></div></td><td><div class="skeleton sk-line"></div></td><td><div class="skeleton sk-line"></div></td><td><div class="skeleton sk-line"></div></td><td><div class="skeleton sk-line"></div></td></tr><tr><td><div class="skeleton sk-line"></div></td><td><div class="skeleton sk-line"></div></td><td><div class="skeleton sk-line"></div></td><td><div class="skeleton sk-line"></div></td><td><div class="skeleton sk-line"></div></td></tr><tr><td><div class="skeleton sk-line"></div></td><td><div class="skeleton sk-line"></div></td><td><div class="skeleton sk-line"></div></td><td><div class="skeleton sk-line"></div></td><td><div class="skeleton sk-line"></div></td></tr><tr><td><div class="skeleton sk-line"></div></td><td><div class="skeleton sk-line"></div></td><td><div class="skeleton sk-line"></div></td><td><div class="skeleton sk-line"></div></td><td><div class="skeleton sk-line"></div></td></tr></tbody>
+            <tbody data-skeleton-target id="recentOrders"></tbody>
+          </table></div>
+        </section></div>
+        <!-- Wallet summary -->
+        <div class="col-xl-4"><section class="ff-panel h-100" aria-labelledby="walletTitle">
+          <div class="ff-panel-head"><h2 id="walletTitle">Wallet &amp; payments</h2><a class="small fw-semibold" href="payments.html">Manage</a></div>
+          <dl class="mb-3">
+            <div class="d-flex justify-content-between py-2 border-bottom"><dt class="fw-semibold">Wallet balance</dt><dd class="mb-0 fw-bold" style="color:var(--ff-success)">₹1,318</dd></div>
+            <div class="d-flex justify-content-between py-2 border-bottom"><dt class="fw-semibold">Outstanding</dt><dd class="mb-0 fw-bold" style="color:var(--ff-warning)">₹584</dd></div>
+            <div class="d-flex justify-content-between py-2 border-bottom"><dt class="fw-semibold">Plan renews</dt><dd class="mb-0">1 Dec 2026</dd></div>
+            <div class="d-flex justify-content-between py-2"><dt class="fw-semibold">Saved this year</dt><dd class="mb-0">₹4,260</dd></div>
+          </dl>
+          <a class="btn btn-primary-ff w-100" href="payments.html#outstanding">Pay ₹584 now</a>
+        </section></div>
+      </div>
+    </main>
+    <footer class="px-4 py-3 small text-muted-ff border-top" style="border-color:var(--ff-border)!important">© <span data-year>2026</span> FreshFold · <a href="contact.html">Support</a> · <a href="index.html">Website</a></footer>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js" defer></script>
+<script src="../assets/js/main.js?v=1.3.3" defer></script>
+<script src="../assets/js/dashboard.js" defer></script>
+</body>
+</html>

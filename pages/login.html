@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Customer Login | FreshFold Laundry</title>
+<meta name="description" content="Log in to your FreshFold account to schedule laundry pickups, track orders live, download invoices, manage addresses and pay securely online or by UPI.">
+<link rel="canonical" href="https://www.freshfold.example/pages/login.html">
+<meta name="theme-color" content="#1a64e0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<!-- Open Graph / social preview — TODO: update domain & image -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FreshFold">
+<meta property="og:title" content="Customer Login | FreshFold Laundry">
+<meta property="og:description" content="Log in to your FreshFold account to schedule laundry pickups, track orders live, download invoices, manage addresses and pay securely online or by UPI.">
+<meta property="og:url" content="https://www.freshfold.example/pages/login.html">
+<meta property="og:image" content="https://www.freshfold.example/assets/images/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/images/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+<script>
+  /* Theme + direction boot: applies saved or system preference before first paint */
+  (function () { try {
+    var t = localStorage.getItem("ff-theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    var d = localStorage.getItem("ff-dir") || "ltr";
+    var h = document.documentElement; h.setAttribute("data-theme", t); h.setAttribute("data-bs-theme", t); h.setAttribute("dir", d);
+    if (d === "rtl") h.setAttribute("lang", "ar");
+  } catch (e) {} })();
+  /* Image fallback: if a remote photo fails, swap in the bundled local image (data-fallback) */
+  addEventListener("error", function (e) { var i = e.target;
+    if (i.tagName === "IMG" && i.dataset.fallback && i.src.indexOf(i.dataset.fallback) < 0) {
+      var p = i.closest("picture"); if (p) p.querySelectorAll("source").forEach(function (s) { s.remove(); });
+      i.removeAttribute("srcset"); i.src = i.dataset.fallback; }
+  }, true);
+</script>
+<!-- Fonts: Outfit (display) + Plus Jakarta Sans (body) — TODO: swap in style.css :root -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<!-- Template styles (use the .min.css versions in production) -->
+<link rel="stylesheet" href="../assets/css/style.css?v=1.4.0">
+<link rel="stylesheet" href="../assets/css/dark-mode.css?v=1.4.0">
+<link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="ff-auth">
+  <!-- ============ AUTH SIDE PANEL ============ -->
+  <aside class="ff-auth-side ff-has-bg" style="background-image:var(--ff-overlay),url('../assets/images/back fresh.jpg') !important" aria-label="Why customers love FreshFold">
+    <a class="ff-logo" href="index.html" aria-label="FreshFold home">
+          <img class="ff-logo-img" src="../assets/images/logo.png" alt="" width="1044" height="360">
+          <img class="ff-logo-img ff-logo-img--light" src="../assets/images/logo-light.png" alt="" width="1044" height="360">
+        </a>
+    <div>
+      <h2 class="display-6 mb-3">Your laundry, on autopilot</h2>
+      <p class="lead-ff mb-4" style="color:#cfe7f1">Schedule, track and pay for every order in one place.</p>
+      <ul class="list-unstyled d-grid gap-3 mb-0">
+        <li class="d-flex gap-2"><i class="bi bi-truck text-info" aria-hidden="true"></i> Free pickup &amp; delivery on orders over ₹299</li>
+        <li class="d-flex gap-2"><i class="bi bi-lightning-charge text-info" aria-hidden="true"></i> 24h express and same-day options</li>
+        <li class="d-flex gap-2"><i class="bi bi-geo-alt text-info" aria-hidden="true"></i> Live order tracking from bag to door</li>
+      </ul>
+    </div>
+    <figure class="mb-0">
+      <blockquote class="mb-2"><p class="mb-0" style="color:#fff">“The easiest app I use all week. Laundry just… happens now.”</p></blockquote>
+      <figcaption class="small">— Ananya I., customer since 2021</figcaption>
+    </figure>
+  </aside>
+  <main id="main" class="ff-auth-main" tabindex="-1">
+    <div class="ff-auth-box">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <div class="d-lg-none"><a class="ff-logo" href="index.html" aria-label="FreshFold home">
+          <img class="ff-logo-img" src="../assets/images/logo.png" alt="" width="1044" height="360">
+          <img class="ff-logo-img ff-logo-img--light" src="../assets/images/logo-light.png" alt="" width="1044" height="360">
+        </a></div>
+        <a href="index.html" class="small fw-semibold text-decoration-none ms-auto me-2 d-inline-flex align-items-center" style="min-height:44px"><i class="bi bi-arrow-left me-1" aria-hidden="true"></i> Back to site</a>
+        <div class="d-flex gap-2"><button type="button" class="btn btn-icon " data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">
+            <i class="bi bi-moon-stars theme-icon-light" aria-hidden="true"></i><i class="bi bi-sun theme-icon-dark" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="btn btn-icon " data-dir-toggle aria-pressed="false" aria-label="Toggle right-to-left layout">
+            <span class="dir-label">RTL</span>
+          </button></div>
+      </div>
+
+      <h1 class="h2 mb-1">Welcome back</h1>
+      <p class="mb-4">Log in to schedule pickups, track orders and see invoices.</p>
+      <form data-validate data-submit="redirect" data-redirect="dashboard.html" aria-label="Log in">
+        <div class="mb-3 ff-field"><label class="form-label" for="lgUser">Email or phone</label>
+          <div class="ff-input-icon"><i class="bi bi-person" aria-hidden="true"></i><input class="form-control" id="lgUser" name="username" autocomplete="username" required placeholder="you@example.com or 98450 12345" data-error-required="Enter the email or phone you signed up with."></div></div>
+        <div class="mb-2 ff-field"><label class="form-label" for="lgPass">Password</label>
+          <div class="position-relative ff-input-icon"><i class="bi bi-lock" aria-hidden="true"></i><input class="form-control" id="lgPass" name="password" type="password" autocomplete="current-password" required minlength="8" data-error-required="Enter your password."><button type="button" class="ff-pass-toggle" data-toggle-password="lgPass" aria-label="Show password"><i class="bi bi-eye" aria-hidden="true"></i></button></div></div>
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <div class="form-check"><input class="form-check-input" type="checkbox" id="lgRemember" name="remember" checked><label class="form-check-label" for="lgRemember">Remember me</label></div>
+          <a href="forgot-password.html" class="small fw-semibold">Forgot password?</a>
+        </div>
+        <button type="submit" class="btn btn-accent btn-lg w-100"><span class="btn-label">Log in</span></button>
+        <div class="ff-form-status mt-3" role="status" aria-live="polite"></div>
+        <p class="small text-muted-ff mt-2 mb-0"><i class="bi bi-info-circle" aria-hidden="true"></i> Demo: any email and an 8+ character password logs you in.</p>
+      </form>
+      <div class="ff-divider">or continue with</div>
+        <div class="d-grid gap-2 d-sm-flex">
+          <a class="btn btn-ghost flex-fill" href="dashboard.html"><i class="bi bi-google" aria-hidden="true"></i> Google</a>
+          <a class="btn btn-ghost flex-fill" href="dashboard.html"><i class="bi bi-apple" aria-hidden="true"></i> Apple</a>
+        </div>
+      <p class="text-center mt-4 mb-0">New to FreshFold? <a href="register.html" class="fw-bold">Create an account</a></p>
+    </div>
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="../assets/js/main.js?v=1.3.3" defer></script>
+
+</body>
+</html>

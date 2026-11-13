@@ -1,0 +1,19 @@
+# FreshFold robots.txt — TODO: replace the domain below
+User-agent: *
+Allow: /
+Disallow: /pages/dashboard.html
+Disallow: /pages/schedule-pickup.html
+Disallow: /pages/track-order.html
+Disallow: /pages/orders.html
+Disallow: /pages/order-details.html
+Disallow: /pages/payments.html
+Disallow: /pages/addresses.html
+Disallow: /pages/profile-settings.html
+Disallow: /pages/messages.html
+Disallow: /pages/notifications.html
+Disallow: /pages/register.html
+Disallow: /pages/forgot-password.html
+Disallow: /pages/404.html
+Disallow: /pages/coming-soon.html
+
+Sitemap: https://www.freshfold.example/sitemap.xml

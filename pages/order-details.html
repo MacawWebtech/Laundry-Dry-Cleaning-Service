@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Order Details & Invoice | FreshFold</title>
+<meta name="description" content="Order details for your FreshFold pickup: every item and service, price breakdown, discounts, check-in notes, status timeline and a downloadable PDF invoice.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://www.freshfold.example/pages/order-details.html">
+<meta name="theme-color" content="#1a64e0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<!-- Open Graph / social preview — TODO: update domain & image -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FreshFold">
+<meta property="og:title" content="Order Details & Invoice | FreshFold">
+<meta property="og:description" content="Order details for your FreshFold pickup: every item and service, price breakdown, discounts, check-in notes, status timeline and a downloadable PDF invoice.">
+<meta property="og:url" content="https://www.freshfold.example/pages/order-details.html">
+<meta property="og:image" content="https://www.freshfold.example/assets/images/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/images/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+<script>
+  /* Theme + direction boot: applies saved or system preference before first paint */
+  (function () { try {
+    var t = localStorage.getItem("ff-theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    var d = localStorage.getItem("ff-dir") || "ltr";
+    var h = document.documentElement; h.setAttribute("data-theme", t); h.setAttribute("data-bs-theme", t); h.setAttribute("dir", d);
+    if (d === "rtl") h.setAttribute("lang", "ar");
+  } catch (e) {} })();
+  /* Image fallback: if a remote photo fails, swap in the bundled local image (data-fallback) */
+  addEventListener("error", function (e) { var i = e.target;
+    if (i.tagName === "IMG" && i.dataset.fallback && i.src.indexOf(i.dataset.fallback) < 0) {
+      var p = i.closest("picture"); if (p) p.querySelectorAll("source").forEach(function (s) { s.remove(); });
+      i.removeAttribute("srcset"); i.src = i.dataset.fallback; }
+  }, true);
+</script>
+<!-- Fonts: Outfit (display) + Plus Jakarta Sans (body) — TODO: swap in style.css :root -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<!-- Template styles (use the .min.css versions in production) -->
+<link rel="stylesheet" href="../assets/css/style.css?v=1.4.0">
+<link rel="stylesheet" href="../assets/css/dark-mode.css?v=1.4.0">
+<link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="ff-dash">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="ff-sidebar" id="dashSidebar" aria-label="Account navigation">
+    <div class="ff-sidebar-head justify-content-between">
+      <a class="ff-logo" href="dashboard.html" aria-label="FreshFold home">
+          <img class="ff-logo-img" src="../assets/images/logo.png" alt="" width="1044" height="360">
+          <img class="ff-logo-img ff-logo-img--light" src="../assets/images/logo-light.png" alt="" width="1044" height="360">
+        </a>
+      <button type="button" class="btn btn-icon sidebar-toggle d-lg-none" data-sidebar-toggle aria-controls="dashSidebar" aria-expanded="false" aria-label="Close menu"><i class="bi bi-x-lg" aria-hidden="true"></i></button>
+    </div>
+    <nav aria-label="Dashboard">
+      <p class="nav-title">Overview</p><ul class="list-unstyled mb-0"><li><a class="ff-side-link" href="dashboard.html"><i class="bi bi-grid-1x2" aria-hidden="true"></i>Dashboard</a></li><li><a class="ff-side-link" href="schedule-pickup.html"><i class="bi bi-calendar-plus" aria-hidden="true"></i>Schedule Pickup</a></li><li><a class="ff-side-link" href="track-order.html"><i class="bi bi-geo-alt" aria-hidden="true"></i>Track Order</a></li><li><a class="ff-side-link" href="orders.html"><i class="bi bi-bag" aria-hidden="true"></i>My Orders</a></li></ul><p class="nav-title">Account</p><ul class="list-unstyled mb-0"><li><a class="ff-side-link" href="payments.html"><i class="bi bi-wallet2" aria-hidden="true"></i>Payments</a></li><li><a class="ff-side-link" href="addresses.html"><i class="bi bi-house-door" aria-hidden="true"></i>Addresses</a></li><li><a class="ff-side-link" href="messages.html"><i class="bi bi-chat-dots" aria-hidden="true"></i>Support Chat<span class="badge rounded-pill text-bg-danger">2</span></a></li><li><a class="ff-side-link" href="notifications.html"><i class="bi bi-bell" aria-hidden="true"></i>Notifications<span class="badge rounded-pill text-bg-primary ff-notif-count">3</span></a></li><li><a class="ff-side-link" href="profile-settings.html"><i class="bi bi-gear" aria-hidden="true"></i>Settings</a></li></ul>
+    </nav>
+    <div class="ff-sidebar-foot">
+      <div class="ff-help-card mb-2">
+        <p class="fw-bold mb-1" style="color:var(--ff-heading)"><i class="bi bi-headset me-1" aria-hidden="true"></i> Need help?</p>
+        <p class="small mb-2">Our team replies in under 10 minutes.</p>
+        <a class="btn btn-sm ff-whatsapp w-100" href="https://wa.me/918045678900"><i class="bi bi-whatsapp" aria-hidden="true"></i> WhatsApp us</a>
+      </div>
+      <a class="ff-side-link" href="login.html"><i class="bi bi-box-arrow-right" aria-hidden="true"></i>Log out</a>
+    </div>
+  </aside>
+  <div class="ff-backdrop" aria-hidden="true"></div>
+
+  <div class="ff-dash-main">
+    <!-- ============ TOPBAR ============ -->
+    <header class="ff-topbar-dash">
+      <button type="button" class="btn btn-icon sidebar-toggle" data-sidebar-toggle aria-controls="dashSidebar" aria-expanded="false" aria-label="Open menu"><i class="bi bi-list" aria-hidden="true"></i></button>
+      <form class="search d-none d-md-block" role="search" action="orders.html">
+        <label for="topSearch" class="visually-hidden">Search orders</label>
+        <div class="ff-input-icon"><i class="bi bi-search" aria-hidden="true"></i><input class="form-control" id="topSearch" type="search" name="q" placeholder="Search orders, e.g. FF-10492"></div>
+      </form>
+      <div class="ms-auto d-flex align-items-center gap-2">
+        <a class="btn btn-accent d-none d-sm-inline-flex" href="schedule-pickup.html"><i class="bi bi-plus-lg" aria-hidden="true"></i> Schedule Pickup</a>
+        <button type="button" class="btn btn-icon " data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">
+            <i class="bi bi-moon-stars theme-icon-light" aria-hidden="true"></i><i class="bi bi-sun theme-icon-dark" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="btn btn-icon " data-dir-toggle aria-pressed="false" aria-label="Toggle right-to-left layout">
+            <span class="dir-label">RTL</span>
+          </button>
+        <a class="btn btn-icon position-relative" href="notifications.html" aria-label="Notifications, 3 unread"><i class="bi bi-bell" aria-hidden="true"></i><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-danger ff-notif-count">3</span></a>
+        <div class="dropdown">
+          <button class="btn p-0 border-0 d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Account menu for Priya Raman">
+            <span class="ff-avatar ff-avatar-sm" aria-hidden="true">PR</span><span class="d-none d-lg-inline fw-semibold" style="color:var(--ff-heading)">Priya</span><i class="bi bi-chevron-down small d-none d-lg-inline" aria-hidden="true"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end shadow">
+            <li><a class="dropdown-item" href="profile-settings.html"><i class="bi bi-person me-2" aria-hidden="true"></i>Profile</a></li>
+            <li><a class="dropdown-item" href="payments.html"><i class="bi bi-wallet2 me-2" aria-hidden="true"></i>Wallet</a></li>
+            <li><a class="dropdown-item" href="index.html"><i class="bi bi-house me-2" aria-hidden="true"></i>Back to website</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-right me-2" aria-hidden="true"></i>Log out</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="ff-dash-content" tabindex="-1">
+      <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-4">
+        <div><h1>Order <span class="ltr" data-order-id>FF-10488</span></h1><p class="mb-0">Dry Cleaning · 3 items · placed 11 Nov 2026</p></div>
+        <a class="btn btn-ghost" href="orders.html"><i class="bi bi-arrow-left" aria-hidden="true"></i> All orders</a>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-xl-8">
+          <section class="ff-panel mb-4" id="invoice" aria-labelledby="itemsTitle">
+            <div class="ff-panel-head"><h2 id="itemsTitle">Items &amp; services</h2><span class="ff-status out">Out for delivery</span></div>
+            <div class="table-responsive"><table class="table ff-dash-table">
+              <caption class="visually-hidden">Items in this order</caption>
+              <thead><tr><th scope="col">Item</th><th scope="col">Service</th><th scope="col" class="text-center">Qty</th><th scope="col" class="text-end">Price</th></tr></thead>
+              <tbody><tr><td>Blazer — navy wool</td><td>Dry Cleaning</td><td class='text-center'>1</td><td class='text-end fw-semibold'>₹349</td></tr><tr><td>Silk saree — maroon</td><td>Dry Cleaning</td><td class='text-center'>1</td><td class='text-end fw-semibold'>₹449</td></tr><tr><td>Shirt — white linen</td><td>Dry Cleaning</td><td class='text-center'>1</td><td class='text-end fw-semibold'>₹149</td></tr><tr><td>Premium stain care</td><td>Add-on</td><td class='text-center'>1</td><td class='text-end fw-semibold'>₹49</td></tr></tbody>
+              <tfoot>
+                <tr><td colspan="3" class="text-end">Subtotal</td><td class="text-end">₹996</td></tr>
+                <tr><td colspan="3" class="text-end">Monthly plan discount (10%)</td><td class="text-end" style="color:var(--ff-success)">−₹99</td></tr>
+                <tr><td colspan="3" class="text-end">Pickup &amp; delivery</td><td class="text-end">Free</td></tr>
+                <tr><th scope="row" colspan="3" class="text-end">Total paid</th><td class="text-end fw-bold fs-5" style="color:var(--ff-primary)">₹897</td></tr>
+              </tfoot>
+            </table></div>
+            <div class="d-flex flex-wrap gap-2 mt-2">
+              <button type="button" class="btn btn-primary-ff" id="downloadInvoice"><span class="btn-label"><i class="bi bi-download" aria-hidden="true"></i> Download invoice (PDF)</span></button>
+              <button type="button" class="btn btn-ghost" data-reorder="FF-10488"><i class="bi bi-arrow-repeat" aria-hidden="true"></i> Reorder</button>
+              <a class="btn btn-ghost" href="messages.html"><i class="bi bi-flag" aria-hidden="true"></i> Report an issue</a>
+            </div>
+          </section>
+          <section class="ff-panel" aria-labelledby="notesTitle">
+            <h2 id="notesTitle" class="h5">Your notes &amp; our check-in report</h2>
+            <p class="mb-2"><strong style="color:var(--ff-heading)">You wrote:</strong> “Small coffee stain on the left cuff of the white shirt.”</p>
+            <p class="mb-0"><strong style="color:var(--ff-heading)">Our team:</strong> Stain on cuff removed fully. One loose button on the blazer re-sewn (free). Saree zari checked — no damage before or after.</p>
+          </section>
+        </div>
+        <div class="col-xl-4">
+          <section class="ff-panel mb-4" aria-labelledby="sumTitle">
+            <h2 id="sumTitle" class="h5">Summary</h2>
+            <dl class="small mb-0">
+              <div class="d-flex justify-content-between py-2 border-bottom"><dt>Order ID</dt><dd class="mb-0 fw-semibold ltr" id="detailOrderId" data-order-id>FF-10488</dd></div>
+              <div class="d-flex justify-content-between py-2 border-bottom"><dt>Placed</dt><dd class="mb-0">11 Nov 2026</dd></div>
+              <div class="d-flex justify-content-between py-2 border-bottom"><dt>Speed</dt><dd class="mb-0">Standard · 48h</dd></div>
+              <div class="d-flex justify-content-between py-2 border-bottom"><dt>Payment</dt><dd class="mb-0">Visa •••• 4417</dd></div>
+              <div class="d-flex justify-content-between py-2"><dt>Address</dt><dd class="mb-0 text-end">Home, HSR Layout<br>560102</dd></div>
+            </dl>
+          </section>
+          <section class="ff-panel" aria-labelledby="tlTitle">
+            <h2 id="tlTitle" class="h5 mb-3">Timeline</h2>
+            <div class="ff-timeline" style="padding-inline-start:44px"><div class="ff-timeline-item" style="padding-bottom:20px"><span class="ff-timeline-dot" style="width:32px;height:32px;inset-inline-start:-44px;font-size:.8rem;;background:var(--ff-success)" aria-hidden="true"><i class="bi bi-check-lg"></i></span><p class="fw-bold mb-0" style="color:var(--ff-heading)">Order placed</p><p class="small mb-0">11 Nov, 7:30 AM</p></div><div class="ff-timeline-item" style="padding-bottom:20px"><span class="ff-timeline-dot" style="width:32px;height:32px;inset-inline-start:-44px;font-size:.8rem;;background:var(--ff-success)" aria-hidden="true"><i class="bi bi-check-lg"></i></span><p class="fw-bold mb-0" style="color:var(--ff-heading)">Picked up by Meera S.</p><p class="small mb-0">11 Nov, 10:10 AM</p></div><div class="ff-timeline-item" style="padding-bottom:20px"><span class="ff-timeline-dot" style="width:32px;height:32px;inset-inline-start:-44px;font-size:.8rem;;background:var(--ff-success)" aria-hidden="true"><i class="bi bi-check-lg"></i></span><p class="fw-bold mb-0" style="color:var(--ff-heading)">In cleaning</p><p class="small mb-0">11 Nov, 2:00 PM</p></div><div class="ff-timeline-item" style="padding-bottom:20px"><span class="ff-timeline-dot" style="width:32px;height:32px;inset-inline-start:-44px;font-size:.8rem;;background:var(--ff-success)" aria-hidden="true"><i class="bi bi-check-lg"></i></span><p class="fw-bold mb-0" style="color:var(--ff-heading)">Quality check passed</p><p class="small mb-0">12 Nov, 9:20 AM</p></div><div class="ff-timeline-item" style="padding-bottom:20px"><span class="ff-timeline-dot" style="width:32px;height:32px;inset-inline-start:-44px;font-size:.8rem;" aria-hidden="true"><i class="bi bi-truck"></i></span><p class="fw-bold mb-0" style="color:var(--ff-heading)">Out for delivery</p><p class="small mb-0">12 Nov, 3:05 PM</p></div><div class="ff-timeline-item" style="padding-bottom:20px"><span class="ff-timeline-dot" style="width:32px;height:32px;inset-inline-start:-44px;font-size:.8rem;background:var(--ff-border);color:var(--ff-text-muted)" aria-hidden="true"><i class="bi bi-house"></i></span><p class="fw-bold mb-0" style="color:var(--ff-heading)">Delivered</p><p class="small mb-0">Expected today, 4–6 PM</p></div></div>
+            <a class="btn btn-ghost w-100 mt-2" href="track-order.html?id=FF-10488">Open live tracking</a>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer class="px-4 py-3 small text-muted-ff border-top" style="border-color:var(--ff-border)!important">© <span data-year>2026</span> FreshFold · <a href="contact.html">Support</a> · <a href="index.html">Website</a></footer>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="../assets/js/main.js?v=1.3.3" defer></script>
+<script src="../assets/js/dashboard.js" defer></script>
+</body>
+</html>

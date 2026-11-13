@@ -1,0 +1,73 @@
+/* ==========================================================================
+   FreshFold — RTL support (Arabic / Hebrew)
+   File: assets/css/rtl.css
+   Activated by <html dir="rtl"> (main.js toggles it and remembers it).
+   Most layout already uses CSS logical properties (inset-inline, margin-inline,
+   padding-inline), so this file only flips what Bootstrap 5's LTR build and
+   directional icons cannot flip on their own.
+   TODO: For a fully Arabic site, swap Bootstrap for bootstrap.rtl.min.css
+         and add an Arabic-friendly font (e.g. "Cairo" or "Tajawal").
+   ========================================================================== */
+
+[dir="rtl"] body { text-align: right; }
+
+/* Bootstrap spacing / alignment utilities used in this template */
+[dir="rtl"] .ms-auto { margin-left: 0 !important; margin-right: auto !important; }
+[dir="rtl"] .me-auto { margin-right: 0 !important; margin-left: auto !important; }
+[dir="rtl"] .me-1 { margin-right: 0 !important; margin-left: .25rem !important; }
+[dir="rtl"] .me-2 { margin-right: 0 !important; margin-left: .5rem !important; }
+[dir="rtl"] .me-3 { margin-right: 0 !important; margin-left: 1rem !important; }
+[dir="rtl"] .ms-1 { margin-left: 0 !important; margin-right: .25rem !important; }
+[dir="rtl"] .ms-2 { margin-left: 0 !important; margin-right: .5rem !important; }
+[dir="rtl"] .ms-3 { margin-left: 0 !important; margin-right: 1rem !important; }
+[dir="rtl"] .text-start { text-align: right !important; }
+[dir="rtl"] .text-end { text-align: left !important; }
+[dir="rtl"] .text-lg-start { text-align: right !important; }
+@media (min-width: 992px) { [dir="rtl"] .text-lg-end { text-align: left !important; } }
+[dir="rtl"] .float-end { float: left !important; }
+
+/* Forms */
+[dir="rtl"] .form-select { background-position: left .75rem center; padding-left: 2.25rem; padding-right: 14px; }
+[dir="rtl"] .ff-input-icon > .form-select { padding-right: 42px; }
+[dir="rtl"] .form-check { padding-left: 0; padding-right: 1.5em; }
+[dir="rtl"] .form-check .form-check-input { float: right; margin-left: 0; margin-right: -1.5em; }
+[dir="rtl"] .form-switch { padding-right: 2.5em; }
+[dir="rtl"] .form-switch .form-check-input { margin-right: -2.5em; }
+[dir="rtl"] .input-group > :not(:first-child) { border-radius: 12px 0 0 12px !important; margin-left: 0; margin-right: -1px; }
+[dir="rtl"] .input-group > :first-child { border-radius: 0 12px 12px 0 !important; }
+
+/* Components */
+[dir="rtl"] .accordion-button::after { margin-left: 0; margin-right: auto; }
+[dir="rtl"] .breadcrumb-item + .breadcrumb-item { padding-left: 0; padding-right: .5rem; }
+[dir="rtl"] .breadcrumb-item + .breadcrumb-item::before { float: right; padding-left: .5rem; padding-right: 0; }
+[dir="rtl"] .dropdown-menu { text-align: right; }
+[dir="rtl"] .carousel-control-prev i, [dir="rtl"] .carousel-control-next i { transform: scaleX(-1); }
+[dir="rtl"] .ff-stepper li::before { left: auto; right: 50%; transform: translateX(50%); }
+[dir="rtl"] .ff-stepper li::after { left: calc(-50% + 22px); right: calc(50% + 22px); }
+[dir="rtl"] .ff-track li .dot { left: auto; right: 50%; transform: translateX(50%); }
+[dir="rtl"] .ff-track li::after { left: calc(-50% + 28px); right: calc(50% + 28px); }
+[dir="rtl"] .ff-turn-item, [dir="rtl"] .ff-card { text-align: right; }
+[dir="rtl"] .ff-estimate-total dd { text-align: left; }
+
+/* Directional icons (arrows) mirror */
+[dir="rtl"] .bi-arrow-right, [dir="rtl"] .bi-arrow-left, [dir="rtl"] .bi-chevron-right,
+[dir="rtl"] .bi-chevron-left, [dir="rtl"] .bi-arrow-right-short, [dir="rtl"] .bi-box-arrow-right,
+[dir="rtl"] .bi-send { display: inline-block; transform: scaleX(-1); }
+[dir="rtl"] .link-arrow:hover i { transform: scaleX(-1) translateX(4px); }
+
+/* Off-canvas dashboard sidebar slides from the right */
+@media (max-width: 1023.98px) {
+  [dir="rtl"] .ff-sidebar { transform: translateX(100%); }
+  [dir="rtl"] .ff-sidebar.open { transform: none; }
+}
+
+/* Keep numbers, phone numbers, prices and IDs left-to-right */
+[dir="rtl"] .ltr, [dir="rtl"] .ff-phone, [dir="rtl"] input[type="tel"], [dir="rtl"] input[type="email"] { direction: ltr; unicode-bidi: embed; }
+[dir="rtl"] input[type="tel"], [dir="rtl"] input[type="email"] { text-align: right; }
+
+/* Banner overlays fade toward the end side in RTL too */
+@media (min-width: 768px) {
+  [dir="rtl"] .ff-hero.ff-has-bg, [dir="rtl"] .ff-page-hero.ff-has-bg { --ff-overlay: linear-gradient(270deg, rgba(242, 247, 254, .97) 0%, rgba(242, 247, 254, .92) 45%, rgba(242, 247, 254, .7) 100%); }
+  [dir="rtl"][data-theme="dark"] .ff-hero.ff-has-bg, [dir="rtl"][data-theme="dark"] .ff-page-hero.ff-has-bg { --ff-overlay: linear-gradient(270deg, rgba(0, 0, 0, .96) 0%, rgba(0, 0, 0, .9) 45%, rgba(0, 0, 0, .72) 100%); }
+  [dir="rtl"] .ff-express.ff-has-bg { --ff-overlay: linear-gradient(270deg, rgba(219, 233, 255, .98) 0%, rgba(219, 233, 255, .94) 50%, rgba(219, 233, 255, .8) 100%); }
+}
